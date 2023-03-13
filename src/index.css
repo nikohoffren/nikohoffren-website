@@ -445,6 +445,19 @@ h3 {
 
 /*------ Videos ------*/
 
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(276, 20%, 50%);
+  }
+  100% {
+    background-color: hsl(276, 20%, 80%);
+  }
+}
+
 .videos {
   background:rgb(0, 0, 0);
   width: 100%;

@@ -22,7 +22,7 @@ export default function Portfolio() {
     <div className="container">
         <h3>WEB DEVELOPMENT</h3>
         <p>Find all of my projects on <a href="https://www.github.com/nikohoffren" class="red-text" target="_blank">Github</a>.</p>
-        <p>You can also check tou my <a href="https://www.freecodecamp.org/nikohoffren" class="red-text" target="_blank">freeCodeCamp</a> account.</p>
+        <p>Be sure to also check out my <a href="https://www.freecodecamp.org/nikohoffren" class="red-text" target="_blank">freeCodeCamp</a> account.</p>
         <p>Languages/Frameworks/Databases:</p>
         <p>
             - Java <br />
