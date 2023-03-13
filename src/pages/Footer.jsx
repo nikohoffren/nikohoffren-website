@@ -12,6 +12,7 @@ export default function Footer() {
         <a href="https://open.spotify.com/artist/1iFr4SJkrSmlBYJMJ1Idqp?si=cu26iw_wT9OD_8a7dsRrlQ"target="{blank}"><i class="fa fa-spotify"></i></a>
         <a href="https://www.soundcloud.com/nikohoffren"target="{blank}" ><i class="fa fa-soundcloud"></i></a>
         <a href="https://www.linkedin.com/in/nikohoffren" target="{blank}"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.github.com/nikohoffren" target="{blank}"><i class="fa fa-github"></i></a>
       </div>
 
       <p class="arial white">nikohoffrenmusic@gmail.com</p>

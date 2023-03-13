@@ -617,3 +617,7 @@ h3 {
   color:rgb(0, 56, 211);
   transition: 0.5s;
 }
+.fa-github:hover {
+  color:rgb(201, 36, 242);
+  transition: 0.5s;
+}
