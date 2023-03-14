@@ -6,7 +6,7 @@ export default function Portfolio() {
     <h1>PORTFOLIO</h1>
     <div className="container">
         <div className="bio-info">
-        <img src="NHphoto2.jpg" width="100%" id="NHphoto" alt="Picture of very hansome Niko Hoffrén" />
+        <img src="NHphoto2.jpg" width="100%" id="NHphoto" alt="Picture of very handsome Niko Hoffrén" />
         <br />
 
             <p>I'm Niko Hoffrén, music producer and programmer born in Kuopio, Finland in 1986. In my spare time i like to spend time with my son, play video games and code something interesting.</p>
