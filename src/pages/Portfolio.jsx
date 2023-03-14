@@ -9,7 +9,7 @@ export default function Portfolio() {
         <img src="NHphoto2.jpg" width="100%" id="NHphoto" alt="Picture of very hansome Niko Hoffrén" />
         <br />
 
-            <p>I'm Niko Hoffrén, music producer and programmer born in Kuopio, Finland in 1986. In my spare time i like to play with my son, make music and code something interesting.</p>
+            <p>I'm Niko Hoffrén, music producer and programmer born in Kuopio, Finland in 1986. In my spare time i like to spend time with my son, play video games and code something interesting.</p>
             <p>In 2020 i started programming as a hobby with Java and my knowledge of languages and different frameworks has grown since over the years.</p>
             <p>You can find more info from the Web development section.</p>
             <p> I'm currently studying Software development in <a href="https://sakky.fi/fi" target="_blank" className="red-text">Savon Ammattiopisto</a> at Kuopio, Finland and hope to graduate in 2024.</p>
