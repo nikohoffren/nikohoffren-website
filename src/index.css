@@ -634,3 +634,10 @@ h3 {
   color:rgb(201, 36, 242);
   transition: 0.5s;
 }
+
+@media(max-width: 500px) {
+  .icons {
+    max-width: 200px;
+    margin: auto;
+  }
+}

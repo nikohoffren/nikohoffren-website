@@ -2,9 +2,6 @@ export default function Footer() {
     return <>
 
     <section class="footer">
-
-
-
       <div class="icons">
         <a href="https://www.facebook.com/nikohoffrenmusic" target="{blank}"><i class="fa fa-facebook"></i></a>
         <a href="https://www.instagram.com/nikohoffren" target="{blank}"><i class="fa fa-instagram"></i></a>
@@ -17,12 +14,12 @@ export default function Footer() {
 
       <p class="arial white">nikohoffrenmusic@gmail.com</p>
 
-        <div class="center">
-          <p class="arial">
-            Copyright &#169; 2023 Niko Hoffrén<br />Coded with Vite <a href="https://vitejs.dev/" target="_blank"><img src="/vite.svg" className="logos" alt="Vite logo" /></a> & React <a href="https://reactjs.org/" target="_blank"><img src="/react.svg" className="logos" alt="React logo" /></a>. Hosted by Netlify
-          </p>
-        </div>
-      </section>
+      <div class="center">
+        <p class="arial">
+          Copyright &#169; 2023 Niko Hoffrén<br />Coded with Vite <a href="https://vitejs.dev/" target="_blank"><img src="/vite.svg" className="logos" alt="Vite logo" /></a> & React <a href="https://reactjs.org/" target="_blank"><img src="/react.svg" className="logos" alt="React logo" /></a>. Hosted by Netlify
+        </p>
+      </div>
+    </section>
 
     </>
 }
