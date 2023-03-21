@@ -3,6 +3,7 @@ export default function Portfolio() {
 
 <section class="bio">
     <div className="extra-margin-top" />
+    <br />
     <h1>PORTFOLIO</h1>
     <div className="container">
         <div className="bio-info">

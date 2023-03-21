@@ -12,11 +12,11 @@ export default function Footer() {
         <a href="https://www.github.com/nikohoffren" target="{blank}"><i class="fa fa-github"></i></a>
       </div>
 
-      <p class="arial white">nikohoffrenmusic@gmail.com</p>
+      <p class="white">nikohoffrenmusic@gmail.com</p>
 
       <div class="center">
-        <p class="arial">
-          Copyright &#169; 2023 Niko Hoffrén<br />Coded with Vite <a href="https://vitejs.dev/" target="_blank"><img src="/vite.svg" className="logos" alt="Vite logo" /></a> & React <a href="https://reactjs.org/" target="_blank"><img src="/react.svg" className="logos" alt="React logo" /></a>. Hosted by Netlify
+        <p class="arial white">
+          Copyright &#169; 2023 Niko Hoffrén<br />Coded with Vite <a href="https://vitejs.dev/" target="_blank"><img src="/vite.svg" className="logos" alt="Vite logo" /></a> + React <a href="https://reactjs.org/" target="_blank"><img src="/react.svg" className="logos" alt="React logo" /></a>. Hosted by Netlify
         </p>
       </div>
     </section>

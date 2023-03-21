@@ -8,11 +8,10 @@ import { Route, Routes } from "react-router-dom"
 import Footer from "./pages/Footer"
 import './index.css'
 
-
 function App() {
-
   return (
     <>
+
       <Navbar />
 
         <Routes>
