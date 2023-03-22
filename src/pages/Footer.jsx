@@ -12,7 +12,11 @@ export default function Footer() {
         <a href="https://www.github.com/nikohoffren" target="{blank}"><i class="fa fa-github"></i></a>
       </div>
 
-      <p class="white">nikohoffrenmusic@gmail.com</p>
+      <p class="white">
+        Personal email: niko.hoffren@gmail.com
+        <br />
+        Music email: nikohoffrenmusic@gmail.com
+      </p>
 
       <div class="center">
         <p class="arial white">
