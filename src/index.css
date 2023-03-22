@@ -26,6 +26,7 @@
   padding: 0;
   font-family: var(--ff-primary);
   color: var(--theme-text);
+  transition: 1s;
 }
 
 html, body {
@@ -36,10 +37,10 @@ html, body {
   background-color: var(--theme-background);
   color: var(--theme-text);
   /* background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url(HHwallpaper.jpg); */
-  background-position: center;
+  /* background-position: center;
   background-attachment: fixed;
   position: relative;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .dark-theme {
@@ -120,7 +121,7 @@ hr {
 }
 
 .extra-margin-top {
-  margin-top: 6rem;
+  margin-top: 7rem;
 }
 
 .header {
@@ -666,23 +667,20 @@ h3 {
   height: 100%;
   position: relative;
   margin-bottom: 5rem;
-  transition: 1s;
 }
 
 .header2-info {
   margin-top: 8%;
   margin-left: 15%;
-  transition: 1s;
 }
+
 .header2-info h1 {
   font-size: 70px;
   color: black;
-  transition: 1s;
 }
 
 .header2-info p {
   color: black;
-  transition: 1s;
 }
 
 .header2-img-box {
@@ -717,6 +715,9 @@ h3 {
     width: 150px;
     height: 150px;
   }
+  .header2-hero {
+    padding-top: 2rem;
+  }
 }
 @media (max-width: 700px) {
   .header2-img-box img {
@@ -727,15 +728,15 @@ h3 {
   }
   .header2-hero {
     position: inherit;
+    padding-top: 4rem;
   }
-
   .header2-info {
     position: inherit;
   }
   .header2-info h1 {
+    font-size: 2em;
     position: inherit;
   }
-
   .header2-info p {
     position: inherit;
   }
@@ -744,27 +745,10 @@ h3 {
 .header2-img-box:hover .back-img {
   bottom: 40px;
   scale: 1.1;
-  transition: 1s;
 }
 .header2-img-box:hover .front-img{
   left: 54%;
   scale: 1.1;
-  transition: 1s;
-}
-.header2-info:hover {
-  font-size: 1.2rem;
-  transition: 1s;
-  color: black;
-}
-.header2-info h1:hover {
-  font-size: 5rem;
-  transition: 1s;
-  color: black;
-}
-.header2-info p:hover {
-  font-size: 1.4rem;
-  transition: 1s;
-  color: black;
 }
 
 .bold {
@@ -783,7 +767,7 @@ h3 {
   transition: 1s;
 }
 
-a:hover {
+.hero-button > a:hover {
   color: rgb(60, 0, 255);
   transition: 1s;
 }
