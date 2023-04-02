@@ -1,3 +1,3 @@
 # nikohoffren-homepage
 
-This is my personal homepage made with Vite and React. 
+This is my personal homepage made with Vite + React & + JavaScript. 
