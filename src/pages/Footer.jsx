@@ -13,9 +13,9 @@ export default function Footer() {
       </div>
 
       <p class="white">
-        Personal email: niko.hoffren@gmail.com
+        Personal: niko.hoffren@gmail.com
         <br />
-        Music email: nikohoffrenmusic@gmail.com
+        Music: nikohoffrenmusic@gmail.com
       </p>
 
       <div class="center">

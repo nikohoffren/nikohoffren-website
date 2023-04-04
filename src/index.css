@@ -675,7 +675,8 @@ h3 {
 }
 
 .header2-info h1 {
-  font-size: 70px;
+  padding-top: 30px;
+  font-size: 4rem;
   color: black;
 }
 
@@ -734,7 +735,7 @@ h3 {
     position: inherit;
   }
   .header2-info h1 {
-    font-size: 2em;
+    font-size: 3em;
     position: inherit;
   }
   .header2-info p {
