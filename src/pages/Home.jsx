@@ -8,8 +8,8 @@ export default function Home() {
             <div className="bio-info">
                 <div className="header2-hero">
                     <div className="header2-info">
-                        <h1><Typing cursorClassName="red-text" speed={200} text={['I\'m Niko Hoffrén']} /></h1>
-                        <h2><Typing cursorClassName="red-text" speed={200} text={['Web developer & music producer']} /></h2>
+                        <h1><Typing cursorClassName="red-text" speed={120} text={['I\'m Niko Hoffrén']} /></h1>
+                        <h2><Typing cursorClassName="red-text" speed={120} text={['Software developer student & music producer']} /></h2>
                         <br />
                         {/* <p class="bold">Welcome to my website! Here you can find my personal<br /> Portfolio and other info</p> */}
                     </div>

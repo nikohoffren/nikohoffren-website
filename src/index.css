@@ -580,6 +580,15 @@ h3 {
   text-decoration: none;
 }
 
+.portfolio-col-link {
+  font-size: 1.2rem;
+  color:hsl(0, 1%, 32%);
+}
+
+.portfolio-col-link:hover {
+  color: red;
+}
+
 .portfolio-col:hover h2{
   color:rgb(255, 72, 72);
 }
@@ -741,15 +750,6 @@ h3 {
   .header2-info p {
     position: inherit;
   }
-}
-
-.header2-img-box:hover .back-img {
-  bottom: 40px;
-  scale: 1.1;
-}
-.header2-img-box:hover .front-img{
-  left: 54%;
-  scale: 1.1;
 }
 
 .bold {

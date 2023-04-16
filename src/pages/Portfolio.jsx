@@ -3,7 +3,7 @@ export default function Portfolio() {
 
 <section class="bio">
     <div className="extra-margin-top" />
-    
+
     <h1>PORTFOLIO</h1>
     <div className="container">
         <div className="bio-info">
@@ -43,9 +43,18 @@ export default function Portfolio() {
 
         <div class="row">
             <div class="portfolio-col">
+                <a href="https://kuopio-public-transport.netlify.app" target="_blank"><img src="vilkku-logo.png" alt="Bottle of delicious honey from Hunajaholistin Hunaja" />
+                <h3>KUOPIO PUBLIC TRANSPORT</h3>
+                <p>Website for all the Kuopio/Siilinjärvi region Vilkku busses/bicycles and routes. Made with JavaScript + Netlify functions.</p>
+                <a href="https://github.com/nikohoffren/kuopio-public-transport" target="_blank" className="portfolio-col-link">Github source code</a>
+                <p class="arial">kuopio-public-transport.netlify.app<br />2023</p></a>
+            </div>
+
+            <div class="portfolio-col">
                 <a href="https://www.hunajaholisti.fi" target="_blank"><img src="HHlahja.jpg" alt="Bottle of delicious honey from Hunajaholistin Hunaja" />
                 <h3>HUNAJAHOLISTIN HUNAJA</h3>
-                <p>This is a Finnish commercial website for selling honey-products. I made the site mainly with Vite/React/JavaScript.</p>
+                <p>This is a Finnish commercial website for selling honey-products. Made with React + JavaScript.</p>
+                <a href="https://github.com/nikohoffren/hunajaholisti-homepage" target="_blank" className="portfolio-col-link">Github source code</a>
                 <p class="arial">hunajaholisti.fi<br />2021 - present</p></a>
             </div>
         </div>
