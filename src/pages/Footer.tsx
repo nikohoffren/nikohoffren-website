@@ -24,7 +24,7 @@ export default function Footer() {
 
       <div className="center">
         <p className="arial white">
-            {language === "en" ? "Copyright © 2023 Niko Hoffrén" : "Tekijänoikeus © 2023 Niko Hoffrén"}
+            {language === "en" ? "Copyright © 2020-2023 Niko Hoffrén" : "Tekijänoikeus © 2020-2023 Niko Hoffrén"}
             <br />
             {language === "en" ? "Coded with React " : "React "}
             <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
