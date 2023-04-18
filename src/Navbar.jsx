@@ -1,7 +1,10 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import LanguageSelector from "./LanguageSelector"
+import { LanguageContext } from "./LanguageContext"
 
 export default function Navbar() {
+    const { language, setLanguage } = useContext(LanguageContext)
     const [isOpen, setIsOpen] = useState(false)
     const toggleSideNav = () => {
         setIsOpen(!isOpen)
@@ -10,16 +13,27 @@ export default function Navbar() {
     return <>
         <nav className="nav">
             <div className={`${!isOpen ? 'nav-links' : 'nav-links-2'}`}>
-                <i class="fa fa-times" onClick={toggleSideNav}></i>
+                <i className="fa fa-times" onClick={toggleSideNav}></i>
                 <ul>
-                    <Link to="/" className="site-title" onClick={toggleSideNav}><img src="NHlogoTransparent.png" alt=""></img></Link>
-                    <CustomLink to="/music" onClick={toggleSideNav}>MUSIC</CustomLink>
-                    <CustomLink to="/videos" onClick={toggleSideNav}>VIDEOS</CustomLink>
-                    <CustomLink to="/gear" onClick={toggleSideNav}>GEAR</CustomLink>
-                    <CustomLink to="/portfolio" onClick={toggleSideNav}>PORTFOLIO</CustomLink>
+                    <CustomLink to="/" className="site-title" onClick={toggleSideNav}><img src="NHlogoTransparent.png" alt=""></img></CustomLink>
+                    <li onClick={toggleSideNav}>
+                        <CustomLink to="/music">{language === "en" ? "MUSIC" : "MUSIIKKI"}</CustomLink>
+                    </li>
+                    <li onClick={toggleSideNav}>
+                        <CustomLink to="/videos">{language === "en" ? "VIDEOS" : "VIDEOT"}</CustomLink>
+                    </li>
+                    <li onClick={toggleSideNav}>
+                        <CustomLink to="/gear">{language === "en" ? "GEAR" : "SOITTIMET"}</CustomLink>
+                    </li>
+                    <li onClick={toggleSideNav}>
+                        <CustomLink to="/portfolio">PORTFOLIO</CustomLink>
+                    </li>
+                    <li>
+                        <LanguageSelector setLanguage={setLanguage} />
+                    </li>
                 </ul>
             </div>
-                <i class="fa fa-bars right" onClick={toggleSideNav}></i>
+                <i className="fa fa-bars right" onClick={toggleSideNav}></i>
         </nav>
     </>
 }
@@ -29,10 +43,6 @@ function CustomLink({ to, children, ...props }) {
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
     return (
-        <li className={isActive ? "active" : ""}>
-            <Link to={to} {...props}>
-                {children}
-            </Link>
-        </li>
+        <Link to={to} className={isActive ? "active" : ""} {...props}>{children}</Link>
     )
 }

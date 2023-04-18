@@ -115,7 +115,7 @@ hr {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logos {
+  a:nth-of-type(1) .logos {
     animation: logos-spin infinite 20s linear;
   }
 }
@@ -423,6 +423,10 @@ p {
   border-radius: 5%;
 }
 
+.music-col a {
+  text-decoration: none;
+}
+
 h3 {
   color: var(--theme-text);
   text-align: center;
@@ -436,12 +440,12 @@ h3 {
   font-weight: 600;
 }
 
-.music h2{
+.music h4{
   color:rgb(82, 0, 121);
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 600;
 }
-.music-col:hover h2{
+.music-col:hover h4{
   color:rgb(255, 72, 72);
 }
 
@@ -772,3 +776,20 @@ h3 {
   color: rgb(60, 0, 255);
   transition: 1s;
 }
+
+.language-selector {
+  position: relative;
+  top: 0.1em;
+  margin-left: 0.9rem;
+}
+
+.language-flag {
+  height: 1.2rem;
+  width: 1.7rem;
+  border-radius: 1%;
+  margin: 0;
+}
+.language-flag:hover {
+  cursor: pointer;
+}
+

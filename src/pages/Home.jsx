@@ -1,15 +1,18 @@
+import React, { useContext } from "react";
+import { LanguageContext } from "/src/LanguageContext";
 import Typing from 'react-typing-effect';
 
 export default function Home() {
+    const { language } = useContext(LanguageContext)
     return <>
     <div className="container"></div>
         {/* <img src="NHlogo.jpg" alt="Niko Hoffrén logo" className="NHlogo" /> */}
-        <section class="home">
+        <section>
             <div className="bio-info">
                 <div className="header2-hero">
                     <div className="header2-info">
-                        <h1><Typing cursorClassName="red-text" speed={120} text={['I\'m Niko Hoffrén']} /></h1>
-                        <h2><Typing cursorClassName="red-text" speed={120} text={['Software developer student & music producer']} /></h2>
+                        <h1><Typing cursorClassName="red-text" speed={120} text={[language === "en" ? "I'm Niko Hoffrén" : "Olen Niko Hoffrén"]} /></h1>
+                        <h2><Typing cursorClassName="red-text" speed={120} text={[language === "en" ? "Software developer student & music producer" : "Ohjelmistokehitysopiskelija ja musiikintuottaja"]} /></h2>
                         <br />
                         {/* <p class="bold">Welcome to my website! Here you can find my personal<br /> Portfolio and other info</p> */}
                     </div>

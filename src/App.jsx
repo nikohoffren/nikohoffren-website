@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import Navbar from "./Navbar"
 import Home from "./pages/Home"
 import Music from "./pages/Music"
@@ -7,23 +8,24 @@ import Portfolio from "./pages/Portfolio"
 import { Route, Routes } from "react-router-dom"
 import Footer from "./pages/Footer"
 import './index.css'
+import { LanguageContext } from './LanguageContext'
 
 function App() {
+  const [language, setLanguage] = useState('en')
+
   return (
     <>
-
-      <Navbar />
-
+      <LanguageContext.Provider value={{ language, setLanguage }}>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/music" element={<Music />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/gear" element={<Gear />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          {/* <Route path="/programming" element={<Programming />} /> */}
         </Routes>
-
-      <Footer />
+        <Footer />
+      </LanguageContext.Provider>
     </>
   )
 }
