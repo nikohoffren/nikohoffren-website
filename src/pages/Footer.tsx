@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "/src/LanguageContext";
+import { LanguageContext } from "src/LanguageContext";
 
 export default function Footer() {
   const { language } = useContext(LanguageContext)
@@ -26,12 +26,13 @@ export default function Footer() {
         <p className="arial white">
             {language === "en" ? "Copyright © 2023 Niko Hoffrén" : "Tekijänoikeus © 2023 Niko Hoffrén"}
             <br />
-            {language === "en" ? "Coded with React.js " : "React.js "}
+            {language === "en" ? "Coded with React " : "React "}
             <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
                 <img src="/react.svg" className="logos" alt="React logo" />
             </a> + Vite<a href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer">
                 <img src="/vite.svg" className="logos" alt="Vite logo" />
             </a>
+             + TypeScript
             {language === "en" ? ". Hosted by Netlify" : " + Netlify"}
         </p>
   </div>

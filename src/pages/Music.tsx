@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "/src/LanguageContext";
+import { LanguageContext } from "src/LanguageContext";
 
 export default function Music() {
     const { language } = useContext(LanguageContext)
@@ -9,9 +9,9 @@ export default function Music() {
     <div className="extra-margin-top" />
     <h1>{language === "en" ? "MUSIC" : "MUSIIKKI"}</h1>
 
-    <div class="row">
-        <div class="music-col">
-            <a href="https://www.beatport.com/release/mystery-adoel-smidt-remix/3588760" target="_blank"><img src="ASMysteryimage.jpg" class="skeleton" alt=""></img></a>
+    <div className="row">
+        <div className="music-col">
+            <a href="https://www.beatport.com/release/mystery-adoel-smidt-remix/3588760" target="_blank"><img src="ASMysteryimage.jpg" className="skeleton" alt=""></img></a>
             <h3>MYSTERY feat. Maya<br />(Adoel Smidt Remix)</h3>
             <p>Yeiskomp Records, 2022</p>
             <a href="https://www.beatport.com/release/mystery-adoel-smidt-remix/3588760" target="_blank">

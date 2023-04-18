@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "/src/LanguageContext";
+import { LanguageContext } from "src/LanguageContext";
 
 export default function Bio() {
     const { language } = useContext(LanguageContext)

@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "/src/LanguageContext";
+import { LanguageContext } from "src/LanguageContext";
 
 export default function Portfolio() {
-    const { language } = useContext(LanguageContext)
-    return <>
+  const { language } = useContext(LanguageContext) as {
+    language: string;
+    setLanguage: (language: string) => void;
+  };
+  return <>
 
 <section className="bio">
     <div className="extra-margin-top" />
