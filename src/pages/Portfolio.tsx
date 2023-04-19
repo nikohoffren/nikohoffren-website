@@ -23,8 +23,8 @@ export default function Portfolio() {
                 ? "In 2020 i started programming as a hobby with Java and my knowledge of languages and different frameworks has grown since over the years."
                 : "Aloitin ohjelmoinnin harrastuksena vuonna 2020 Javalla ja tietoni ohjelmointikielistä kuten myös erilaisista kehitysalustoista ja rajapinnoista on kasvanut vuosien aikana."}</p>
             <p>{language === "en"
-                ? "You can find more info from the Web development section."
-                : "Lisätietoja löydät Web-kehitys -osiosta."}</p>
+                ? "The page you are reading right now is made with React, Vite and TypeScript. You can find more info about my other projects from the Web development section."
+                : "Sivu jota luet tällä hetkellä on tehty Reactin, Viten sekä TypeScriptin avulla. Lisätietoja muista projekteistani löydät Web-kehitys -osiosta."}</p>
             <p>{language === "en"
                 ? "I'm currently studying Software development in "
                 : "Opiskelen tällä hetkellä ohjelmistokehitystä "} <a href="https://sakky.fi/fi" target="_blank" className="red-text">{language === "en"
@@ -48,10 +48,10 @@ export default function Portfolio() {
             <ul>
                 <li>JavaScript</li>
                 <li>TypeScript</li>
+                <li>React</li>
                 <li>PHP</li>
                 <li>SQL</li>
                 <li>Java</li>
-                <li>React.js</li>
                 <li>Dart (Flutter)</li>
                 <li>Ruby (on Rails)</li>
             </ul>
@@ -69,7 +69,7 @@ export default function Portfolio() {
             <div className="portfolio-col">
                 <a href="https://www.hunajaholisti.fi" target="_blank"><img src="HHlahja.jpg" alt="Bottle of delicious honey from Hunajaholistin Hunaja" />
                 <h3>{language === "en" ? "HONEYHOLIC'S HONEY" : "HUNAJAHOLISTIN HUNAJA"}</h3>
-                <p>{language === "en" ? "This is a Finnish commercial website for selling honey-products. Made with React.js + JavaScript." : "Suomalainen hunajanmyyntisivusto. Työkalut: React.js + JavaScript."}</p>
+                <p>{language === "en" ? "This is a Finnish commercial website for selling honey-products. Made with React, Vite and TypeScript." : "Suomalainen hunajanmyyntisivusto. Työkalut: React, Vite ja TypeScript."}</p>
                 <a href="https://github.com/nikohoffren/hunajaholisti-homepage" target="_blank" className="portfolio-col-link">{language === "en" ? "Github source code" : "Github lähdekoodi"}</a>
                 <p className="arial">hunajaholisti.fi<br />{language === "en" ? "2021 - present" : "2021 - nykyhetki"}</p></a>
             </div>
