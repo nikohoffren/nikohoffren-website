@@ -57,6 +57,16 @@ html, body {
   color: white;
 }
 
+.cv-download-button {
+  color:rgb(0, 32, 211);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.cv-download-button:hover {
+  color: rgb(233, 2, 2);
+}
+
 hr {
   height: 0.5px;
   background-color: white;

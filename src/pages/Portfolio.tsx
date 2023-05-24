@@ -4,8 +4,10 @@ import { LanguageContext } from "src/LanguageContext";
 export default function Portfolio() {
   const { language } = useContext(LanguageContext) as {
     language: string;
-    setLanguage: (language: string) => void;
-  };
+    setLanguage: (language: string) => void
+  }
+  const cvUrl = "/nikohoffren-cv.pdf"
+  
   return <>
 
 <section className="bio">
@@ -42,6 +44,7 @@ export default function Portfolio() {
         <h3>{language === "en" ? "WEB DEVELOPMENT" : "WEB-KEHITYS"}</h3>
         <p>{language === "en" ? "Find all of my projects on " : "Löydät kaikki projektini "} <a href="https://www.github.com/nikohoffren" className="red-text" target="_blank">{language === "en" ? "Github" : "Githubista"}</a>.</p>
         <p>{language === "en" ? "Be sure to also check out my " : "Tutustu myös "} <a href="https://www.freecodecamp.org/nikohoffren" className="red-text" target="_blank">freeCodeCamp</a> {language === "en" ? "account." : "tiliini."}</p>
+        <p>{language === "en" ? "Download my CV from " : "Lataa CV:ni "} <a href={cvUrl} download className="red-text" target="_blank">{language === "en" ? 'here' : 'täältä'}</a>.</p>
 
         <p>{language === "en" ? "Languages/Frameworks:" : "Ohjelmointikielet ja rajapinnat:"}</p>
         <p>
