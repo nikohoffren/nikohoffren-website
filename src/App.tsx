@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import Navbar from "./Navbar";
 import Home from "./pages/Home";
 import Music from "./pages/Music";
@@ -13,9 +13,11 @@ import { LanguageContext } from "./LanguageContext";
 function App() {
     const [language, setLanguage] = useState("en");
 
+    const value = useMemo(() => ({ language, setLanguage }), [language, setLanguage]);
+
     return (
         <>
-            <LanguageContext.Provider value={{ language, setLanguage }}>
+            <LanguageContext.Provider value={value}>
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
