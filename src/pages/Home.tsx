@@ -31,8 +31,8 @@ export default function Home() {
                                     speed={120}
                                     text={[
                                         language === "en"
-                                            ? "Software developer student & music producer"
-                                            : "Ohjelmistokehitysopiskelija ja musiikintuottaja",
+                                            ? "Software developer & music producer"
+                                            : "Ohjelmistokehittäjä ja musiikintuottaja",
                                     ]}
                                 />
                             </h2>

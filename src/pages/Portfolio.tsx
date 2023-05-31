@@ -53,7 +53,7 @@ export default function Portfolio() {
                             </a>
                             {language === "en"
                                 ? " at Kuopio, Finland and hope to graduate in 2024."
-                                : " Kuopiossa, ja toivon valmistuvani vuonna 2024."}
+                                : " Kuopiossa, josta tulen valmistumaan keväällä 2024."}
                         </p>
                     </div>
                 </div>
@@ -127,7 +127,7 @@ export default function Portfolio() {
                     <div className="row">
                         <div className="portfolio-col">
                             <a
-                                href="https://kuopio-public-transport.netlify.app"
+                                href="https://kuopionjulkinenliikenne.live"
                                 target="_blank"
                             >
                                 <img src="vilkku-logo.png" alt="Vilkku logo" />
@@ -151,7 +151,7 @@ export default function Portfolio() {
                                         : "Github lähdekoodi"}
                                 </a>
                                 <p className="arial">
-                                    kuopio-public-transport.netlify.app
+                                    kuopionjulkinenliikenne.live
                                     <br />
                                     2023
                                 </p>
