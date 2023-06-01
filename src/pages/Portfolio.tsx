@@ -18,7 +18,6 @@ export default function Portfolio() {
                     <div className="bio-info">
                         <img
                             src="NHphoto2.jpg"
-                            width="100%"
                             id="NHphoto"
                             alt="Picture of very handsome Niko Hoffrén"
                         />
@@ -37,6 +36,11 @@ export default function Portfolio() {
                             {language === "en"
                                 ? "The page you are reading right now is made with React, Vite and TypeScript. You can find more info about my other projects from the Web development section."
                                 : "Sivu jota luet tällä hetkellä on tehty Reactin, Viten sekä TypeScriptin avulla. Lisätietoja muista projekteistani löydät Web-kehitys -osiosta."}
+                        </p>
+                        <p>
+                            {language === "en"
+                                ? "I have work experience in areas like being a business sales consultant, from the logistics industry and earlier education from the field of Business Administration in Customer service and Marketing."
+                                : "Minulla on työkokemusta mm. yritysmyyntineuvottelijana olemisesta, logistiikka-alalta sekä aiempana koulutuksena Liiketalouden perustutkinto Asiakaspalvelu- ja markkinointi linjalta."}
                         </p>
                         <p>
                             {language === "en"
@@ -269,12 +273,12 @@ export default function Portfolio() {
 
                 <div className="container">
                     <h3>
-                        {language === "en" ? "WORKING HISTORY" : "TYÖHISTORIA"}
+                        {language === "en" ? "WORKING HISTORY/EDUCATION" : "TYÖHISTORIA/KOULUTUS"}
                     </h3>
                     <p>
                         {language === "en"
-                            ? "You can find my complete working history in my"
-                            : "Löydät koko työhistoriani"}{" "}
+                            ? "You can find my complete working history and education info in my"
+                            : "Löydät koko työhistoriani sekä tietoa koulutuksestani"}{" "}
                         <a
                             href="https://www.linkedin.com/in/nikohoffren/details/experience/"
                             target="_blank"

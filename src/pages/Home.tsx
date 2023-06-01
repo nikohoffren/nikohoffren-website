@@ -17,7 +17,7 @@ export default function Home() {
                             <h1>
                                 <Typing
                                     cursorClassName="red-text"
-                                    speed={120}
+                                    speed={80}
                                     text={[
                                         language === "en"
                                             ? "I'm Niko Hoffrén"
@@ -28,7 +28,7 @@ export default function Home() {
                             <h2>
                                 <Typing
                                     cursorClassName="red-text"
-                                    speed={120}
+                                    speed={80}
                                     text={[
                                         language === "en"
                                             ? "Software developer & music producer"

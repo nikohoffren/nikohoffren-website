@@ -351,11 +351,11 @@ nav .fa {
     border-radius: 10px;
     text-align: left;
     padding: 4rem;
-    margin: 0.7rem;
+    margin: 0.5rem;
     color: var(--theme-text);
 }
 #NHphoto {
-    width: 30%;
+    width: 22%;
     border-radius: 10px;
     float: left;
     margin: 20px;
@@ -699,7 +699,14 @@ h3 {
 
 .header2-info h1 {
     padding-top: 30px;
-    font-size: 4rem;
+    font-size: 5rem;
+    color: black;
+}
+
+.header2-info h2 {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    font-size: 2rem;
     color: black;
 }
 
@@ -711,7 +718,7 @@ h3 {
     width: 40%;
     height: 100%;
     right: 100px;
-    top: 220px;
+    top: 11rem;
     position: absolute;
 }
 
