@@ -718,20 +718,20 @@ h3 {
     width: 40%;
     height: 100%;
     right: 100px;
-    top: 11rem;
+    top: 14rem;
     position: absolute;
 }
 
 .header2-img-box img {
     width: 450px;
-    height: 450px;
-    left: 50%;
+    height: 650px;
+    left: 45%;
     position: absolute;
     bottom: 0;
     transform: translateX(-50%);
     transition: bottom 1s, left 1s;
     transition: 1s;
-    border-radius: 5%;
+    border-radius: 10%;
 }
 @media (max-width: 1200px) {
     .header2-img-box {
@@ -743,8 +743,8 @@ h3 {
         top: 150px;
     }
     .header2-img-box img {
-        width: 150px;
-        height: 150px;
+        width: 250px;
+        height: 350px;
     }
     .header2-hero {
         padding-top: 2rem;
@@ -765,7 +765,7 @@ h3 {
         position: inherit;
     }
     .header2-info h1 {
-        font-size: 3em;
+        font-size: 2.7em;
         position: inherit;
     }
     .header2-info p {

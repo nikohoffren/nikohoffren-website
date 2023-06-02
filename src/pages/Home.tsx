@@ -15,20 +15,15 @@ export default function Home() {
                     <div className="header2-hero">
                         <div className="header2-info">
                             <h1>
-                                <Typing
-                                    cursorClassName="red-text"
-                                    speed={80}
-                                    text={[
-                                        language === "en"
-                                            ? "I'm Niko Hoffrén"
-                                            : "Olen Niko Hoffrén",
-                                    ]}
-                                />
+                                {language === "en"
+                                    ? "I'm Niko Hoffrén"
+                                    : "Olen Niko Hoffrén"}
                             </h1>
                             <h2>
                                 <Typing
                                     cursorClassName="red-text"
-                                    speed={80}
+                                    speed={30}
+                                    eraseSpeed={30}
                                     text={[
                                         language === "en"
                                             ? "Software developer & music producer"
@@ -56,7 +51,7 @@ export default function Home() {
                         <div className="header2-img-box">
                             {/* <img src="react.svg" alt="Niko Hoffrén" className="back-img" /> */}
                             <img
-                                src="NHphoto2.jpg"
+                                src="NH-photo3.JPG.png"
                                 alt="Niko Hoffrén"
                                 className="front-img"
                             />

@@ -24,8 +24,8 @@ export default function Portfolio() {
                         <br />
                         <p>
                             {language === "en"
-                                ? "I'm Niko Hoffrén, music producer and programmer born in Kuopio, Finland in 1986. In my spare time i like to spend time with my son, play video games and code something interesting."
-                                : "Olen Niko Hoffrén, musiikkituottaja ja ohjelmistokehityksen opiskelija, syntynyt Kuopiossa vuonna 1986. Vapaa-aikanani tykkään viettää aikaa poikani kanssa, pelata videopelejä sekä koodata jotain mielenkiintoista."}
+                                ? "Hi! I'm Niko Hoffrén, programmer and music producer from Kuopio, Finland. In my spare time i like to spend time with my son, play video games and code something interesting."
+                                : "Hei! Olen Niko Hoffrén, ohjelmistokehittäjä ja musiikintuottaja Kuopiosta. Vapaa-aikanani tykkään viettää aikaa poikani kanssa, pelata videopelejä sekä koodata jotain mielenkiintoista."}
                         </p>
                         <p>
                             {language === "en"
@@ -40,7 +40,7 @@ export default function Portfolio() {
                         <p>
                             {language === "en"
                                 ? "I have work experience in areas like being a business sales consultant, from the logistics industry and earlier education from the field of Business Administration in Customer service and Marketing."
-                                : "Minulla on työkokemusta mm. yritysmyyntineuvottelijana olemisesta, logistiikka-alalta sekä aiempana koulutuksena Liiketalouden perustutkinto Asiakaspalvelu- ja markkinointi linjalta."}
+                                : "Minulla on työkokemusta mm. yritysmyyntineuvottelijana olemisesta, logistiikka-alalta sekä aiempana koulutuksena Liiketalouden perustutkinto asiakaspalvelu- ja markkinointi linjalta."}
                         </p>
                         <p>
                             {language === "en"
