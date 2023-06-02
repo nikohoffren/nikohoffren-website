@@ -172,10 +172,11 @@ hr {
 .footer {
     width: 100%;
     text-align: center;
-    padding: 10px 0;
     background-color: rgb(15, 15, 15);
-    position: inherit;
-    top: -0.5rem;
+    top: 7rem;
+    position: relative;
+    padding: 0;
+    margin: 0;
 }
 .footer h3 {
     font-size: 35px;
@@ -339,7 +340,7 @@ nav .fa {
 /*------ Portfolio ------*/
 
 .bio {
-    width: 80%;
+    width: 55%;
     margin: auto;
     text-align: center;
     padding-top: var(--fz-accent-2);
@@ -540,7 +541,7 @@ h3 {
 /*------ Gear ------*/
 
 .gear {
-    width: 80%;
+    width: 60%;
     margin: auto;
     text-align: center;
     padding-top: 10px;
@@ -693,7 +694,7 @@ h3 {
 }
 
 .header2-info {
-    margin-top: 8%;
+    margin-top: 9%;
     margin-left: 15%;
 }
 
@@ -718,20 +719,19 @@ h3 {
     width: 40%;
     height: 100%;
     right: 100px;
-    top: 14rem;
+    top: 22rem;
     position: absolute;
 }
 
 .header2-img-box img {
-    width: 450px;
-    height: 650px;
+    width: 560px;
+    height: 810px;
     left: 45%;
     position: absolute;
     bottom: 0;
     transform: translateX(-50%);
     transition: bottom 1s, left 1s;
     transition: 1s;
-    border-radius: 10%;
 }
 @media (max-width: 1200px) {
     .header2-img-box {
