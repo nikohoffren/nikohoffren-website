@@ -11,10 +11,22 @@ export default function Videos() {
 
                 <div className="videos-row">
                     <div className="videos-col skeleton">
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/mA1mjCzKDKU"
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                    </div>
+
+                    <div className="videos-col skeleton">
                         <iframe
                             width="560"
                             height="315"
-                            src="https://www.youtube.com/embed/5AoYrQBycUc"
+                            src="https://www.youtube.com/embed/h81OYCLoXIY"
                             title="YouTube video player"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -26,19 +38,7 @@ export default function Videos() {
                         <iframe
                             width="560"
                             height="315"
-                            src="https://www.youtube.com/embed/LaHqCFDHgZk"
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-
-                    <div className="videos-col skeleton">
-                        <iframe
-                            width="560"
-                            height="315"
-                            src="https://www.youtube.com/embed/WqVq4LfJoh4"
+                            src="https://www.youtube.com/embed/Nkt2_k8jz28"
                             title="YouTube video player"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
