@@ -719,13 +719,13 @@ h3 {
     width: 40%;
     height: 100%;
     right: 100px;
-    top: 22rem;
+    top: 25rem;
     position: absolute;
 }
 
 .header2-img-box img {
-    width: 560px;
-    height: 810px;
+    width: 600px;
+    height: 850px;
     left: 45%;
     position: absolute;
     bottom: 0;
@@ -733,6 +733,16 @@ h3 {
     transition: bottom 1s, left 1s;
     transition: 1s;
 }
+
+@media (max-width: 1600px) {
+    .header2-img-box img {
+        width: 530px;
+        height: 780px;
+        left: 60%;
+    }
+}
+
+
 @media (max-width: 1200px) {
     .header2-img-box {
         display: flex;
