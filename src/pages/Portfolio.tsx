@@ -29,8 +29,8 @@ export default function Portfolio() {
                         </p>
                         <p>
                             {language === "en"
-                                ? "In 2020 i started programming as a hobby with Java and my knowledge of languages and different frameworks has grown since over the years."
-                                : "Aloitin ohjelmoinnin harrastuksena vuonna 2020 Javalla ja tietoni ohjelmointikielistä kuten myös erilaisista kehitysalustoista ja rajapinnoista on kasvanut vuosien aikana."}
+                                ? "My first programming language was Java, after which I delved into the world of HTML, CSS, and JavaScript. My knowledge of programming languages, as well as various development platforms and APIs, has grown over the years."
+                                : "Ensimmäinen ohjelmointikieleni oli Java, jonka jälkeen siirryin HTML:n, CSS:n sekä JavaScriptin maailmaan. Tietoni ohjelmointikielistä kuten myös erilaisista kehitysalustoista ja rajapinnoista on kasvanut vuosien aikana."}
                         </p>
                         <p>
                             {language === "en"
@@ -40,7 +40,7 @@ export default function Portfolio() {
                         <p>
                             {language === "en"
                                 ? "I have work experience in areas like being a business sales consultant, from the logistics industry and earlier education from the field of Business Administration in Customer service and Marketing."
-                                : "Minulla on työkokemusta mm. yritysmyyntineuvottelijana olemisesta, logistiikka-alalta sekä aiempana koulutuksena Liiketalouden perustutkinto asiakaspalvelu- ja markkinointi linjalta."}
+                                : "Minulla on työkokemusta mm. yritysmyyntineuvottelijana olemisesta, logistiikka-alalta sekä aiempana koulutuksena Liiketalouden perustutkinto asiakaspalvelu ja markkinointi linjalta."}
                         </p>
                         <p>
                             {language === "en"
@@ -112,8 +112,8 @@ export default function Portfolio() {
 
                     <p>
                         {language === "en"
-                            ? "Languages/Frameworks:"
-                            : "Ohjelmointikielet ja rajapinnat:"}
+                            ? "PROGRAMMING LANGUAGES AND FRAMEWORKS:"
+                            : "OHJELMOINTIKIELET JA RAJAPINNAT:"}
                     </p>
                     <p>
                         <ul>
@@ -121,10 +121,29 @@ export default function Portfolio() {
                             <li>TypeScript</li>
                             <li>React</li>
                             <li>PHP</li>
-                            <li>SQL</li>
+                            <li>SQL (MySQL)</li>
                             <li>Java</li>
                             <li>Dart (Flutter)</li>
                             <li>Ruby (on Rails)</li>
+                        </ul>
+                    </p>
+                    <p>
+                        {language === "en"
+                            ? "LINKEDIN SKILLS ASSESSMENT BADGES:"
+                            : "LINKEDIN OSAAMISEN ARVIOINTIMERKIT:"}
+                    </p>
+                    <p>
+                        <ul>
+                            <li>GNU/Linux</li>
+                            <li>Node.js</li>
+                            <li>JavaScript</li>
+                            <li>CSS</li>
+                            <li>React.js</li>
+                            <li>PHP</li>
+                            <li>Ruby on Rails</li>
+                            <li>Object-Oriented Programming (OOP)</li>
+                            <li>Microsoft PowerPoint</li>
+                            <li>Pro Tools</li>
                         </ul>
                     </p>
 
@@ -273,7 +292,9 @@ export default function Portfolio() {
 
                 <div className="container">
                     <h3>
-                        {language === "en" ? "WORKING HISTORY/EDUCATION" : "TYÖHISTORIA/KOULUTUS"}
+                        {language === "en"
+                            ? "WORKING HISTORY/EDUCATION"
+                            : "TYÖHISTORIA/KOULUTUS"}
                     </h3>
                     <p>
                         {language === "en"
