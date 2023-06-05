@@ -142,6 +142,7 @@ export default function Portfolio() {
                             <li>PHP</li>
                             <li>Ruby on Rails</li>
                             <li>Object-Oriented Programming (OOP)</li>
+                            <li>Search Engine Optimization (SEO)</li>
                             <li>Microsoft PowerPoint</li>
                             <li>Pro Tools</li>
                         </ul>
