@@ -340,7 +340,7 @@ nav .fa {
 /*------ Portfolio ------*/
 
 .bio {
-    width: 55%;
+    width: 60%;
     margin: auto;
     text-align: center;
     padding-top: var(--fz-accent-2);
@@ -365,6 +365,9 @@ nav .fa {
 @media (max-width: 750px) {
     #NHphoto {
         width: 50%;
+    }
+    .bio {
+        width: 90%;
     }
 
     .bio-info {
