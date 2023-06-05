@@ -770,41 +770,41 @@ h3 {
     .header2-info p {
         position: inherit;
     }
-    }
+}
 
-    .bold {
+.bold {
     font-weight: bold;
-    }
+}
 
-    .hero-button {
+.hero-button {
     font-size: 1.3rem;
     color: rgb(249, 96, 96);
     text-decoration: none;
     transition: 1s;
-    }
+}
 
-    .hero-button:hover {
+.hero-button:hover {
     box-shadow: 0 0 30px 10px rgba(230, 103, 255, 0.2);
     transition: 1s;
-    }
+}
 
-    .hero-button > a:hover {
+.hero-button > a:hover {
     color: rgb(60, 0, 255);
     transition: 1s;
-    }
+}
 
-    .language-selector {
+.language-selector {
     position: relative;
     top: 0.1em;
     margin-left: 0.9rem;
-    }
+}
 
-    .language-flag {
+.language-flag {
     height: 1.2rem;
     width: 1.7rem;
     border-radius: 1%;
     margin: 0;
-    }
-    .language-flag:hover {
+}
+.language-flag:hover {
     cursor: pointer;
-    }
+}

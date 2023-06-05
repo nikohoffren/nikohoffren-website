@@ -13,7 +13,10 @@ import { LanguageContext } from "./LanguageContext";
 function App() {
     const [language, setLanguage] = useState("en");
 
-    const value = useMemo(() => ({ language, setLanguage }), [language, setLanguage]);
+    const value = useMemo(
+        () => ({ language, setLanguage }),
+        [language, setLanguage]
+    );
 
     return (
         <>
