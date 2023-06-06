@@ -138,9 +138,10 @@ export default function Portfolio() {
                         <div className="container-left-align">
                             <ul>
                                 <li>GNU/Linux</li>
+                                <li>Bash</li>
                                 <li>Node.js</li>
                                 <li>JavaScript</li>
-                                <li>CSS</li>
+                                <li>Cascading Style Sheets (CSS)</li>
                                 <li>React.js</li>
                                 <li>PHP</li>
                                 <li>Ruby on Rails</li>
