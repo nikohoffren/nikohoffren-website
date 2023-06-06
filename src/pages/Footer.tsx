@@ -91,6 +91,17 @@ export default function Footer() {
                         {language === "en"
                             ? ". Hosted by Netlify"
                             : " + Netlify"}
+                        <a
+                            href="https://www.netlify.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="/netlify.png"
+                                className="logos"
+                                alt="Netlify logo"
+                            />
+                        </a>
                     </p>
                 </div>
             </section>

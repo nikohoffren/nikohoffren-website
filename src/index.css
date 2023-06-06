@@ -89,6 +89,10 @@ hr {
     align-items: center;
 }
 
+.container-left-align {
+    text-align: left;
+}
+
 .right {
     position: relative;
     left: 13rem;

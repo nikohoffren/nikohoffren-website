@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "src/LanguageContext";
 
-
 export default function Portfolio() {
     const { language } = useContext(LanguageContext) as {
         language: string;
@@ -117,16 +116,18 @@ export default function Portfolio() {
                             : "OHJELMOINTIKIELET JA RAJAPINNAT:"}
                     </p>
                     <p>
-                        <ul>
-                            <li>JavaScript</li>
-                            <li>TypeScript</li>
-                            <li>React</li>
-                            <li>PHP</li>
-                            <li>SQL (MySQL)</li>
-                            <li>Java</li>
-                            <li>Dart (Flutter)</li>
-                            <li>Ruby (on Rails)</li>
-                        </ul>
+                        <div className="container-left-align">
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>TypeScript</li>
+                                <li>React</li>
+                                <li>PHP</li>
+                                <li>SQL (MySQL)</li>
+                                <li>Java</li>
+                                <li>Dart (Flutter)</li>
+                                <li>Ruby (on Rails)</li>
+                            </ul>
+                        </div>
                     </p>
                     <p>
                         {language === "en"
@@ -134,20 +135,22 @@ export default function Portfolio() {
                             : "LINKEDIN OSAAMISEN ARVIOINTIMERKIT:"}
                     </p>
                     <p>
-                        <ul>
-                            <li>GNU/Linux</li>
-                            <li>Node.js</li>
-                            <li>JavaScript</li>
-                            <li>CSS</li>
-                            <li>React.js</li>
-                            <li>PHP</li>
-                            <li>Ruby on Rails</li>
-                            <li>Object-Oriented Programming (OOP)</li>
-                            <li>Google Cloud Platform (GCP)</li>
-                            <li>Search Engine Optimization (SEO)</li>
-                            <li>Microsoft PowerPoint</li>
-                            <li>Pro Tools</li>
-                        </ul>
+                        <div className="container-left-align">
+                            <ul>
+                                <li>GNU/Linux</li>
+                                <li>Node.js</li>
+                                <li>JavaScript</li>
+                                <li>CSS</li>
+                                <li>React.js</li>
+                                <li>PHP</li>
+                                <li>Ruby on Rails</li>
+                                <li>Object-Oriented Programming (OOP)</li>
+                                <li>Google Cloud Platform (GCP)</li>
+                                <li>Search Engine Optimization (SEO)</li>
+                                <li>Microsoft PowerPoint</li>
+                                <li>Pro Tools</li>
+                            </ul>
+                        </div>
                     </p>
 
                     <div className="row">
