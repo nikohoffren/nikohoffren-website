@@ -357,7 +357,6 @@ nav .fa {
     margin: auto;
     text-align: center;
     padding-top: var(--fz-accent-2);
-
 }
 
 .bio-info {
@@ -366,11 +365,10 @@ nav .fa {
     text-align: left;
     padding: 4rem;
     margin: 0.5rem;
-
 }
 #NHphoto {
-    width: 22%;
-    border-radius: 10px;
+    width: 40%;
+    border-radius: 100%;
     float: left;
     margin: 20px;
 }
@@ -826,3 +824,8 @@ h3 {
 .language-flag:hover {
     cursor: pointer;
 }
+
+.hyphens {
+    hyphens: manual;
+}
+

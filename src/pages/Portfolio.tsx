@@ -15,9 +15,9 @@ export default function Portfolio() {
 
                 <h1>PORTFOLIO</h1>
                 <div className="container">
-                    <div className="bio-info">
+                    <div className="bio-info hyphens">
                         <img
-                            src="NHphoto2.jpg"
+                            src="NHphoto3.png"
                             id="NHphoto"
                             alt="Picture of very handsome Niko Hoffrén"
                         />
