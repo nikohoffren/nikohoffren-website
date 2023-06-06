@@ -91,7 +91,7 @@ export default function Footer() {
                                 alt="Vite logo"
                             />
                         </a>
-                        + TypeScript
+                        + TypeScript JSX
                         {language === "en"
                             ? ". Hosted by Netlify"
                             : " + Netlify"}

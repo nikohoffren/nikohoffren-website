@@ -34,8 +34,8 @@ export default function Portfolio() {
                         </p>
                         <p>
                             {language === "en"
-                                ? "The page you are reading right now is made with React, Vite and TypeScript. You can find more info about my other projects from the Web development section."
-                                : "Sivu jota luet tällä hetkellä on tehty Reactin, Viten sekä TypeScriptin avulla. Lisätietoja muista projekteistani löydät Web-kehitys -osiosta."}
+                                ? "The page you are reading right now is created using Vite and React + TypeScript JSX. You can find more info about my other projects from the Web development section."
+                                : "Sivu jota luet tällä hetkellä on luotu Viten avulla käyttäen Reactia TypeScript JSX:n kera. Lisätietoja muista projekteistani löydät Web-kehitys -osiosta."}
                         </p>
                         <p>
                             {language === "en"
