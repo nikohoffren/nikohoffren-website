@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "src/LanguageContext";
-import Typing from "react-typing-effect";
+import "../dark-theme.css";
+// import Typing from "react-typing-effect";
 
 export default function Home() {
     const { language } = useContext(LanguageContext);
@@ -20,7 +21,7 @@ export default function Home() {
                                     : "Olen Niko Hoffrén"}
                             </h1>
                             <h2>
-                                <Typing
+                                {/* <Typing
                                     cursorClassName="red-text"
                                     speed={30}
                                     eraseSpeed={30}
@@ -29,7 +30,12 @@ export default function Home() {
                                             ? "Software developer & music producer"
                                             : "Ohjelmistokehittäjä ja musiikintuottaja",
                                     ]}
-                                />
+                                /> */}
+                                {[
+                                    language === "en"
+                                        ? "Software developer & music producer"
+                                        : "Ohjelmistokehittäjä ja musiikintuottaja",
+                                ]}
                             </h2>
                             <br />
                             <h4>

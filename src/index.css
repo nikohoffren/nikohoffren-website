@@ -16,8 +16,14 @@
     --fz-primary-1: 1rem;
     --fz-primary-1_2: 1.2rem;
     --fz-accent-2: 2rem;
-    --theme-background: rgb(237, 237, 237);
-    --theme-text: rgb(11, 11, 11);
+
+    /* Light theme */
+    --theme-background-light: rgb(237, 237, 237);
+    --theme-text-light: rgb(11, 11, 11);
+
+    /* Dark theme */
+    --theme-background-dark: #000000;
+    --theme-text-dark: #ffffff;
 }
 
 * {
@@ -25,7 +31,6 @@
     margin: 0;
     padding: 0;
     font-family: var(--ff-primary);
-    color: var(--theme-text);
     transition: 1s;
 }
 
@@ -35,22 +40,26 @@ body {
     scroll-behavior: smooth;
     min-height: 100vh;
     width: 100%;
-    background-color: var(--theme-background);
-    color: var(--theme-text);
-    /* background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url(HHwallpaper.jpg); */
-    /* background-position: center;
-  background-attachment: fixed;
-  position: relative;
-  background-size: cover; */
+    background-color: var(--theme-background-light);
 }
 
-.dark-theme {
-    --theme-background: rgb(16, 15, 15);
-    --theme-text: rgb(237, 237, 237);
+.toggle-theme-button {
+    background-color: #020202;
+    border: none;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.toggle-theme-button img {
+    width: 2rem;
 }
 
 .red-text {
-    color: var(--clr-primary-pink);
+    color: rgb(63, 63, 250);
     text-decoration: none;
 }
 
@@ -84,6 +93,7 @@ hr {
     position: relative;
     left: 13rem;
 }
+
 @media (max-width: 500px) {
     .right {
         left: 7rem;
@@ -93,11 +103,6 @@ hr {
 .smaller-hr {
     width: 20rem;
 }
-
-/* .glowing-image:hover,
-.glowing-image:focus {
-  box-shadow: 0 0 30px 10px rgba(230, 103, 255, 0.5);
-} */
 
 .full-screen-height {
     min-height: 100vh;
@@ -145,18 +150,19 @@ hr {
 .footer-image {
     margin: 10px auto;
     width: 80%;
-    /* background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(GEARimage.JPG); */
     background-position: center;
     background-size: cover;
     border-radius: 15px;
     text-align: center;
     padding: 150px 0;
 }
+
 .footer-image h1 {
     color: whitesmoke;
     margin-bottom: 40px;
     padding: 0;
 }
+
 @media (max-width: 700px) {
     .footer-image h1 {
         font-size: 30px;
@@ -178,6 +184,7 @@ hr {
     padding: 0;
     margin: 0;
 }
+
 .footer h3 {
     font-size: 35px;
     margin-bottom: 0.3rem;
@@ -189,6 +196,7 @@ hr {
     font-family: "Arial", sans-serif;
     font-size: var(--fz-primary-0_8);
 }
+
 .white {
     color: rgb(255, 255, 255);
 }
@@ -212,6 +220,7 @@ nav img {
 }
 
 .nav ul {
+    list-style-type: none;
     display: flex;
     gap: 1rem;
     padding: 5px;
@@ -344,7 +353,7 @@ nav .fa {
     margin: auto;
     text-align: center;
     padding-top: var(--fz-accent-2);
-    color: var(--theme-text);
+
 }
 
 .bio-info {
@@ -353,7 +362,7 @@ nav .fa {
     text-align: left;
     padding: 4rem;
     margin: 0.5rem;
-    color: var(--theme-text);
+
 }
 #NHphoto {
     width: 22%;
@@ -465,7 +474,7 @@ h3 {
 
 .music-col:hover,
 .music-col:focus {
-    box-shadow: 0 0 30px 10px rgba(230, 103, 255, 0.5);
+    box-shadow: 0 0 30px 10px rgba(228, 95, 255, 0.5);
 }
 
 @media (max-width: 700px) {
@@ -587,7 +596,7 @@ h3 {
 
 .portfolio-col-link {
     font-size: 1.2rem;
-    color: hsl(0, 1%, 32%);
+    color: hsl(0, 0%, 29%);
 }
 
 .portfolio-col-link:hover {
@@ -691,18 +700,12 @@ h3 {
 .header2-info h1 {
     padding-top: 30px;
     font-size: 5rem;
-    color: black;
 }
 
 .header2-info h2 {
     padding-top: 1rem;
     padding-bottom: 2rem;
     font-size: 2rem;
-    color: black;
-}
-
-.header2-info p {
-    color: black;
 }
 
 .header2-img-box {
@@ -741,6 +744,10 @@ h3 {
     .header2-hero {
         padding-top: 2rem;
     }
+    .toggle-theme-button {
+        top: 20%;
+        right: 8%;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -772,6 +779,10 @@ h3 {
     }
     .header2-info p {
         position: inherit;
+    }
+    .toggle-theme-button {
+        top: 5.5%;
+        right: 40%;
     }
 }
 

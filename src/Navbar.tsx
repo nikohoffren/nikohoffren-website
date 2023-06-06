@@ -10,7 +10,12 @@ interface CustomLinkProps {
     onClick?: () => void;
 }
 
-export default function Navbar() {
+interface NavbarProps {
+    theme: string;
+    toggleTheme: () => void;
+}
+
+export default function Navbar({ theme, toggleTheme }: NavbarProps) {
     const { language, setLanguage } = useContext(LanguageContext);
     const [isOpen, setIsOpen] = useState(false);
     const toggleSideNav = () => {
@@ -19,7 +24,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="nav">
+            <nav className={`nav ${theme === "dark" ? "dark" : ""}`}>
                 <div className={`${!isOpen ? "nav-links" : "nav-links-2"}`}>
                     <i className="fa fa-times" onClick={toggleSideNav}></i>
                     <ul>
@@ -28,7 +33,7 @@ export default function Navbar() {
                             className="site-title"
                             onClick={toggleSideNav}
                         >
-                            <img src="NHlogoTransparent.png" alt=""></img>
+                            <img src="NHlogoTransparent.png" alt="" />
                         </CustomLink>
                         <li onClick={toggleSideNav}>
                             <CustomLink to="/music">
@@ -51,6 +56,13 @@ export default function Navbar() {
                         <li>
                             <LanguageSelector setLanguage={setLanguage} />
                         </li>
+                        <button onClick={toggleTheme} className="toggle-theme-button">
+                            {theme === "light" ? (
+                                <img src="/sun.png" alt="Sun png image" />
+                            ) : (
+                                <img src="/moon.png" alt="Moon png image" />
+                            )}
+                        </button>
                     </ul>
                 </div>
                 <i className="fa fa-bars right" onClick={toggleSideNav}></i>

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import Navbar from "./Navbar";
 import Home from "./pages/Home";
 import Music from "./pages/Music";
@@ -11,17 +11,26 @@ import "./index.css";
 import { LanguageContext } from "./LanguageContext";
 
 function App() {
+    const [theme, setTheme] = useState("light");
     const [language, setLanguage] = useState("en");
+
+    const toggleTheme = () => {
+        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    };
 
     const value = useMemo(
         () => ({ language, setLanguage }),
         [language, setLanguage]
     );
 
+    useEffect(() => {
+        document.body.classList.toggle("dark", theme === "dark");
+    }, [theme]);
+
     return (
         <>
             <LanguageContext.Provider value={value}>
-                <Navbar />
+                <Navbar theme={theme} toggleTheme={toggleTheme} />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/music" element={<Music />} />

@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { LanguageContext } from "src/LanguageContext";
+import "../dark-theme.css";
 
 interface VideoProps {
     src: string;

@@ -52,13 +52,9 @@ export default function Footer() {
                 </div>
 
                 <p className="white">
-                    {language === "en"
-                        ? "Personal: niko.hoffren@gmail.com"
-                        : "Henkilökohtainen: niko.hoffren@gmail.com"}
+                    niko.hoffren@gmail.com
                     <br />
-                    {language === "en"
-                        ? "Music: nikohoffrenmusic@gmail.com"
-                        : "Musiikki: nikohoffrenmusic@gmail.com"}
+                    nikohoffrenmusic@gmail.com
                 </p>
 
                 <div className="center">

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "src/LanguageContext";
-import ImageWithLoading from "../ImageWithLoading"; // Ensure the path is correct
+import ImageWithLoading from "../ImageWithLoading";
 
 export default function Music() {
     const { language } = useContext(LanguageContext);

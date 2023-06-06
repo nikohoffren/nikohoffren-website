@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "src/LanguageContext";
 
+
 export default function Portfolio() {
     const { language } = useContext(LanguageContext) as {
         language: string;
@@ -156,12 +157,12 @@ export default function Portfolio() {
                                 target="_blank"
                             >
                                 <img src="vilkku-logo.png" alt="Vilkku logo" />
-                                <h3>
+                                <h3 className="red-text">
                                     {language === "en"
                                         ? "KUOPIO PUBLIC TRANSPORT"
                                         : "KUOPION JULKINEN LIIKENNE (KUOPIO PUBLIC TRANSPORT)"}
                                 </h3>
-                                <p>
+                                <p className="red-text">
                                     {language === "en"
                                         ? "Website for all the Kuopio/Siilinjärvi region Vilkku busses, Vilkku bicycles and Biketaxis current locations, stops and routes. Made with JavaScript + Netlify functions."
                                         : "Verkkosivusto josta käyttäjä näkee kaikki Kuopion sekä Siilinjärven alueen Vilkku bussien, Vilkku fillarien sekä Biketaxien sijainnit, pysäkit sekä reitit. Työkalut: JavaScript + Netlify Functions."}
@@ -175,7 +176,7 @@ export default function Portfolio() {
                                         ? "Github source code"
                                         : "Github lähdekoodi"}
                                 </a>
-                                <p className="arial">
+                                <p className="arial red-text">
                                     kuopionjulkinenliikenne.live
                                     <br />
                                     2023
@@ -192,12 +193,12 @@ export default function Portfolio() {
                                     src="HHlahja.jpg"
                                     alt="Bottle of delicious honey from Hunajaholistin Hunaja"
                                 />
-                                <h3>
+                                <h3 className="red-text">
                                     {language === "en"
                                         ? "HONEYHOLIC'S HONEY"
                                         : "HUNAJAHOLISTIN HUNAJA"}
                                 </h3>
-                                <p>
+                                <p className="red-text">
                                     {language === "en"
                                         ? "This is a Finnish commercial website for selling honey-products. Made with React, Vite and TypeScript."
                                         : "Suomalainen hunajanmyyntisivusto. Työkalut: React, Vite ja TypeScript."}
@@ -211,7 +212,7 @@ export default function Portfolio() {
                                         ? "Github source code"
                                         : "Github lähdekoodi"}
                                 </a>
-                                <p className="arial">
+                                <p className="arial red-text">
                                     hunajaholisti.fi
                                     <br />
                                     {language === "en"
