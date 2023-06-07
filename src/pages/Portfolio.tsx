@@ -157,6 +157,37 @@ export default function Portfolio() {
                     <div className="row">
                         <div className="portfolio-col">
                             <a
+                                href="https://github.com/nikohoffren/kiss-css"
+                                target="_blank"
+                            >
+                                <img src="kiss-css-logo.jpg" alt="KISS CSS logo" />
+                                <h3 className="red-text">
+                                    {language === "en"
+                                        ? "KISS CSS Framework"
+                                        : "KISS CSS Kehys"}
+                                </h3>
+                                <p className="red-text">
+                                    {language === "en"
+                                        ? "KISS (Keep It Simple Stylesheets) is a simple, lightweight CSS framework designed for ease of use. It provides a collection of reusable CSS classes and components to quickly style your web projects."
+                                        : "KISS (Keep It Simple Stylesheets) on yksinkertainen ja kevyt CSS-kehys, joka on suunniteltu helppokäyttöisyyttä ajatellen. Se tarjoaa kokoelman uudelleenkäytettäviä CSS-luokkia ja komponentteja, joiden avulla voit nopeasti tyylittää verkkoprojektejasi."}
+                                </p>
+                                <a
+                                    href="https://github.com/nikohoffren/kiss-css"
+                                    target="_blank"
+                                    className="portfolio-col-link"
+                                >
+                                    {language === "en"
+                                        ? "Github source code"
+                                        : "Github lähdekoodi"}
+                                </a>
+                                <p className="arial red-text">
+                                    2023
+                                </p>
+                            </a>
+                        </div>
+
+                        <div className="portfolio-col">
+                            <a
                                 href="https://kuopionjulkinenliikenne.live"
                                 target="_blank"
                             >
