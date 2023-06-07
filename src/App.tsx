@@ -11,7 +11,7 @@ import "./index.css";
 import { LanguageContext } from "./LanguageContext";
 
 function App() {
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
     const [language, setLanguage] = useState("en");
 
     const toggleTheme = () => {
@@ -25,6 +25,10 @@ function App() {
 
     useEffect(() => {
         document.body.classList.toggle("dark", theme === "dark");
+    }, [theme]);
+
+    useEffect(() => {
+        localStorage.setItem("theme", theme);
     }, [theme]);
 
     return (
