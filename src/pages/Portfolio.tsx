@@ -140,12 +140,15 @@ export default function Portfolio() {
                                 <li>GNU/Linux</li>
                                 <li>Bash</li>
                                 <li>Node.js</li>
+                                <li>REST APIs</li>
+                                <li>JSON</li>
                                 <li>JavaScript</li>
                                 <li>Cascading Style Sheets (CSS)</li>
                                 <li>React.js</li>
                                 <li>PHP</li>
                                 <li>Ruby on Rails</li>
                                 <li>Object-Oriented Programming (OOP)</li>
+                                <li>WordPress</li>
                                 <li>Google Cloud Platform (GCP)</li>
                                 <li>Search Engine Optimization (SEO)</li>
                                 <li>Microsoft PowerPoint</li>
