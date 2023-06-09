@@ -34,8 +34,8 @@ export default function Portfolio() {
                         </p>
                         <p>
                             {language === "en"
-                                ? "The page you are reading right now is created using Vite and React + TypeScript JSX. You can find more info about my other projects from the Web development section."
-                                : "Sivu jota luet tällä hetkellä on luotu Viten avulla käyttäen Reactia TypeScript JSX:n kera. Lisätietoja muista projekteistani löydät Web-kehitys -osiosta."}
+                                ? "The page you are currently reading has been created using Vite and React with TypeScript JSX. In addition, I have developed, among other things, my own CSS library/framework called KISS (Keep It Simple Stylesheets), which has been published as an npm package, as well as the Smart Meeting Scheduler Chrome-extension designed to facilitate the process of scheduling meetings using Google Calendar. You can find more information about these and other projects in the Web Development section."
+                                : "Sivu jota luet tällä hetkellä on luotu Viten avulla käyttäen Reactia TypeScript JSX:n kera. Lisäksi olen tehnyt mm. oman CSS-kirjaston nimeltä KISS (Keep It Simple Stylesheets) joka on julkaistu npm-pakettina sekä Smart Meeding Scheduler Chrome-laajennuksen, joka on suunniteltu helpottamaan kokousten ajanvaraamisprosessia käyttäen Google-kalenteria. Lisätietoja näistä sekä muista projekteistani löydät Web-kehitys -osiosta."}
                         </p>
                         <p>
                             {language === "en"
@@ -158,36 +158,6 @@ export default function Portfolio() {
                     </p>
 
                     <div className="row">
-                        <div className="portfolio-col">
-                            <a
-                                href="https://github.com/nikohoffren/kiss-css"
-                                target="_blank"
-                            >
-                                <img src="kiss-css-logo.jpg" alt="KISS CSS logo" />
-                                <h3 className="red-text">
-                                    {language === "en"
-                                        ? "KISS CSS Framework"
-                                        : "KISS CSS Kehys"}
-                                </h3>
-                                <p className="red-text">
-                                    {language === "en"
-                                        ? "KISS (Keep It Simple Stylesheets) is a simple, lightweight CSS framework designed for ease of use. It provides a collection of reusable CSS classes and components to quickly style your web projects."
-                                        : "KISS (Keep It Simple Stylesheets) on yksinkertainen ja kevyt CSS-kehys, joka on suunniteltu helppokäyttöisyyttä ajatellen. Se tarjoaa kokoelman uudelleenkäytettäviä CSS-luokkia ja komponentteja, joiden avulla voit nopeasti tyylittää verkkoprojektejasi."}
-                                </p>
-                                <a
-                                    href="https://github.com/nikohoffren/kiss-css"
-                                    target="_blank"
-                                    className="portfolio-col-link"
-                                >
-                                    {language === "en"
-                                        ? "Github source code"
-                                        : "Github lähdekoodi"}
-                                </a>
-                                <p className="arial red-text">
-                                    2023
-                                </p>
-                            </a>
-                        </div>
 
                         <div className="portfolio-col">
                             <a
@@ -256,6 +226,68 @@ export default function Portfolio() {
                                     {language === "en"
                                         ? "2021 - present"
                                         : "2021 - nykyhetki"}
+                                </p>
+                            </a>
+                        </div>
+
+                        <div className="portfolio-col">
+                            <a
+                                href="https://github.com/nikohoffren/kiss-css"
+                                target="_blank"
+                            >
+                                <img src="kiss-css-logo.jpg" alt="KISS CSS logo" />
+                                <h3 className="red-text">
+                                    {language === "en"
+                                        ? "KISS CSS Framework"
+                                        : "KISS CSS Kehys"}
+                                </h3>
+                                <p className="red-text">
+                                    {language === "en"
+                                        ? "KISS (Keep It Simple Stylesheets) is a simple, lightweight CSS framework designed for ease of use. It provides a collection of reusable CSS classes and components to quickly style your web projects. Published as npm-package. The website and detailed documentation are still in the production phase."
+                                        : "KISS (Keep It Simple Stylesheets) on yksinkertainen ja kevyt CSS-kehys, joka on suunniteltu helppokäyttöisyyttä ajatellen. Se tarjoaa kokoelman uudelleenkäytettäviä CSS-luokkia ja komponentteja, joiden avulla voit nopeasti tyylittää verkkoprojektejasi. Julkaistu npm-pakettina. Web-sivusto ja tarkempi dokumentaatio on vielä tuotantovaiheessa."}
+                                </p>
+                                <a
+                                    href="https://github.com/nikohoffren/kiss-css"
+                                    target="_blank"
+                                    className="portfolio-col-link"
+                                >
+                                    {language === "en"
+                                        ? "Github source code"
+                                        : "Github lähdekoodi"}
+                                </a>
+                                <p className="arial red-text">
+                                    2023
+                                </p>
+                            </a>
+                        </div>
+
+                        <div className="portfolio-col">
+                            <a
+                                href="https://github.com/nikohoffren/smart-meeting-scheduler"
+                                target="_blank"
+                            >
+                                <img src="smart-meeting-scheduler-logo.jpg" alt="KISS CSS logo" />
+                                <h3 className="red-text">
+                                    {language === "en"
+                                        ? "Smart Meeting Scheduler Chrome Extension"
+                                        : "Smart Meeting Scheduler Chrome -laajennus"}
+                                </h3>
+                                <p className="red-text">
+                                    {language === "en"
+                                        ? "The Smart Meeting Scheduler Chrome Extension is a powerful tool designed to simplify and streamline the process of scheduling meetings using Google Calendar. It automatically finds the best meeting times that work for all attendees, eliminating the need for back-and-forth emails and reducing scheduling conflicts. Written mostly in JavaScript. (Currently in development)"
+                                        : "Smart Meeting Scheduler Chrome -laajennus on tehokas työkalu, joka on suunniteltu helpottamaan ja tehostamaan kokousten ajanvaraamisprosessia käyttäen Google-kalenteria. Se etsii automaattisesti parhaat kokousajat, jotka sopivat kaikille osallistujille, poistaen tarpeen lähettää edestakaisia sähköposteja ja vähentäen aikatauluristiriitoja. Koodattu pääosin JavaScriptillä. (Vielä tuotantovaiheessa)"}
+                                </p>
+                                <a
+                                    href="https://github.com/nikohoffren/smart-meeting-scheduler"
+                                    target="_blank"
+                                    className="portfolio-col-link"
+                                >
+                                    {language === "en"
+                                        ? "Github source code"
+                                        : "Github lähdekoodi"}
+                                </a>
+                                <p className="arial red-text">
+                                    2023
                                 </p>
                             </a>
                         </div>
@@ -339,8 +371,8 @@ export default function Portfolio() {
                     </h3>
                     <p>
                         {language === "en"
-                            ? "You can find my complete working history and education info in my"
-                            : "Löydät koko työhistoriani sekä tietoa koulutuksestani"}{" "}
+                            ? "In total I have +15 years of work experience in areas like being a business sales consultant, from the logistics industry and earlier education from the field of Business Administration in Customer service and Marketing. You can find my complete working history and education info in my"
+                            : "Kokonaisuudessaan minulla on yli 15 vuoden työkokemus eri aloilta, kuten liiketoimintamyyntikonsulttina toimimisesta, logistiikka-alalta sekä aiemmin hankitusta koulutuksesta liiketalouden alalta asiakaspalvelussa ja markkinoinnissa. Löydät koko työhistoriani sekä tietoa koulutuksestani"}{" "}
                         <a
                             href="https://www.linkedin.com/in/nikohoffren/details/experience/"
                             target="_blank"
