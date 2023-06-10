@@ -147,6 +147,7 @@ export default function Portfolio() {
                                 <li>React.js</li>
                                 <li>PHP</li>
                                 <li>Ruby on Rails</li>
+                                <li>Eclipse IDE</li>
                                 <li>Object-Oriented Programming (OOP)</li>
                                 <li>WordPress</li>
                                 <li>Google Cloud Platform (GCP)</li>
