@@ -58,9 +58,9 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                         </li>
                         <button onClick={toggleTheme} className="toggle-theme-button">
                             {theme === "light" ? (
-                                <img src="/sun.png" alt="Sun png image" />
+                                <img src="/sun.png" alt="Sun png image" onClick={toggleSideNav} />
                             ) : (
-                                <img src="/moon.png" alt="Moon png image" />
+                                <img src="/moon.png" alt="Moon png image" onClick={toggleSideNav} />
                             )}
                         </button>
                     </ul>
