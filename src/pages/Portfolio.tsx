@@ -29,8 +29,8 @@ export default function Portfolio() {
                         </p>
                         <p>
                             {language === "en"
-                                ? "My first programming language was Java, after which I delved into the world of HTML, CSS, and JavaScript. My knowledge of programming languages, as well as various development platforms and APIs, has grown over the years."
-                                : "Ensimmäinen ohjelmointikieleni oli Java, jonka jälkeen siirryin HTML:n, CSS:n sekä JavaScriptin maailmaan. Tietoni ohjelmointikielistä kuten myös erilaisista kehitysalustoista ja rajapinnoista on kasvanut vuosien aikana."}
+                                ? "My first programming language was Java using Eclipse IDE, after which I delved into the world of HTML, CSS, and JavaScript using VS Code. My knowledge of programming languages, as well as various development platforms and APIs, has grown over the years."
+                                : "Ensimmäinen ohjelmointikieleni oli Java käyttäen Eclipse IDE:tä, jonka jälkeen siirryin HTML:n, CSS:n sekä JavaScriptin maailmaan VS Coden kera. Tietoni ohjelmointikielistä kuten myös erilaisista kehitysalustoista ja rajapinnoista on kasvanut vuosien aikana."}
                         </p>
                         <p>
                             {language === "en"
