@@ -96,9 +96,7 @@ export default function Portfolio() {
                         {language === "en" ? "account." : "tiliini."}
                     </p>
                     <p>
-                        {language === "en"
-                            ? "Download my CV from "
-                            : "Lataa CV:ni "}{" "}
+                        {language === "en" ? "Download my CV " : "Lataa CV:ni "}{" "}
                         <a
                             href={cvUrl}
                             download
@@ -159,7 +157,6 @@ export default function Portfolio() {
                     </p>
 
                     <div className="row">
-
                         <div className="portfolio-col">
                             <a
                                 href="https://kuopionjulkinenliikenne.live"
@@ -236,7 +233,10 @@ export default function Portfolio() {
                                 href="https://github.com/nikohoffren/kiss-css"
                                 target="_blank"
                             >
-                                <img src="kiss-css-logo.jpg" alt="KISS CSS logo" />
+                                <img
+                                    src="kiss-css-logo.jpg"
+                                    alt="KISS CSS logo"
+                                />
                                 <h3 className="red-text">
                                     {language === "en"
                                         ? "KISS CSS Framework"
@@ -256,9 +256,7 @@ export default function Portfolio() {
                                         ? "Github source code"
                                         : "Github lähdekoodi"}
                                 </a>
-                                <p className="arial red-text">
-                                    2023
-                                </p>
+                                <p className="arial red-text">2023</p>
                             </a>
                         </div>
 
@@ -267,7 +265,10 @@ export default function Portfolio() {
                                 href="https://github.com/nikohoffren/smart-meeting-scheduler"
                                 target="_blank"
                             >
-                                <img src="smart-meeting-scheduler-logo.jpg" alt="KISS CSS logo" />
+                                <img
+                                    src="smart-meeting-scheduler-logo.jpg"
+                                    alt="KISS CSS logo"
+                                />
                                 <h3 className="red-text">
                                     {language === "en"
                                         ? "Smart Meeting Scheduler Chrome Extension"
@@ -287,9 +288,7 @@ export default function Portfolio() {
                                         ? "Github source code"
                                         : "Github lähdekoodi"}
                                 </a>
-                                <p className="arial red-text">
-                                    2023
-                                </p>
+                                <p className="arial red-text">2023</p>
                             </a>
                         </div>
                     </div>
