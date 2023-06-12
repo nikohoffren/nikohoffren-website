@@ -39,7 +39,7 @@ export default function Portfolio() {
                         </p>
                         <p>
                             {language === "en"
-                                ? "I have work experience in areas like being a business sales consultant, from the logistics industry and earlier education from the field of Business Administration in Customer service and Marketing."
+                                ? "I have work experience in areas like business sales consultanting, logistics industry and earlier education from the field of Business Administration in Customer service and Marketing."
                                 : "Minulla on työkokemusta mm. yritysmyyntineuvottelijana olemisesta, logistiikka-alalta sekä aiempana koulutuksena Liiketalouden perustutkinto asiakaspalvelu ja markkinointi linjalta."}
                         </p>
                         <p>
