@@ -120,7 +120,7 @@ export default function Portfolio() {
                                 <li>TypeScript</li>
                                 <li>React</li>
                                 <li>PHP</li>
-                                <li>SQL (MySQL)</li>
+                                <li>SQL (MySQL, MariaDB)</li>
                                 <li>Java</li>
                                 <li>Dart (Flutter)</li>
                                 <li>Ruby (on Rails)</li>
