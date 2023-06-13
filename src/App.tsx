@@ -1,9 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import Navbar from "./Navbar";
 import Home from "./pages/Home";
-import Music from "./pages/Music";
-import Videos from "./pages/Videos";
-import Gear from "./pages/Gear";
+import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./pages/Footer";
@@ -11,7 +9,9 @@ import "./index.css";
 import { LanguageContext } from "./LanguageContext";
 
 function App() {
-    const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
+    const [theme, setTheme] = useState(
+        localStorage.getItem("theme") ?? "light"
+    );
     const [language, setLanguage] = useState("en");
 
     const toggleTheme = () => {
@@ -37,9 +37,7 @@ function App() {
                 <Navbar theme={theme} toggleTheme={toggleTheme} />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/music" element={<Music />} />
-                    <Route path="/videos" element={<Videos />} />
-                    <Route path="/gear" element={<Gear />} />
+                    <Route path="/about" element={<About />} />
                     <Route path="/portfolio" element={<Portfolio />} />
                 </Routes>
                 <Footer />

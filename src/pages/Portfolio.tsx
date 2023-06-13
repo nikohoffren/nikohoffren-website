@@ -14,61 +14,11 @@ export default function Portfolio() {
                 <div className="extra-margin-top" />
 
                 <h1>PORTFOLIO</h1>
-                <div className="container">
-                    <div className="bio-info hyphens">
-                        <img
-                            src="NHphoto3.png"
-                            id="NHphoto"
-                            alt="Picture of very handsome Niko Hoffrén"
-                        />
-                        <br />
-                        <p>
-                            {language === "en"
-                                ? "Hi! I'm Niko Hoffrén, programmer and music producer from Kuopio, Finland. In my spare time i like to spend time with my son, play video games and code something interesting."
-                                : "Hei! Olen Niko Hoffrén, ohjelmistokehittäjä ja musiikintuottaja Kuopiosta. Vapaa-aikanani tykkään viettää aikaa poikani kanssa, pelata videopelejä sekä koodata jotain mielenkiintoista."}
-                        </p>
-                        <p>
-                            {language === "en"
-                                ? "My first programming language was Java using Eclipse IDE, after which I delved into the world of HTML, CSS, and JavaScript using VS Code. My knowledge of programming languages, as well as various development platforms and APIs, has grown over the years."
-                                : "Ensimmäinen ohjelmointikieleni oli Java käyttäen Eclipse IDE:tä, jonka jälkeen siirryin HTML:n, CSS:n sekä JavaScriptin maailmaan VS Coden kera. Tietoni ohjelmointikielistä kuten myös erilaisista kehitysalustoista ja rajapinnoista on kasvanut vuosien aikana."}
-                        </p>
-                        <p>
-                            {language === "en"
-                                ? "The page you are currently reading has been created using Vite and React with TypeScript JSX. In addition, I have developed, among other things, my own CSS library/framework called KISS (Keep It Simple Stylesheets), which has been published as an npm package, as well as the Smart Meeting Scheduler Chrome-extension designed to facilitate the process of scheduling meetings using Google Calendar. You can find more information about these and other projects in the Web Development section."
-                                : "Sivu jota luet tällä hetkellä on luotu Viten avulla käyttäen Reactia TypeScript JSX:n kera. Lisäksi olen tehnyt mm. oman CSS-kirjaston nimeltä KISS (Keep It Simple Stylesheets) joka on julkaistu npm-pakettina sekä Smart Meeding Scheduler Chrome-laajennuksen, joka on suunniteltu helpottamaan kokousten ajanvaraamisprosessia käyttäen Google-kalenteria. Lisätietoja näistä sekä muista projekteistani löydät Web-kehitys -osiosta."}
-                        </p>
-                        <p>
-                            {language === "en"
-                                ? "I have work experience in areas like business sales consultanting, logistics industry and earlier education from the field of Business Administration in Customer service and Marketing."
-                                : "Minulla on työkokemusta mm. yritysmyyntineuvottelijana olemisesta, logistiikka-alalta sekä aiempana koulutuksena Liiketalouden perustutkinto asiakaspalvelu ja markkinointi linjalta."}
-                        </p>
-                        <p>
-                            {language === "en"
-                                ? "I'm currently studying Software development in "
-                                : "Opiskelen tällä hetkellä ohjelmistokehitystä "}{" "}
-                            <a
-                                href="https://sakky.fi/fi"
-                                target="_blank"
-                                className="red-text"
-                            >
-                                {language === "en"
-                                    ? "Savon Ammattiopisto"
-                                    : "Savon Ammattiopistossa"}
-                            </a>
-                            {language === "en"
-                                ? " at Kuopio, Finland and hope to graduate in 2024."
-                                : " Kuopiossa, josta tulen valmistumaan keväällä 2024."}
-                        </p>
-                    </div>
-                </div>
 
-                <hr />
-                <br />
+                <div className="small-extra-margin" />
 
-                <div className="container">
-                    <h3>
-                        {language === "en" ? "WEB DEVELOPMENT" : "WEB-KEHITYS"}
-                    </h3>
+                <div className="container small-margin-bottom">
+
                     <p>
                         {language === "en"
                             ? "Find all of my projects on "
@@ -96,6 +46,19 @@ export default function Portfolio() {
                         {language === "en" ? "account." : "tiliini."}
                     </p>
                     <p>
+                        {language === "en"
+                            ? "You can also find all of my music production related info on "
+                            : "Löydät myös kaikki musiikkituotantooni liittyvät tiedot täältä: "}{" "}
+                        <a
+                            href="https://nikohoffrenmusic.netlify.app"
+                            className="red-text"
+                            target="_blank"
+                        >
+                            nikohoffrenmusic.netlify.app
+                        </a>{" "}
+
+                    </p>
+                    <p>
                         {language === "en" ? "Download my CV " : "Lataa CV:ni "}{" "}
                         <a
                             href={cvUrl}
@@ -108,6 +71,10 @@ export default function Portfolio() {
                         .
                     </p>
 
+                </div>
+                <hr />
+                <br />
+                <div className="container">
                     <p>
                         {language === "en"
                             ? "PROGRAMMING LANGUAGES AND FRAMEWORKS:"
@@ -298,72 +265,6 @@ export default function Portfolio() {
                 <hr />
 
                 <div className="container">
-                    <div className="bio-info">
-                        <h3>
-                            {language === "en"
-                                ? "MUSIC PRODUCING & AUDIO ENGINEERING"
-                                : "MUSIIKIN TUOTANTO SEKÄ MIKSAUS JA MASTEROINTI"}
-                        </h3>
-                        <p>
-                            {language === "en"
-                                ? "I have played keyboards from when i was 5 years old and have been making music since. Past several years i've been making electronic music with FL Studio and have released tracks with labels such as Monster Tunes, Trancespired, Trance All-Stars, Alveda, Yeiskomp and many others."
-                                : "Olen soittanut koskettimia 5-vuotiaasta lähtien ja tehnyt musiikkia siitä lähtien. Viimeisten vuosien aikana olen tehnyt elektronista musiikkia FL Studiolla sekä julkaissut kappaleita levy-yhtiöillä kuin Monster Tunes, Trancespired, Trance All-Stars, Alveda, Yeiskomp ja monet muut."}
-                        </p>
-                        <p>
-                            {language === "en"
-                                ? "I have mixed and mastered tracks for artists such as"
-                                : "Olen miksannut ja masteroinut kappaleita sellaisille artisteille kuin"}{" "}
-                            <a
-                                href="https://linktr.ee/ianjamestabone"
-                                target="_blank"
-                                className="red-text"
-                            >
-                                IanT
-                            </a>{" "}
-                            {language === "en" ? "and" : "ja"}{" "}
-                            <a
-                                href="https://www.darylg.net"
-                                target="_blank"
-                                className="red-text"
-                            >
-                                DarylG
-                            </a>
-                            .
-                        </p>
-                        <p>
-                            {language === "en"
-                                ? "Currently i also play keyboards in"
-                                : "Soitan myös koskettimia yhtyeessä"}{" "}
-                            <a
-                                href="https://www.instagram.com/forsakengodsofficial/"
-                                target="_blank"
-                                className="red-text"
-                            >
-                                Forsaken Gods
-                            </a>
-                            ,{" "}
-                            {language === "en"
-                                ? "which is a power metal band based in Helsinki. In my past career i've made music with"
-                                : "joka on Helsingissä toimiva power metal -yhtye. Aiemmin urallani olen tehnyt musiikkia yhdessä bändien "}{" "}
-                            <a
-                                href="https://www.youtube.com/watch?v=v5FRxNfK7kE&ab_channel=ElektraHelsinki-Topic"
-                                target="_blank"
-                                className="red-text"
-                            >
-                                Elektra Helsinki
-                            </a>
-                            , Love & Death, Precursor{" "}
-                            {language === "en"
-                                ? "and several others."
-                                : "ja useiden muiden kanssa."}
-                        </p>
-                    </div>
-                </div>
-
-                <hr />
-                <br />
-
-                <div className="container">
                     <h3>
                         {language === "en"
                             ? "WORKING HISTORY/EDUCATION"
@@ -371,8 +272,8 @@ export default function Portfolio() {
                     </h3>
                     <p>
                         {language === "en"
-                            ? "In total I have +15 years of work experience in areas like being a business sales consultant, from the logistics industry and earlier education from the field of Business Administration in Customer service and Marketing. You can find my complete working history and education info in my"
-                            : "Kokonaisuudessaan minulla on yli 15 vuoden työkokemus eri aloilta, kuten liiketoimintamyyntikonsulttina toimimisesta, logistiikka-alalta sekä aiemmin hankitusta koulutuksesta liiketalouden alalta asiakaspalvelussa ja markkinoinnissa. Löydät koko työhistoriani sekä tietoa koulutuksestani"}{" "}
+                            ? "In total I have +15 years of work experience in areas like business sales consultanting, logistics industry and earlier education from the field of Business Administration in Customer service and Marketing. You can find my complete working history and education info in my"
+                            : "Kokonaisuudessaan minulla on yli 15 vuoden työkokemus eri aloilta, kuten yritysmyyntineuvottelijana toimimisesta, logistiikka-alalta sekä aiemmin hankitusta koulutuksesta liiketalouden alalta asiakaspalvelussa ja markkinoinnissa. Löydät koko työhistoriani sekä tietoa koulutuksestani"}{" "}
                         <a
                             href="https://www.linkedin.com/in/nikohoffren/details/experience/"
                             target="_blank"

@@ -35,19 +35,10 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                         >
                             <img src="NHlogoTransparent.png" alt="" />
                         </CustomLink>
+
                         <li onClick={toggleSideNav}>
-                            <CustomLink to="/music">
-                                {language === "en" ? "MUSIC" : "MUSIIKKI"}
-                            </CustomLink>
-                        </li>
-                        <li onClick={toggleSideNav}>
-                            <CustomLink to="/videos">
-                                {language === "en" ? "VIDEOS" : "VIDEOT"}
-                            </CustomLink>
-                        </li>
-                        <li onClick={toggleSideNav}>
-                            <CustomLink to="/gear">
-                                {language === "en" ? "GEAR" : "SOITTIMET"}
+                            <CustomLink to="/about">
+                                {language === "en" ? "ABOUT" : "MINUSTA"}
                             </CustomLink>
                         </li>
                         <li onClick={toggleSideNav}>
@@ -56,11 +47,22 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                         <li>
                             <LanguageSelector setLanguage={setLanguage} />
                         </li>
-                        <button onClick={toggleTheme} className="toggle-theme-button">
+                        <button
+                            onClick={toggleTheme}
+                            className="toggle-theme-button"
+                        >
                             {theme === "light" ? (
-                                <img src="/sun.png" alt="Sun png image" onClick={toggleSideNav} />
+                                <img
+                                    src="/sun.png"
+                                    alt="Sun png image"
+                                    onClick={toggleSideNav}
+                                />
                             ) : (
-                                <img src="/moon.png" alt="Moon png image" onClick={toggleSideNav} />
+                                <img
+                                    src="/moon.png"
+                                    alt="Moon png image"
+                                    onClick={toggleSideNav}
+                                />
                             )}
                         </button>
                     </ul>

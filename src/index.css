@@ -144,6 +144,20 @@ hr {
     margin-top: 7rem;
 }
 
+.small-extra-margin {
+    margin: 6rem;
+}
+
+.small-margin-bottom {
+    margin-bottom: 2rem;
+}
+
+.nikohoffrenmusic-link {
+    color: red;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
 .header {
     min-height: 100vh;
     width: 100%;
@@ -773,7 +787,8 @@ h3 {
         padding-top: 4rem;
     }
     .header2-info {
-        position: inherit;
+        text-align: center;
+        margin-left: auto;
     }
     .header2-info h1 {
         font-size: 2.7em;
@@ -828,4 +843,3 @@ h3 {
 .hyphens {
     hyphens: manual;
 }
-

@@ -33,14 +33,14 @@ export default function Home() {
                                 /> */}
                                 {[
                                     language === "en"
-                                        ? "Software developer & music producer"
-                                        : "Ohjelmistokehittäjä ja musiikintuottaja",
+                                        ? "Software developer"
+                                        : "Ohjelmistokehittäjä",
                                 ]}
                             </h2>
                             <br />
                             <h4>
                                 {language === "en"
-                                    ? "Download my CV from this link:"
+                                    ? "You can download my CV here:"
                                     : "Lataa CV:ni tästä linkistä:"}
                             </h4>
                             <a

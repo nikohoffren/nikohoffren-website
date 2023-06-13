@@ -8,36 +8,6 @@ export default function Footer() {
             <section className="footer">
                 <div className="icons">
                     <a
-                        href="https://www.facebook.com/nikohoffrenmusic"
-                        target="{blank}"
-                    >
-                        <i className="fa fa-facebook"></i>
-                    </a>
-                    <a
-                        href="https://www.instagram.com/nikohoffren"
-                        target="{blank}"
-                    >
-                        <i className="fa fa-instagram"></i>
-                    </a>
-                    <a
-                        href="https://www.youtube.com/channel/UCwGsJfqeCbZePUcrOvc-F2w"
-                        target="{blank}"
-                    >
-                        <i className="fa fa-youtube"></i>
-                    </a>
-                    <a
-                        href="https://open.spotify.com/artist/1iFr4SJkrSmlBYJMJ1Idqp?si=cu26iw_wT9OD_8a7dsRrlQ"
-                        target="{blank}"
-                    >
-                        <i className="fa fa-spotify"></i>
-                    </a>
-                    <a
-                        href="https://www.soundcloud.com/nikohoffren"
-                        target="{blank}"
-                    >
-                        <i className="fa fa-soundcloud"></i>
-                    </a>
-                    <a
                         href="https://www.linkedin.com/in/nikohoffren"
                         target="{blank}"
                     >
@@ -49,12 +19,25 @@ export default function Footer() {
                     >
                         <i className="fa fa-github"></i>
                     </a>
+                    <a
+                        href="https://www.instagram.com/nikohoffren"
+                        target="{blank}"
+                    >
+                        <i className="fa fa-instagram"></i>
+                    </a>
                 </div>
 
+                <p className="white">Email: niko.hoffren@gmail.com</p>
                 <p className="white">
-                    niko.hoffren@gmail.com
-                    <br />
-                    nikohoffrenmusic@gmail.com
+                    {language === "en" ? "My music: " : "Musiikkini: "}
+                    <a
+                        href="https://nikohoffrenmusic.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="nikohoffrenmusic-link"
+                    >
+                        nikohoffrenmusic.netlify.app
+                    </a>
                 </p>
 
                 <div className="center">
