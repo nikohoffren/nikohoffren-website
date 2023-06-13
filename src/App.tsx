@@ -1,8 +1,9 @@
 import React, { useState, useMemo, useEffect } from "react";
 import Navbar from "./Navbar";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Portfolio from "./pages/Portfolio";
+import Skills from "./pages/Skills";
+import Contact from "./pages/Contact";
+import Projects from "./pages/Projects";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./pages/Footer";
 import "./index.css";
@@ -37,8 +38,9 @@ function App() {
                 <Navbar theme={theme} toggleTheme={toggleTheme} />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/portfolio" element={<Portfolio />} />
+                    <Route path="/skills" element={<Skills />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/contact" element={<Contact />} />
                 </Routes>
                 <Footer />
             </LanguageContext.Provider>

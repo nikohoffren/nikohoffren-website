@@ -37,12 +37,21 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                         </CustomLink>
 
                         <li onClick={toggleSideNav}>
-                            <CustomLink to="/about">
-                                {language === "en" ? "ABOUT" : "MINUSTA"}
+                            <CustomLink to="/skills">
+                                {language === "en" ? "SKILLS" : "TAIDOT"}
                             </CustomLink>
                         </li>
                         <li onClick={toggleSideNav}>
-                            <CustomLink to="/portfolio">PORTFOLIO</CustomLink>
+                            <CustomLink to="/projects">
+                                {" "}
+                                {language === "en" ? "PROJECTS" : "PROJEKTIT"}
+                            </CustomLink>
+                        </li>
+                        <li onClick={toggleSideNav}>
+                            <CustomLink to="/contact">
+                                {" "}
+                                {language === "en" ? "CONTACT" : "OTA YHTEYTTÄ"}
+                            </CustomLink>
                         </li>
                         <li>
                             <LanguageSelector setLanguage={setLanguage} />

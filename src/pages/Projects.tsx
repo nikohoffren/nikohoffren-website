@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "src/LanguageContext";
 
-export default function Portfolio() {
+export default function Projects() {
     const { language } = useContext(LanguageContext) as {
         language: string;
         setLanguage: (language: string) => void;
@@ -13,12 +13,11 @@ export default function Portfolio() {
             <section className="bio">
                 <div className="extra-margin-top" />
 
-                <h1>PORTFOLIO</h1>
+                <h1>{language === "en" ? "PROJECTS" : "PROJEKTIT"}</h1>
 
                 <div className="small-extra-margin" />
 
-                <div className="container small-margin-bottom">
-
+                <div className="container">
                     <p>
                         {language === "en"
                             ? "Find all of my projects on "
@@ -56,7 +55,6 @@ export default function Portfolio() {
                         >
                             nikohoffrenmusic.netlify.app
                         </a>{" "}
-
                     </p>
                     <p>
                         {language === "en" ? "Download my CV " : "Lataa CV:ni "}{" "}
@@ -70,59 +68,9 @@ export default function Portfolio() {
                         </a>
                         .
                     </p>
-
                 </div>
-                <hr />
-                <br />
-                <div className="container">
-                    <p>
-                        {language === "en"
-                            ? "PROGRAMMING LANGUAGES AND FRAMEWORKS:"
-                            : "OHJELMOINTIKIELET JA RAJAPINNAT:"}
-                    </p>
-                    <p>
-                        <div className="container-left-align">
-                            <ul>
-                                <li>JavaScript</li>
-                                <li>TypeScript</li>
-                                <li>React</li>
-                                <li>PHP</li>
-                                <li>SQL (MySQL, MariaDB)</li>
-                                <li>Java</li>
-                                <li>Dart (Flutter)</li>
-                                <li>Ruby (on Rails)</li>
-                            </ul>
-                        </div>
-                    </p>
-                    <p>
-                        {language === "en"
-                            ? "LINKEDIN SKILLS ASSESSMENT BADGES:"
-                            : "LINKEDIN OSAAMISEN ARVIOINTIMERKIT:"}
-                    </p>
-                    <p>
-                        <div className="container-left-align">
-                            <ul>
-                                <li>GNU/Linux</li>
-                                <li>Bash</li>
-                                <li>Node.js</li>
-                                <li>REST APIs</li>
-                                <li>JSON</li>
-                                <li>JavaScript</li>
-                                <li>Cascading Style Sheets (CSS)</li>
-                                <li>React.js</li>
-                                <li>PHP</li>
-                                <li>Ruby on Rails</li>
-                                <li>Eclipse IDE</li>
-                                <li>Object-Oriented Programming (OOP)</li>
-                                <li>WordPress</li>
-                                <li>Google Cloud Platform (GCP)</li>
-                                <li>Search Engine Optimization (SEO)</li>
-                                <li>Microsoft PowerPoint</li>
-                                <li>Pro Tools</li>
-                            </ul>
-                        </div>
-                    </p>
 
+                <div className="container">
                     <div className="row">
                         <div className="portfolio-col">
                             <a
@@ -260,60 +208,7 @@ export default function Portfolio() {
                         </div>
                     </div>
                 </div>
-
-                <br />
-                <hr />
-
-                <div className="container">
-                    <h3>
-                        {language === "en"
-                            ? "WORKING HISTORY/EDUCATION"
-                            : "TYÖHISTORIA/KOULUTUS"}
-                    </h3>
-                    <p>
-                        {language === "en"
-                            ? "In total I have +15 years of work experience in areas like business sales consultanting, logistics industry and earlier education from the field of Business Administration in Customer service and Marketing. You can find my complete working history and education info in my"
-                            : "Kokonaisuudessaan minulla on yli 15 vuoden työkokemus eri aloilta, kuten yritysmyyntineuvottelijana toimimisesta, logistiikka-alalta sekä aiemmin hankitusta koulutuksesta liiketalouden alalta asiakaspalvelussa ja markkinoinnissa. Löydät koko työhistoriani sekä tietoa koulutuksestani"}{" "}
-                        <a
-                            href="https://www.linkedin.com/in/nikohoffren/details/experience/"
-                            target="_blank"
-                            className="red-text"
-                        >
-                            {language === "en"
-                                ? "LinkedIn"
-                                : "LinkedIn-profiilistani"}
-                            .
-                        </a>
-                    </p>
-                </div>
-
-                <br />
-                <hr />
-                <br />
-
-                <div className="container">
-                    <h3>{language === "en" ? "LANGUAGES" : "KIELET"}</h3>
-                    <p>
-                        {language === "en"
-                            ? "ENGLISH - Full professional proficiency"
-                            : "ENGLANTI - Täysi ammatillinen sujuvuus"}
-                    </p>
-                    <p>
-                        {language === "en"
-                            ? "FINNISH - Native or bilingual proficiency"
-                            : "SUOMI - Äidinkieli tai kaksikielinen sujuvuus"}
-                    </p>
-                    <p>
-                        {language === "en"
-                            ? "SWEDISH - Elementary proficiency"
-                            : "RUOTSI - Perustason sujuvuus"}
-                    </p>
-                </div>
-
-                <br />
-                <hr />
-                <br />
-                <br />
+                <div className="small-margin-bottom" />
             </section>
         </>
     );

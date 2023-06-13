@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "src/LanguageContext";
 import "../dark-theme.css";
+import Projects from "./Projects";
+import { Link } from "react-router-dom";
 // import Typing from "react-typing-effect";
 
 export default function Home() {
@@ -37,6 +39,72 @@ export default function Home() {
                                         : "Ohjelmistokehittäjä",
                                 ]}
                             </h2>
+
+                            <div className="hyphens">
+                                <p>
+                                    {language === "en"
+                                        ? "Welcome to my website! I'm software developer from Kuopio, Finland. In my spare time i like to spend time with my son, play video games and code something interesting."
+                                        : "Tervetuloa kotisivuilleni! Olen ohjelmistokehittäjä Kuopiosta, Suomesta. Vapaa-aikanani tykkään viettää aikaa poikani kanssa, pelata videopelejä sekä koodata jotain mielenkiintoista."}
+                                </p>
+
+                                <p>
+                                    {language === "en" ? (
+                                        <>
+                                            The page you are currently reading
+                                            has been created using Vite and
+                                            React with TypeScript. In addition,
+                                            I have developed, among other
+                                            things, my own CSS library/framework
+                                            called KISS (Keep It Simple
+                                            Stylesheets), which has been
+                                            published as an npm package, as well
+                                            as the Smart Meeting Scheduler
+                                            Chrome-extension designed to
+                                            facilitate the process of scheduling
+                                            meetings using Google Calendar. You
+                                            can find more information about
+                                            these and other projects of mine in
+                                            the{" "}
+                                            <Link
+                                                className="projects-link"
+                                                to="/projects"
+                                            >
+                                                Projects
+                                            </Link>
+                                            -section.
+                                        </>
+                                    ) : (
+                                        <>
+                                            Sivu jota luet tällä hetkellä on
+                                            luotu Viten avulla käyttäen Reactia
+                                            TypeScriptin kera. Lisäksi olen
+                                            tehnyt mm. oman CSS-kirjaston
+                                            nimeltä KISS (Keep It Simple
+                                            Stylesheets) joka on julkaistu
+                                            npm-pakettina sekä Smart Meeding
+                                            Scheduler Chrome-laajennuksen, joka
+                                            on suunniteltu helpottamaan
+                                            kokousten ajanvaraamisprosessia
+                                            käyttäen Google-kalenteria.
+                                            Lisätietoja näistä sekä muista
+                                            projekteistani löydät{" "}
+                                            <Link
+                                                className="projects-link"
+                                                to="/projects"
+                                            >
+                                                Projektit
+                                            </Link>
+                                            -osiosta.
+                                        </>
+                                    )}
+                                </p>
+
+                                <p>
+                                    {language === "en"
+                                        ? "In total I have +15 years of work experience in areas like business sales consultanting, logistics industry and earlier education from the field of Business Administration in Customer service and Marketing."
+                                        : "Kokonaisuudessaan minulla on yli 15 vuoden työkokemus eri aloilta, kuten yritysmyyntineuvottelijana toimimisesta, logistiikka-alalta sekä aiemmin hankitusta koulutuksesta liiketalouden alalta asiakaspalvelussa ja markkinoinnissa."}
+                                </p>
+                            </div>
                             <br />
                             <h4>
                                 {language === "en"
@@ -51,11 +119,9 @@ export default function Home() {
                                 {language === "en" ? "Download CV" : "Lataa CV"}
                             </a>
                             <br />
-                            {/* <p class="bold">Welcome to my website! Here you can find my personal<br /> Portfolio and other info</p> */}
                         </div>
 
                         <div className="header2-img-box">
-                            {/* <img src="react.svg" alt="Niko Hoffrén" className="back-img" /> */}
                             <img
                                 src="NH-photo3.JPG.png"
                                 alt="Niko Hoffrén"

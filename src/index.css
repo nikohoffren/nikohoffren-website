@@ -58,9 +58,17 @@ body {
     width: 2rem;
 }
 
+.smaller-width {
+    width: 77%;
+}
+
 .red-text {
-    color: rgb(63, 63, 250);
+    color: rgb(86, 86, 255);
     text-decoration: none;
+}
+
+.red-text:hover {
+    color: rgb(24, 24, 223);
 }
 
 .white-text {
@@ -145,17 +153,39 @@ hr {
 }
 
 .small-extra-margin {
-    margin: 6rem;
+    margin: 4rem;
 }
 
 .small-margin-bottom {
     margin-bottom: 2rem;
 }
 
+.medium-margin-bottom {
+    margin-bottom: 4rem;
+}
+
+.huge-margin-bottom {
+    margin-bottom: 9rem;
+}
+
 .nikohoffrenmusic-link {
     color: red;
     font-size: 1.2rem;
     text-decoration: none;
+}
+
+.nikohoffrenmusic-link:hover {
+    color: rgb(161, 3, 3);
+}
+
+.projects-link {
+    color: red;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.projects-link:hover {
+    color: rgb(161, 3, 3);
 }
 
 .header {
@@ -197,8 +227,8 @@ hr {
     width: 100%;
     text-align: center;
     background-color: rgb(15, 15, 15);
-    top: 7rem;
     position: relative;
+
     padding: 0;
     margin: 0;
 }
@@ -593,7 +623,7 @@ h3 {
     border: solid white;
     border-radius: 10px;
     margin-bottom: 5%;
-    padding: 10px 5px;
+    padding: 10px 60px;
     box-sizing: border-box;
     transition: 0.5s;
     cursor: pointer;
@@ -612,7 +642,7 @@ h3 {
 
 .portfolio-col-link {
     font-size: 1.2rem;
-    color: hsl(0, 0%, 29%);
+    color: hsl(0, 1%, 43%);
 }
 
 .portfolio-col-link:hover {
@@ -705,17 +735,22 @@ h3 {
 .header2-hero {
     height: 100%;
     position: relative;
-    margin-bottom: 5rem;
 }
 
 .header2-info {
-    margin-top: 9%;
+    margin-top: 8%;
     margin-left: 15%;
+    max-width: 38em;
 }
 
 .header2-info h1 {
     padding-top: 30px;
     font-size: 5rem;
+}
+
+.header2-info p {
+   padding: 0;
+   margin-bottom: 0.5rem;
 }
 
 .header2-info h2 {
@@ -728,7 +763,7 @@ h3 {
     width: 40%;
     height: 100%;
     right: 100px;
-    top: 25rem;
+    top: 5rem;
     position: absolute;
 }
 
@@ -745,40 +780,9 @@ h3 {
 
 @media (max-width: 1600px) {
     .header2-img-box img {
-        width: 530px;
-        height: 780px;
-        left: 60%;
-    }
-}
-
-@media (max-width: 1200px) {
-    .header2-img-box img {
-        width: 450px;
-        height: 680px;
-        left: 60%;
-    }
-    .header2-hero {
-        padding-top: 2rem;
-    }
-    .toggle-theme-button {
-        top: 20%;
-        right: 8%;
-    }
-}
-
-@media (max-width: 1100px) {
-    .header2-img-box img {
-        width: 350px;
-        height: 480px;
-        left: 60%;
-        bottom: 20%;
-    }
-}
-
-@media (max-width: 700px) {
-    .header2-img-box img {
         display: none;
     }
+
     .header2-img-box {
         position: inherit;
     }
@@ -789,6 +793,7 @@ h3 {
     .header2-info {
         text-align: center;
         margin-left: auto;
+        margin-right: auto;
     }
     .header2-info h1 {
         font-size: 2.7em;
@@ -797,6 +802,20 @@ h3 {
     .header2-info p {
         position: inherit;
     }
+}
+
+@media (max-width: 1200px) {
+
+
+    .toggle-theme-button {
+        top: 20%;
+        right: 8%;
+    }
+}
+
+
+@media (max-width: 700px) {
+
     .toggle-theme-button {
         top: 5.5%;
         right: 40%;
@@ -843,3 +862,85 @@ h3 {
 .hyphens {
     hyphens: manual;
 }
+
+
+
+
+
+
+.container-left-align ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container-left-align ul li {
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 10px;
+    margin: 10px;
+    flex: 1 0 200px; /* Adjust this value to change the minimum width of the items */
+    transition: background .3s;
+    color: #3d009e;
+    box-shadow: 0px 5px 15px rgba(73, 0, 190, 0.5);
+}
+
+.container-left-align ul li:hover {
+    background: #d9b1ff;
+    color: #000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+form h1 {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0429ff;
+    color: #fff;
+    cursor: pointer;
+    font-size: large;
+    transition: background-color .3s;
+}
+
+form button:hover {
+    background-color: #5517ff;
+}
+
+
