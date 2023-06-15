@@ -48,8 +48,8 @@ export default function Skills() {
                                 <li>React.js</li>
                                 <li>PHP</li>
                                 <li>Ruby on Rails</li>
-                                <li>Eclipse IDE</li>
                                 <li>Object-Oriented Programming (OOP)</li>
+                                <li>Eclipse IDE</li>
                                 <li>WordPress</li>
                                 <li>Google Cloud Platform (GCP)</li>
                                 <li>Search Engine Optimization (SEO)</li>

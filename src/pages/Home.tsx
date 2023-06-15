@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "src/LanguageContext";
 import "../dark-theme.css";
-import Projects from "./Projects";
 import { Link } from "react-router-dom";
 // import Typing from "react-typing-effect";
 
@@ -12,7 +11,6 @@ export default function Home() {
     return (
         <>
             <div className="container"></div>
-            {/* <img src="NHlogo.jpg" alt="Niko Hoffrén logo" className="NHlogo" /> */}
             <section>
                 <div className="bio-info">
                     <div className="header2-hero">
@@ -39,6 +37,14 @@ export default function Home() {
                                         : "Ohjelmistokehittäjä",
                                 ]}
                             </h2>
+
+                            {/* mobile profile image */}
+                            <img
+                                src="NHphoto3.png"
+                                alt="Niko Hoffrén"
+                                id="NHPhoto"
+                                className="mobileNHPhoto hidden"
+                            />
 
                             <div className="hyphens">
                                 <p>

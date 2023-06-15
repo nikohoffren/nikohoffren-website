@@ -417,6 +417,12 @@ nav .fa {
     margin: 20px;
 }
 
+.mobileNHPhoto {
+    width: 70%;
+    border-radius: 100%;
+    margin-bottom: 2rem;
+}
+
 @media (max-width: 750px) {
     #NHphoto {
         width: 50%;
@@ -778,7 +784,15 @@ h3 {
     transition: 1s;
 }
 
+.hidden {
+    display: none;
+}
+
 @media (max-width: 1600px) {
+    .mobileNHPhoto {
+        display: inline-block;
+    }
+
     .header2-img-box img {
         display: none;
     }
@@ -796,7 +810,7 @@ h3 {
         margin-right: auto;
     }
     .header2-info h1 {
-        font-size: 2.7em;
+        font-size: 3.7em;
         position: inherit;
     }
     .header2-info p {
