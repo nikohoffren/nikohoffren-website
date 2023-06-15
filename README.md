@@ -9,7 +9,3 @@ This repository contains the code for my personal portfolio website. The website
 - [Vite](https://vitejs.dev/)
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-
-## Reflection
-
-I chose to use Vite for this project due to its fast and lean build tool, allowing for a quicker development process. TypeScript was used to provide static type checking, and Tailwind CSS allowed me to style the website easily with low-level utility classes.

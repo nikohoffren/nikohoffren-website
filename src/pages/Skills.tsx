@@ -49,7 +49,7 @@ export default function Skills() {
                                 <li>PHP</li>
                                 <li>Ruby on Rails</li>
                                 <li>Object-Oriented Programming (OOP)</li>
-                                <li>Eclipse IDE</li>
+                                <li>Android</li>
                                 <li>WordPress</li>
                                 <li>Google Cloud Platform (GCP)</li>
                                 <li>Search Engine Optimization (SEO)</li>
