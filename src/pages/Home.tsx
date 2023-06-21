@@ -37,6 +37,11 @@ export default function Home() {
                                         : "Ohjelmistokehittäjä",
                                 ]}
                             </h2>
+                            <div className="medium-margin-bottom">
+                                <Link className="hire-me-button" to="/contact">
+                                    {language === "en" ? "HIRE ME" : "PALKKAA MINUT"}
+                                </Link>
+                            </div>
 
                             {/* mobile profile image */}
                             <img
@@ -60,17 +65,8 @@ export default function Home() {
                                             has been created using Vite and
                                             React with TypeScript. In addition,
                                             I have developed, among other
-                                            things, my own CSS library/framework
-                                            called KISS (Keep It Simple
-                                            Stylesheets), which has been
-                                            published as an npm package, as well
-                                            as the Smart Meeting Scheduler
-                                            Chrome-extension designed to
-                                            facilitate the process of scheduling
-                                            meetings using Google Calendar. You
-                                            can find more information about
-                                            these and other projects of mine in
-                                            the{" "}
+                                            things, various projects which you
+                                            can find in the{" "}
                                             <Link
                                                 className="projects-link"
                                                 to="/projects"
@@ -84,16 +80,7 @@ export default function Home() {
                                             Sivu jota luet tällä hetkellä on
                                             luotu Viten avulla käyttäen Reactia
                                             TypeScriptin kera. Lisäksi olen
-                                            tehnyt mm. oman CSS-kirjaston
-                                            nimeltä KISS (Keep It Simple
-                                            Stylesheets) joka on julkaistu
-                                            npm-pakettina sekä Smart Meeding
-                                            Scheduler Chrome-laajennuksen, joka
-                                            on suunniteltu helpottamaan
-                                            kokousten ajanvaraamisprosessia
-                                            käyttäen Google-kalenteria.
-                                            Lisätietoja näistä sekä muista
-                                            projekteistani löydät{" "}
+                                            tehnyt lukuisasti muita projekteja joista lisätietoja löydät{" "}
                                             <Link
                                                 className="projects-link"
                                                 to="/projects"

@@ -43,6 +43,27 @@ body {
     background-color: var(--theme-background-light);
 }
 
+.hire-me-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px 50px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .hire-me-button:hover {
+    background-color: #0056b3;
+  }
+
+  .hire-me-button:active {
+    background-color: #004085;
+  }
+
+
 .toggle-theme-button {
     background-color: #020202;
     border: none;
@@ -76,7 +97,7 @@ body {
 }
 
 .cv-download-button {
-    color: rgb(0, 32, 211);
+    color: rgb(32, 64, 247);
     font-size: 1.5rem;
     text-decoration: none;
 }
