@@ -94,8 +94,8 @@ export default function Home() {
 
                                 <p>
                                     {language === "en"
-                                        ? "In total I have +15 years of work experience in areas like business sales consultanting, logistics industry and earlier education from the field of Business Administration in Customer service and Marketing."
-                                        : "Kokonaisuudessaan minulla on yli 15 vuoden työkokemus eri aloilta, kuten yritysmyyntineuvottelijana toimimisesta, logistiikka-alalta sekä aiemmin hankitusta koulutuksesta liiketalouden alalta asiakaspalvelussa ja markkinoinnissa."}
+                                        ? "In total I have +15 years of work experience in areas like music production, business sales consultanting, logistics industry and earlier education from the field of Business Administration in Customer service and Marketing."
+                                        : "Kokonaisuudessaan minulla on yli 15 vuoden työkokemus eri aloilta, kuten musiikkituotannosta, yritysmyynnistä, logistiikka-alalta sekä aiemmin hankitusta koulutuksesta liiketalouden alalta asiakaspalvelussa ja markkinoinnissa."}
                                 </p>
                             </div>
                             <br />
