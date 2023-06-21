@@ -44,7 +44,7 @@ body {
 }
 
 .hire-me-button {
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white;
     padding: 15px 50px;
     font-size: 24px;
@@ -53,16 +53,15 @@ body {
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s ease;
-  }
+}
 
-  .hire-me-button:hover {
+.hire-me-button:hover {
     background-color: #0056b3;
-  }
+}
 
-  .hire-me-button:active {
+.hire-me-button:active {
     background-color: #004085;
-  }
-
+}
 
 .toggle-theme-button {
     background-color: #020202;
@@ -776,8 +775,8 @@ h3 {
 }
 
 .header2-info p {
-   padding: 0;
-   margin-bottom: 0.5rem;
+    padding: 0;
+    margin-bottom: 0.5rem;
 }
 
 .header2-info h2 {
@@ -792,17 +791,20 @@ h3 {
     right: 100px;
     top: 5rem;
     position: absolute;
+
 }
 
 .header2-img-box img {
     width: 600px;
-    height: 850px;
+    height: 680px;
     left: 45%;
     position: absolute;
     bottom: 0;
     transform: translateX(-50%);
     transition: bottom 1s, left 1s;
     transition: 1s;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .hidden {
@@ -840,17 +842,13 @@ h3 {
 }
 
 @media (max-width: 1200px) {
-
-
     .toggle-theme-button {
         top: 20%;
         right: 8%;
     }
 }
 
-
 @media (max-width: 700px) {
-
     .toggle-theme-button {
         top: 5.5%;
         right: 40%;
@@ -898,11 +896,6 @@ h3 {
     hyphens: manual;
 }
 
-
-
-
-
-
 .container-left-align ul {
     display: flex;
     flex-wrap: wrap;
@@ -919,7 +912,7 @@ h3 {
     padding: 10px;
     margin: 10px;
     flex: 1 0 200px; /* Adjust this value to change the minimum width of the items */
-    transition: background .3s;
+    transition: background 0.3s;
     color: #3d009e;
     box-shadow: 0px 5px 15px rgba(73, 0, 190, 0.5);
 }
@@ -951,7 +944,9 @@ form label {
     margin-bottom: 20px;
 }
 
-form input[type="text"], form input[type="email"], form textarea {
+form input[type="text"],
+form input[type="email"],
+form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -971,11 +966,9 @@ form button {
     color: #fff;
     cursor: pointer;
     font-size: large;
-    transition: background-color .3s;
+    transition: background-color 0.3s;
 }
 
 form button:hover {
     background-color: #5517ff;
 }
-
-
