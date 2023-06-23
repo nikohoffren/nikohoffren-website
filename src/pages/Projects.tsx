@@ -80,8 +80,8 @@ export default function Projects() {
                                 <img src="vilkku-logo.png" alt="Vilkku logo" />
                                 <h3 className="red-text">
                                     {language === "en"
-                                        ? "KUOPIO PUBLIC TRANSPORT"
-                                        : "KUOPION JULKINEN LIIKENNE (KUOPIO PUBLIC TRANSPORT)"}
+                                        ? "KUOPIO PUBLIC TRANSPORT - Website"
+                                        : "KUOPION JULKINEN LIIKENNE (KUOPIO PUBLIC TRANSPORT) - Verkkosivusto"}
                                 </h3>
                                 <p className="red-text">
                                     {language === "en"
@@ -116,8 +116,8 @@ export default function Projects() {
                                 />
                                 <h3 className="red-text">
                                     {language === "en"
-                                        ? "HONEYHOLIC'S HONEY"
-                                        : "HUNAJAHOLISTIN HUNAJA"}
+                                        ? "HONEYHOLIC'S HONEY - Website"
+                                        : "HUNAJAHOLISTIN HUNAJA - Verkkosivusto"}
                                 </h3>
                                 <p className="red-text">
                                     {language === "en"
@@ -140,6 +140,35 @@ export default function Projects() {
                                         ? "2021 - present"
                                         : "2021 - nykyhetki"}
                                 </p>
+                            </a>
+                        </div>
+
+                        <div className="portfolio-col">
+                            <a
+                                href="https://github.com/nikohoffren/stolen-or-not-app"
+                                target="_blank"
+                            >
+                                <img src="stolen-gear-logo.jpeg" alt="StolenOrNot? app logo" />
+                                <h3 className="red-text">
+                                    {language === "en"
+                                        ? "StolenOrNot? (Flutter App)"
+                                        : "StolenOrNot? (Flutter Mobiilisovellus)"}
+                                </h3>
+                                <p className="red-text">
+                                    {language === "en"
+                                        ? "This Flutter application is built to help people keep track of their valuable devices and protect them from theft. It allows users to register their devices, such as computers, cars, musical instruments, and more by entering a name and a unique serial number for each device. If a device gets stolen, users can mark it as such in the app. That way, if someone is selling the device in question, people will be able to check whether the device is already registered to someone in the app."
+                                        : "Tämä Flutter-sovellus on rakennettu auttamaan ihmisiä pitämään kirjaa arvokkaista laitteistaan ja suojaamaan niitä varkauksilta. Se mahdollistaa käyttäjille laitteiden, kuten tietokoneiden, autojen, musiikki-instrumenttien ja muiden, rekisteröimisen syöttämällä nimen ja ainutlaatuisen sarjanumeron jokaiselle laitteelle. Jos laite varastetaan, käyttäjät voivat merkitä sen sovelluksessa varastetuksi. Tällä tavoin, jos joku yrittää myydä kyseistä laitetta, ihmiset voivat tarkistaa, onko laite jo rekisteröity sovelluksessa jollekin."}
+                                </p>
+                                <a
+                                    href="https://github.com/nikohoffren/stolen-or-not-app"
+                                    target="_blank"
+                                    className="portfolio-col-link"
+                                >
+                                    {language === "en"
+                                        ? "Github source code"
+                                        : "Github lähdekoodi"}
+                                </a>
+                                <p className="arial red-text">2023</p>
                             </a>
                         </div>
 
@@ -191,8 +220,8 @@ export default function Projects() {
                                 </h3>
                                 <p className="red-text">
                                     {language === "en"
-                                        ? "The Smart Meeting Scheduler Chrome Extension is a powerful tool designed to simplify and streamline the process of scheduling meetings using Google Calendar. It automatically finds the best meeting times that work for all attendees, eliminating the need for back-and-forth emails and reducing scheduling conflicts. Written mostly in JavaScript. (Currently in development)"
-                                        : "Smart Meeting Scheduler Chrome -laajennus on tehokas työkalu, joka on suunniteltu helpottamaan ja tehostamaan kokousten ajanvaraamisprosessia käyttäen Google-kalenteria. Se etsii automaattisesti parhaat kokousajat, jotka sopivat kaikille osallistujille, poistaen tarpeen lähettää edestakaisia sähköposteja ja vähentäen aikatauluristiriitoja. Koodattu pääosin JavaScriptillä. (Vielä tuotantovaiheessa)"}
+                                        ? "The Smart Meeting Scheduler Chrome Extension is a powerful tool designed to simplify and streamline the process of scheduling meetings using Google Calendar. It automatically finds the best meeting times that work for all attendees, eliminating the need for back-and-forth emails and reducing scheduling conflicts. Written mostly in JavaScript."
+                                        : "Smart Meeting Scheduler Chrome -laajennus on tehokas työkalu, joka on suunniteltu helpottamaan ja tehostamaan kokousten ajanvaraamisprosessia käyttäen Google-kalenteria. Se etsii automaattisesti parhaat kokousajat, jotka sopivat kaikille osallistujille, poistaen tarpeen lähettää edestakaisia sähköposteja ja vähentäen aikatauluristiriitoja. Koodattu pääosin JavaScriptillä."}
                                 </p>
                                 <a
                                     href="https://github.com/nikohoffren/smart-meeting-scheduler"
