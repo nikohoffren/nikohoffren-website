@@ -78,12 +78,12 @@ export default function Projects() {
                                 target="_blank"
                             >
                                 <img src="vilkku-logo.png" alt="Vilkku logo" />
-                                <h3 className="red-text">
+                                <h3 className="white-text">
                                     {language === "en"
                                         ? "KUOPIO PUBLIC TRANSPORT - Website"
                                         : "KUOPION JULKINEN LIIKENNE (KUOPIO PUBLIC TRANSPORT) - Verkkosivusto"}
                                 </h3>
-                                <p className="red-text">
+                                <p className="white-text">
                                     {language === "en"
                                         ? "Website for all the Kuopio/Siilinjärvi region Vilkku busses, Vilkku bicycles and Biketaxis current locations, stops and routes. Made with JavaScript + Netlify functions."
                                         : "Verkkosivusto josta käyttäjä näkee kaikki Kuopion sekä Siilinjärven alueen Vilkku bussien, Vilkku fillarien sekä Biketaxien sijainnit, pysäkit sekä reitit. Työkalut: JavaScript + Netlify Functions."}
@@ -97,7 +97,7 @@ export default function Projects() {
                                         ? "Github source code"
                                         : "Github lähdekoodi"}
                                 </a>
-                                <p className="arial red-text">
+                                <p className="arial white-text">
                                     kuopionjulkinenliikenne.live
                                     <br />
                                     2023
@@ -114,12 +114,12 @@ export default function Projects() {
                                     src="HHlahja.jpg"
                                     alt="Bottle of delicious honey from Hunajaholistin Hunaja"
                                 />
-                                <h3 className="red-text">
+                                <h3 className="white-text">
                                     {language === "en"
-                                        ? "HONEYHOLIC'S HONEY - Website"
+                                        ? "HUNAJAHOLISTIN HUNAJA - Website"
                                         : "HUNAJAHOLISTIN HUNAJA - Verkkosivusto"}
                                 </h3>
-                                <p className="red-text">
+                                <p className="white-text">
                                     {language === "en"
                                         ? "This is a Finnish commercial website for selling honey-products. Made with React, Vite and TypeScript."
                                         : "Suomalainen hunajanmyyntisivusto. Työkalut: React, Vite ja TypeScript."}
@@ -133,7 +133,7 @@ export default function Projects() {
                                         ? "Github source code"
                                         : "Github lähdekoodi"}
                                 </a>
-                                <p className="arial red-text">
+                                <p className="arial white-text">
                                     hunajaholisti.fi
                                     <br />
                                     {language === "en"
@@ -149,12 +149,12 @@ export default function Projects() {
                                 target="_blank"
                             >
                                 <img src="stolen-gear-logo.jpeg" alt="StolenOrNot? app logo" />
-                                <h3 className="red-text">
+                                <h3 className="white-text">
                                     {language === "en"
                                         ? "StolenOrNot? (Flutter App)"
                                         : "StolenOrNot? (Flutter Mobiilisovellus)"}
                                 </h3>
-                                <p className="red-text">
+                                <p className="white-text">
                                     {language === "en"
                                         ? "This Flutter application is built to help people keep track of their valuable devices and protect them from theft. It allows users to register their devices, such as computers, cars, musical instruments, and more by entering a name and a unique serial number for each device. If a device gets stolen, users can mark it as such in the app. That way, if someone is selling the device in question, people will be able to check whether the device is already registered to someone in the app."
                                         : "Tämä Flutter-sovellus on rakennettu auttamaan ihmisiä pitämään kirjaa arvokkaista laitteistaan ja suojaamaan niitä varkauksilta. Se mahdollistaa käyttäjille laitteiden, kuten tietokoneiden, autojen, musiikki-instrumenttien ja muiden, rekisteröimisen syöttämällä nimen ja ainutlaatuisen sarjanumeron jokaiselle laitteelle. Jos laite varastetaan, käyttäjät voivat merkitä sen sovelluksessa varastetuksi. Tällä tavoin, jos joku yrittää myydä kyseistä laitetta, ihmiset voivat tarkistaa, onko laite jo rekisteröity sovelluksessa jollekin."}
@@ -168,7 +168,7 @@ export default function Projects() {
                                         ? "Github source code"
                                         : "Github lähdekoodi"}
                                 </a>
-                                <p className="arial red-text">2023</p>
+                                <p className="arial white-text">2023</p>
                             </a>
                         </div>
 
@@ -181,12 +181,12 @@ export default function Projects() {
                                     src="kiss-css-logo.jpg"
                                     alt="KISS CSS logo"
                                 />
-                                <h3 className="red-text">
+                                <h3 className="white-text">
                                     {language === "en"
                                         ? "KISS CSS Framework"
                                         : "KISS CSS Kehys"}
                                 </h3>
-                                <p className="red-text">
+                                <p className="white-text">
                                     {language === "en"
                                         ? "KISS (Keep It Simple Stylesheets) is a simple, lightweight CSS framework designed for ease of use. It provides a collection of reusable CSS classes and components to quickly style your web projects. Published as npm-package. The website and detailed documentation are still in the production phase."
                                         : "KISS (Keep It Simple Stylesheets) on yksinkertainen ja kevyt CSS-kehys, joka on suunniteltu helppokäyttöisyyttä ajatellen. Se tarjoaa kokoelman uudelleenkäytettäviä CSS-luokkia ja komponentteja, joiden avulla voit nopeasti tyylittää verkkoprojektejasi. Julkaistu npm-pakettina. Web-sivusto ja tarkempi dokumentaatio on vielä tuotantovaiheessa."}
@@ -200,7 +200,7 @@ export default function Projects() {
                                         ? "Github source code"
                                         : "Github lähdekoodi"}
                                 </a>
-                                <p className="arial red-text">2023</p>
+                                <p className="arial white-text">2023</p>
                             </a>
                         </div>
 
@@ -213,12 +213,12 @@ export default function Projects() {
                                     src="smart-meeting-scheduler-logo.jpg"
                                     alt="KISS CSS logo"
                                 />
-                                <h3 className="red-text">
+                                <h3 className="white-text">
                                     {language === "en"
                                         ? "Smart Meeting Scheduler Chrome Extension"
                                         : "Smart Meeting Scheduler Chrome -laajennus"}
                                 </h3>
-                                <p className="red-text">
+                                <p className="white-text">
                                     {language === "en"
                                         ? "The Smart Meeting Scheduler Chrome Extension is a powerful tool designed to simplify and streamline the process of scheduling meetings using Google Calendar. It automatically finds the best meeting times that work for all attendees, eliminating the need for back-and-forth emails and reducing scheduling conflicts. Written mostly in JavaScript. Downloadable in Chrome Webstore!"
                                         : "Smart Meeting Scheduler Chrome -laajennus on tehokas työkalu, joka on suunniteltu helpottamaan ja tehostamaan kokousten ajanvaraamisprosessia käyttäen Google-kalenteria. Se etsii automaattisesti parhaat kokousajat, jotka sopivat kaikille osallistujille, poistaen tarpeen lähettää edestakaisia sähköposteja ja vähentäen aikatauluristiriitoja. Koodattu pääosin JavaScriptillä. Ladattavissa Chrome Webstoresta!"}
@@ -226,13 +226,15 @@ export default function Projects() {
                                 <a
                                     href="https://github.com/nikohoffren/smart-meeting-scheduler"
                                     target="_blank"
+
+
                                     className="portfolio-col-link"
                                 >
                                     {language === "en"
                                         ? "Github source code"
                                         : "Github lähdekoodi"}
                                 </a>
-                                <p className="arial red-text">2023</p>
+                                <p className="arial white-text">2023</p>
                             </a>
                         </div>
                     </div>

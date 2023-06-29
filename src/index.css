@@ -645,7 +645,7 @@ h3 {
 
 .portfolio-col {
     flex: content;
-    background: var(--theme-background);
+    background: rgb(37, 37, 37);
     border: solid white;
     border-radius: 10px;
     margin-bottom: 5%;
