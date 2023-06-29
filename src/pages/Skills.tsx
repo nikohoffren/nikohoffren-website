@@ -48,10 +48,12 @@ export default function Skills() {
                                 <li>React.js</li>
                                 <li>PHP</li>
                                 <li>Ruby on Rails</li>
+                                <li>Scala</li>
                                 <li>Object-Oriented Programming (OOP)</li>
                                 <li>Android</li>
                                 <li>WordPress</li>
                                 <li>Google Cloud Platform (GCP)</li>
+                                <li>Google Analytics</li>
                                 <li>Search Engine Optimization (SEO)</li>
                             </ul>
                         </div>

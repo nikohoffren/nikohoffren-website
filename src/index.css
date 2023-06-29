@@ -280,6 +280,7 @@ hr {
     position: fixed;
     opacity: 0.88;
     margin-top: 0.5rem;
+    z-index: 10;
 }
 
 nav img {
@@ -646,29 +647,41 @@ h3 {
 .portfolio-col {
     flex: content;
     background: rgb(37, 37, 37);
-    border: solid white;
-    border-radius: 10px;
+    border-radius: 12px 12px 12px 12px;
     margin-bottom: 5%;
-    padding: 10px 60px;
     box-sizing: border-box;
     transition: 0.5s;
     cursor: pointer;
     color: var(--theme-text);
+    position: relative;
 }
+
 .portfolio-col img {
-    height: 200px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 5%;
+    height: 250px;
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    object-fit: cover;
 }
 
 .portfolio-col a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
     text-decoration: none;
+}
+
+.portfolio-col h3,
+.portfolio-col p,
+.portfolio-col .portfolio-col-link,
+.portfolio-col .arial {
+    position: relative;
+    z-index: 1;
 }
 
 .portfolio-col-link {
     font-size: 1.2rem;
-    color: hsl(0, 1%, 43%);
+    color: hsl(0, 0%, 50%);
 }
 
 .portfolio-col-link:hover {
@@ -791,7 +804,6 @@ h3 {
     right: 100px;
     top: 5rem;
     position: absolute;
-
 }
 
 .header2-img-box img {

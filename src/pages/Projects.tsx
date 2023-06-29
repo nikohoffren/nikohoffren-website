@@ -77,17 +77,41 @@ export default function Projects() {
                                 href="https://kuopionjulkinenliikenne.live"
                                 target="_blank"
                             >
-                                <img src="vilkku-logo.png" alt="Vilkku logo" />
+                                <img
+                                    src="Vilkku_sydan_violetti.png"
+                                    alt="Vilkku logo"
+                                />
                                 <h3 className="white-text">
                                     {language === "en"
                                         ? "KUOPIO PUBLIC TRANSPORT - Website"
                                         : "KUOPION JULKINEN LIIKENNE (KUOPIO PUBLIC TRANSPORT) - Verkkosivusto"}
                                 </h3>
                                 <p className="white-text">
-                                    {language === "en"
-                                        ? "Website for all the Kuopio/Siilinjärvi region Vilkku busses, Vilkku bicycles and Biketaxis current locations, stops and routes. Made with JavaScript + Netlify functions."
-                                        : "Verkkosivusto josta käyttäjä näkee kaikki Kuopion sekä Siilinjärven alueen Vilkku bussien, Vilkku fillarien sekä Biketaxien sijainnit, pysäkit sekä reitit. Työkalut: JavaScript + Netlify Functions."}
+                                    {language === "en" ? (
+                                        <>
+                                            Website for all the
+                                            Kuopio/Siilinjärvi region Vilkku
+                                            busses, Vilkku bicycles, and
+                                            Biketaxis current locations, stops,
+                                            and routes.
+                                            <br />
+                                            Made with JavaScript + Netlify
+                                            functions.
+                                        </>
+                                    ) : (
+                                        <>
+                                            Verkkosivusto josta käyttäjä näkee
+                                            kaikki Kuopion sekä Siilinjärven
+                                            alueen Vilkku bussien,
+                                            <br />
+                                            Vilkku fillarien sekä Biketaxien
+                                            sijainnit, pysäkit sekä reitit.
+                                            Työkalut: JavaScript + Netlify
+                                            Functions.
+                                        </>
+                                    )}
                                 </p>
+
                                 <a
                                     href="https://github.com/nikohoffren/kuopio-public-transport"
                                     target="_blank"
@@ -148,7 +172,10 @@ export default function Projects() {
                                 href="https://github.com/nikohoffren/stolen-or-not-app"
                                 target="_blank"
                             >
-                                <img src="stolen-gear-logo.jpeg" alt="StolenOrNot? app logo" />
+                                <img
+                                    src="stolen-gear-logo.jpeg"
+                                    alt="StolenOrNot? app logo"
+                                />
                                 <h3 className="white-text">
                                     {language === "en"
                                         ? "StolenOrNot? (Flutter App)"
@@ -226,8 +253,6 @@ export default function Projects() {
                                 <a
                                     href="https://github.com/nikohoffren/smart-meeting-scheduler"
                                     target="_blank"
-
-
                                     className="portfolio-col-link"
                                 >
                                     {language === "en"
