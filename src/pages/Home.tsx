@@ -94,8 +94,8 @@ export default function Home() {
 
                                 <p>
                                     {language === "en"
-                                        ? "In total I have +15 years of work experience in areas like music production, business sales consultanting, logistics industry and earlier education from the field of Business Administration in Customer service and Marketing."
-                                        : "Kokonaisuudessaan minulla on yli 15 vuoden työkokemus eri aloilta, kuten musiikkituotannosta, yritysmyynnistä, logistiikka-alalta sekä aiemmin hankitusta koulutuksesta liiketalouden alalta asiakaspalvelussa ja markkinoinnissa."}
+                                        ? "For the past 5 years, I have been working as a music producer, as well as a mixer and mastering engineer. I also have nearly eight years of experience in the logistics industry, where I have held managerial positions."
+                                        : "Viimeiset 5 vuotta olen työskennellyt musiikkituottajana sekä myös miksaajana ja masteroijana. Minulla on myös lähes kahdeksan vuoden kokemus logistiikka-alalta, joissa olen myös toimunut esimiestehtävissä."}
                                 </p>
                             </div>
                             <br />
