@@ -25,6 +25,12 @@ export default function Footer() {
                     >
                         <i className="fa fa-instagram"></i>
                     </a>
+                    <a
+                        href="https://www.twitter.com/nikohoffren"
+                        target="{blank}"
+                    >
+                        <i className="fa fa-twitter"></i>
+                    </a>
                 </div>
 
                 <p className="white">Email: niko.hoffren@gmail.com</p>

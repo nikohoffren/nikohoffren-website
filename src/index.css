@@ -743,24 +743,9 @@ h3 {
     color: darkviolet;
     transition: 0.5s;
 }
-.fa-youtube:hover {
-    color: rgb(211, 0, 0);
-    transition: 0.5s;
-}
-.fa-spotify:hover {
-    color: rgb(41, 228, 4);
-    transition: 0.5s;
-}
-.fa-soundcloud:hover {
-    color: rgb(233, 153, 4);
-    transition: 0.5s;
-}
+
 .fa-linkedin:hover {
     color: rgb(0, 56, 211);
-    transition: 0.5s;
-}
-.fa-github:hover {
-    color: rgb(201, 36, 242);
     transition: 0.5s;
 }
 

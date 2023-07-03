@@ -94,8 +94,8 @@ export default function Home() {
 
                                 <p>
                                     {language === "en"
-                                        ? "Since 2020, I have been working as a music producer, as well as a mixer and mastering engineer. I also have nearly eight years of experience in the logistics industry, where I have held managerial positions."
-                                        : "Vuodesta 2020 olen työskennellyt musiikkituottajana sekä myös miksaajana ja masteroijana. Minulla on myös lähes kahdeksan vuoden kokemus logistiikka-alalta, joissa olen toiminut myös esimiestehtävissä."}
+                                        ? "Since 2019, I have been working as a music producer, as well as a audio mixer and mastering engineer. I also have nearly eight years of experience in the logistics industry, where I have held managerial positions."
+                                        : "Vuodesta 2019 olen työskennellyt musiikkituottajana sekä myös audiomiksaajana ja masteroijana. Minulla on myös lähes kahdeksan vuoden kokemus logistiikka-alalta, joissa olen toiminut myös esimiestehtävissä."}
                                 </p>
                             </div>
                             <br />
