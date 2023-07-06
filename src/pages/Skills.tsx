@@ -5,7 +5,7 @@ export default function Skills() {
     const { language } = useContext(LanguageContext);
 
     return (
-        <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <section className="py-10 px-8 md:px-16 shadow-lg rounded-lg my-20 mx-4 md:mx-8 lg:mx-16">
             <h1 className="text-4xl font-bold mb-10 text-center">
                 {language === "en" ? "SKILLS" : "TAIDOT"}
             </h1>
