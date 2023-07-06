@@ -11,12 +11,12 @@ export default function Home() {
             <section>
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                     <div>
-                        <h1 className="text-3xl font-semibold mb-2">
+                        <h1 className="text-5xl font-semibold mb-2">
                             {language === "en"
                                 ? "I'm Niko Hoffrén"
                                 : "Olen Niko Hoffrén"}
                         </h1>
-                        <h2 className="text-xl font-semibold mb-4">
+                        <h2 className="text-xl font-semibold mb-4 mt-4">
                             {language === "en"
                                 ? "Software developer"
                                 : "Ohjelmistokehittäjä"}
