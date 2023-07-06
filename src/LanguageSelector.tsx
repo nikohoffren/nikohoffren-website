@@ -13,15 +13,15 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ setLanguage }) => {
     };
 
     return (
-        <div className="language-selector">
+        <div className="language-selector flex items-center space-x-2">
             <button
                 onClick={() => handleClick("fi")}
                 className={language === "fi" ? "active" : ""}
             >
                 <img
                     src="./Flag_of_Finland.svg.png"
-                    alt=""
-                    className="language-flag"
+                    alt="Finnish Flag"
+                    className="language-flag h-6 w-auto hover:scale-110"
                 />
             </button>
             <button
@@ -30,8 +30,8 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ setLanguage }) => {
             >
                 <img
                     src="./Flag_of_the_United_Kingdom_(1-2).svg.png"
-                    alt=""
-                    className="language-flag"
+                    alt="British Flag"
+                    className="language-flag h-6 w-10 hover:scale-110"
                 />
             </button>
         </div>

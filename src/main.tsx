@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import "./dark-theme.css";
+import './tailwind.css'
 
 const rootElement = document.getElementById("root");
 

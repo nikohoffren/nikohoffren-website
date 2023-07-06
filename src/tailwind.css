@@ -1,0 +1,12 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+    --ff-primary: "", sans-serif;
+}
+
+* {
+    font-family: var(--ff-primary);
+    transition: 0.2s;
+}

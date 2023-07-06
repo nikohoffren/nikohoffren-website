@@ -6,7 +6,7 @@ import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./pages/Footer";
-import "./index.css";
+import './tailwind.css'
 import { LanguageContext } from "./LanguageContext";
 
 function App() {
@@ -32,8 +32,11 @@ function App() {
         localStorage.setItem("theme", theme);
     }, [theme]);
 
+    const bgClass = theme === "dark" ? 'bg-gray-700' : 'bg-white';
+    const textClass = theme === "dark" ? 'text-white' : 'text-black';
+
     return (
-        <>
+        <div className={`${bgClass} ${textClass} min-h-screen`}>
             <LanguageContext.Provider value={value}>
                 <Navbar theme={theme} toggleTheme={toggleTheme} />
                 <Routes>
@@ -44,7 +47,7 @@ function App() {
                 </Routes>
                 <Footer />
             </LanguageContext.Provider>
-        </>
+        </div>
     );
 }
 
