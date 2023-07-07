@@ -38,7 +38,7 @@ export default function Home() {
                                     ? "The page you are currently reading has been created using Vite and React with TypeScript. In addition, I have developed, among other things, various projects which you can find in the "
                                     : "Sivu jota luet tällä hetkellä on luotu Viten avulla käyttäen Reactia TypeScriptin kera. Lisäksi olen tehnyt lukuisasti muita projekteja joista lisätietoja löydät "}
                                 <Link
-                                    className="underline text-blue-600"
+                                    className="underline text-blue-600 hover:text-red-600"
                                     to="/projects"
                                 >
                                     {language === "en"
