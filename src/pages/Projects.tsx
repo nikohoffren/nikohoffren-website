@@ -175,7 +175,7 @@ export default function Projects() {
 
                     <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full cursor-pointer m-auto">
                         <a
-                            href="https://github.com/nikohoffren/stolen-or-not-app"
+                            href="https://play.google.com/store/apps/details?id=com.nikohoffren.stolen_gear_app"
                             target="_blank"
                             className="w-full block h-full"
                         >
@@ -192,8 +192,8 @@ export default function Projects() {
                                 </h2>
                                 <p className="text-md text-gray-800 dark:text-white py-2">
                                     {language === "en"
-                                        ? "This Flutter application is built to help people keep track of their valuable devices and protect them from theft. It allows users to register their devices, such as computers, cars, musical instruments, and more. Tools: Flutter, Dart & Firebase."
-                                        : "Tämä Flutter-sovellus on rakennettu auttamaan ihmisiä pitämään kirjaa arvokkaista laitteistaan ja suojaamaan niitä varkauksilta. Työkalut: Flutter, Dart & Firebase."}
+                                        ? "This Flutter application is built to help people keep track of their valuable devices and protect them from theft. It allows users to register their devices, such as computers, cars, musical instruments, and more. Available in Google Play Store. Tools: Flutter, Dart & Firebase."
+                                        : "Tämä Flutter-sovellus on rakennettu auttamaan ihmisiä pitämään kirjaa arvokkaista laitteistaan ja suojaamaan niitä varkauksilta. Saatavilla Google Play Store:sta. Työkalut: Flutter, Dart & Firebase."}
                                 </p>
                                 <a
                                     href="https://github.com/nikohoffren/stolen-or-not-app"
