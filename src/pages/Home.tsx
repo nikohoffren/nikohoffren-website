@@ -2,13 +2,22 @@ import React, { useContext, useState } from "react";
 import { LanguageContext } from "src/LanguageContext";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
+import { RefreshIcon } from "@heroicons/react/outline";
 
 export default function Home() {
     const { language } = useContext(LanguageContext);
     const cvUrl = "/nikohoffren-cv.pdf";
     const [inProp, setInProp] = useState(false);
     const [textInProp, setTextInProp] = useState(false);
-
+    const [isLoading, setIsLoading] = useState(true);
+    const imageLoaded = () => {
+        setIsLoading(false);
+    };
+    const loader = (
+        <div className="flex items-center justify-center h-full">
+            <RefreshIcon className="animate-spin h-8 w-8 text-gray-500" />
+        </div>
+    );
     React.useEffect(() => {
         setInProp(true);
         setTextInProp(true);
@@ -119,15 +128,18 @@ export default function Home() {
                         </>
                     </div>
                     <div>
+                    {isLoading && loader}
                         <CSSTransition
                             in={inProp}
                             timeout={500}
                             classNames="slide"
                         >
+
                             <img
                                 src="NH-photo3.JPG.png"
                                 alt="Niko Hoffrén"
                                 className="w-full h-auto"
+                                onLoad={imageLoaded}
                             />
                         </CSSTransition>
                     </div>

@@ -1,17 +1,17 @@
-import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App";
-import './tailwind.css'
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import './tailwind.css';
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 
 if (rootElement) {
-    ReactDOM.render(
+    const root = createRoot(rootElement);
+    root.render(
         <BrowserRouter>
             <App />
-        </BrowserRouter>,
-        rootElement
+        </BrowserRouter>
     );
 } else {
-    console.error("Unable to find the root element for your application.");
+    console.error('Unable to find the root element for your application.');
 }
