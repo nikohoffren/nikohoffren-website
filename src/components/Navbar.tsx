@@ -4,13 +4,7 @@ import LanguageSelector from "./LanguageSelector";
 import { LanguageContext } from "./LanguageContext";
 import { FiMenu, FiX } from "react-icons/fi";
 import React from "react";
-
-interface CustomLinkProps {
-    to: string;
-    children: React.ReactNode;
-    className?: string;
-    onClick?: () => void;
-}
+import CustomLink from "./CustomLink";
 
 interface NavbarProps {
     theme: string;
@@ -30,7 +24,9 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
 
     return (
         <>
-            <nav className={`grid grid-cols-2 p-4 ${bgClass} ${textClass} fixed w-full z-50 top-0`}>
+            <nav
+                className={`grid grid-cols-2 p-4 ${bgClass} ${textClass} fixed w-full z-50 top-0`}
+            >
                 <div className="flex space-x-6">
                     <CustomLink to="/" className="font-bold text-lg ml-4">
                         <img
@@ -158,18 +154,5 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                 </div>
             </nav>
         </>
-    );
-}
-
-function CustomLink({ to, children, ...props }: CustomLinkProps) {
-    const resolvedPath = useResolvedPath(to);
-    const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-
-    const activeClass = isActive ? "border-b-2 border-gray-700 pb-1" : "";
-
-    return (
-        <Link to={to} className={`block ${activeClass}`} {...props}>
-            {children}
-        </Link>
     );
 }
