@@ -21,7 +21,7 @@ export default function Skills() {
                     >
                         <div>
                             <p className="text-lg font-semibold mb-4">
-                            {categoryNames[language][category]}
+                                {categoryNames[language][category]}
                             </p>
                             <ul className="space-y-3">
                                 {skillCategories[category].map((skill) => (
@@ -30,11 +30,18 @@ export default function Skills() {
                                         href={skillUrls[skill] || "#"}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        className="text-xl"
                                     >
+
                                         <li className="flex items-center space-x-2 py-2 px-4 rounded-md shadow-sm hover:shadow-md transition duration-300 ease-in-out transform hover:scale-105 bg-white hover:bg-gray-200 cursor-pointer">
-                                            <img src={skillIcons[skill]} alt={`${skill} icon`} className="w-4 h-4" />
+                                            <img
+                                                src={skillIcons[skill]}
+                                                alt={`${skill} icon`}
+                                                className="w-8 h-8"
+                                            />
                                             <span>{skill}</span>
                                         </li>
+
                                     </a>
                                 ))}
                             </ul>

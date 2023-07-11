@@ -11,7 +11,7 @@ export const skillIcons = {
     "Express.js": 'expressjs.png',
     "Axios.js": 'axiosjs.png',
     "Netlify Functions": 'netlify.png',
-    "SQL (MySQL, MariaDB)": 'sql.png',
+    "SQL (MySQL, MariaDB)": 'sql.jpg',
     "Dart (Flutter)": 'flutter.png',
     Bash: 'bash.png',
     Fish: 'fish.png',
