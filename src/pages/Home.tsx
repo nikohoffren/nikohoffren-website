@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import { LanguageContext } from "src/LanguageContext";
+import { LanguageContext } from "../components/LanguageContext";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
-import { RefreshIcon } from "@heroicons/react/outline";
+import Loader from "../components/Loader";
 
 export default function Home() {
     const { language } = useContext(LanguageContext);
@@ -13,11 +13,7 @@ export default function Home() {
     const imageLoaded = () => {
         setIsLoading(false);
     };
-    const loader = (
-        <div className="flex items-center justify-center h-full">
-            <RefreshIcon className="animate-spin h-8 w-8 text-gray-500" />
-        </div>
-    );
+
     React.useEffect(() => {
         setInProp(true);
         setTextInProp(true);
@@ -25,7 +21,7 @@ export default function Home() {
 
     return (
         <div className={`mx-auto container px-4 sm:px-6 lg:px-8 mt-8`}>
-             <div className="py-10" />
+            <div className="py-10" />
             <section>
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                     <div>
@@ -128,13 +124,12 @@ export default function Home() {
                         </>
                     </div>
                     <div>
-                    {isLoading && loader}
+                        {isLoading && <Loader />}
                         <CSSTransition
                             in={inProp}
                             timeout={500}
                             classNames="slide"
                         >
-
                             <img
                                 src="NH-photo3.JPG.png"
                                 alt="Niko Hoffrén"

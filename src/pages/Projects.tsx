@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import { LanguageContext } from "src/LanguageContext";
-import { RefreshIcon } from "@heroicons/react/outline";
+import { LanguageContext } from "../components/LanguageContext";
+import Loader from "../components/Loader";
 
 export default function Projects() {
     const { language } = useContext(LanguageContext) as {
@@ -12,11 +12,6 @@ export default function Projects() {
     const imageLoaded = () => {
         setIsLoading(false);
     };
-    const loader = (
-        <div className="flex items-center justify-center h-full">
-            <RefreshIcon className="animate-spin h-8 w-8 text-gray-500" />
-        </div>
-    );
 
     return (
         <>
@@ -88,7 +83,7 @@ export default function Projects() {
                             target="_blank"
                             className="w-full block h-full"
                         >
-                            {isLoading && loader}
+                            {isLoading && <Loader />}
                             <img
                                 alt="Vilkku logo"
                                 src="Vilkku_sydan_violetti.png"
@@ -150,7 +145,7 @@ export default function Projects() {
                             target="_blank"
                             className="w-full block h-full"
                         >
-                            {isLoading && loader}
+                            {isLoading && <Loader />}
                             <img
                                 src="HHlahja.jpg"
                                 alt="Bottle of delicious honey from Hunajaholistin Hunaja"
@@ -213,7 +208,7 @@ export default function Projects() {
                             target="_blank"
                             className="w-full block h-full"
                         >
-                            {isLoading && loader}
+                            {isLoading && <Loader />}
                             <img
                                 src="stolen-gear-logo.jpeg"
                                 alt="StolenOrNot? app logo"
@@ -276,7 +271,7 @@ export default function Projects() {
                             target="_blank"
                             className="w-full block h-full"
                         >
-                            {isLoading && loader}
+                            {isLoading && <Loader />}
                             <img
                                 src="kiss-css-logo.jpg"
                                 alt="KISS CSS logo"
@@ -340,7 +335,7 @@ export default function Projects() {
                             target="_blank"
                             className="w-full block h-full"
                         >
-                            {isLoading && loader}
+                            {isLoading && <Loader />}
                             <img
                                 src="smart-meeting-scheduler-logo.jpg"
                                 alt="KISS CSS logo"

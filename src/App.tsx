@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
-import Navbar from "./Navbar";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
@@ -7,7 +7,7 @@ import Projects from "./pages/Projects";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./pages/Footer";
 import './tailwind.css'
-import { LanguageContext } from "./LanguageContext";
+import { LanguageContext } from "./components/LanguageContext";
 
 function App() {
     const [theme, setTheme] = useState(
