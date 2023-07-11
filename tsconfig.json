@@ -15,6 +15,6 @@
         "src/*": ["src/*"]
       }
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx, ../components/"],
+    "include": ["src/**/*.ts", "src/**/*.tsx, ../components/", "src/constants/SkillCategories.tsx"],
     "exclude": ["node_modules"]
   }
