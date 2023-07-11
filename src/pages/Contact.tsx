@@ -5,7 +5,8 @@ export default function Contact() {
     const { language } = useContext(LanguageContext);
 
     return (
-        <div className="py-10 px-8 md:px-16 shadow-lg rounded-lg my-20 mx-4 md:mx-8 lg:mx-16">
+        <div className="py-10 px-8 md:px-16 rounded-lg my-10 mx-4 md:mx-8 lg:mx-16">
+            <div className="py-10" />
             <h1 className="text-4xl font-bold mb-10 text-center">
                 {language === "en" ? "CONTACT" : "OTA YHTEYTTÄ"}
             </h1>

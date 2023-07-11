@@ -1,7 +1,6 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
 :root {
@@ -10,7 +9,6 @@
 
 * {
     font-family: var(--ff-primary);
-    transition: 0.1s;
 }
 
 .btn {
@@ -19,11 +17,11 @@
     padding: 1rem 3rem;
     font-size: 1rem;
     line-height: 1.5;
-    color: white;
     text-decoration: none;
     text-transform: uppercase;
     background-color: hsl(var(--hue), 100%, 41%);
     border: 1px solid hsl(var(--hue), 100%, 41%);
+    border-radius: 5px;
     outline: transparent;
     overflow: hidden;
     cursor: pointer;
@@ -40,18 +38,11 @@
     }
 
     &-ghost {
-        color: hsl(var(--hue), 100%, 41%);
         background-color: transparent;
         border-color: hsl(var(--hue), 100%, 41%);
-
-        &:hover {
-            color: white;
-        }
     }
 
     &-shine {
-        color: white;
-
         &::before {
             position: absolute;
             content: "";
@@ -102,3 +93,24 @@
     transition: transform 500ms, opacity 500ms;
 }
 
+.slide-text-enter {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.slide-text-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 500ms, opacity 500ms;
+}
+
+.slide-text-exit {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-text-exit-active {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 500ms, opacity 500ms;
+}

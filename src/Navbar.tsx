@@ -29,7 +29,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
 
     return (
         <>
-            <nav className={`grid grid-cols-2 p-4 ${bgClass} ${textClass}`}>
+            <nav className={`grid grid-cols-2 p-4 ${bgClass} ${textClass} fixed w-full z-50 top-0`}>
                 <div className="flex space-x-6">
                     <CustomLink to="/" className="font-bold text-lg ml-4">
                         <img
