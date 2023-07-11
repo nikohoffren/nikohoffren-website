@@ -38,7 +38,7 @@
     }
 
     &-ghost {
-        background-color: transparent;
+        background-color: rgb(130, 112, 233);
         border-color: hsl(var(--hue), 100%, 41%);
     }
 
@@ -61,7 +61,7 @@
         }
 
         &:hover {
-            background: transparent;
+            background: rgb(105, 90, 187);
             box-shadow: 0 0 20px 10px hsla(var(--hue), 100%, 41%, 0.5);
         }
 

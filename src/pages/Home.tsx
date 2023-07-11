@@ -54,7 +54,7 @@ export default function Home() {
                                 classNames="slide-text"
                             >
                                 <Link to="/contact">
-                                    <button className="btn btn-primary btn-ghost btn-shine">
+                                    <button className="btn btn-primary btn-ghost btn-shine text-white">
                                         {language === "en"
                                             ? "HIRE ME"
                                             : "PALKKAA MINUT"}

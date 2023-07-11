@@ -11,12 +11,12 @@ import { LanguageContext } from "./components/LanguageContext";
 
 function App() {
     const [theme, setTheme] = useState(
-        localStorage.getItem("theme") ?? "light"
+        localStorage.getItem("theme") ?? "dark"
     );
     const [language, setLanguage] = useState("en");
 
     const toggleTheme = () => {
-        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+        setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
     };
 
     const value = useMemo(
