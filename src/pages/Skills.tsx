@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../components/LanguageContext";
 import { skillUrls } from "../constants/SkillUrls";
+import { skillIcons } from "../constants/SkillIcons";
 import { skillCategories, categoryNames } from "../constants/SkillCategories";
 
 export default function Skills() {
@@ -30,8 +31,9 @@ export default function Skills() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <li className="py-2 px-4 rounded-md shadow-sm hover:shadow-md transition duration-300 ease-in-out transform hover:scale-105 bg-white hover:bg-gray-200 cursor-pointer">
-                                            {skill}
+                                        <li className="flex items-center space-x-2 py-2 px-4 rounded-md shadow-sm hover:shadow-md transition duration-300 ease-in-out transform hover:scale-105 bg-white hover:bg-gray-200 cursor-pointer">
+                                            <img src={skillIcons[skill]} alt={`${skill} icon`} className="w-4 h-4" />
+                                            <span>{skill}</span>
                                         </li>
                                     </a>
                                 ))}

@@ -17,8 +17,8 @@ export const categoryNames = {
       scriptingShellOS: "Scripting / Shell / OS",
   },
   fi: {
-      frontEnd: "Front-end ohjelmointikielet",
-      backEnd: "Back-end ohjelmointikielet",
+      frontEnd: "Front-end Kielet / Kirjastot",
+      backEnd: "Back-end Kielet",
       backEndFrameworks: "Back-end Frameworkit",
       databaseSystems: "Tietokantajärjestelmät",
       mobileDevelopment: "Mobiilikehitys",
