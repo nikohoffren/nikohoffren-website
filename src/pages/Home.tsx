@@ -1,10 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { LanguageContext } from "src/LanguageContext";
 import { Link } from "react-router-dom";
+import { CSSTransition } from "react-transition-group";
 
 export default function Home() {
     const { language } = useContext(LanguageContext);
     const cvUrl = "/nikohoffren-cv.pdf";
+    const [inProp, setInProp] = useState(false);
+
+    React.useEffect(() => {
+        setInProp(true);
+    }, []);
 
     return (
         <div className={`mx-auto container px-4 sm:px-6 lg:px-8 mt-8`}>
@@ -21,12 +27,15 @@ export default function Home() {
                                 ? "Software developer"
                                 : "Ohjelmistokehittäjä"}
                         </h2>
-                        <Link
-                            to="/contact"
-                            className={`mb-4 inline-block px-5 py-3 rounded-lg shadow-lg text-white bg-blue-500 hover:bg-blue-700 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm uppercase tracking-widest`}
-                        >
-                            {language === "en" ? "HIRE ME" : "PALKKAA MINUT"}
+
+                        <Link to="/contact">
+                            <button className="btn btn-primary btn-ghost btn-shine">
+                                {language === "en"
+                                    ? "HIRE ME"
+                                    : "PALKKAA MINUT"}
+                            </button>
                         </Link>
+
                         <div className="mt-4 text-base space-y-4">
                             <p>
                                 {language === "en"
@@ -61,17 +70,23 @@ export default function Home() {
                         <a
                             href={cvUrl}
                             download
-                            className={`mt-2 inline-block px-5 py-3 rounded-lg shadow-lg text-white bg-blue-500 hover:bg-blue-700 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm uppercase tracking-widest`}
+                            className={`mt-2 inline-block px-1 py-3 text-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm uppercase tracking-widest`}
                         >
                             {language === "en" ? "Download CV" : "Lataa CV"}
                         </a>
                     </div>
                     <div>
-                        <img
-                            src="NH-photo3.JPG.png"
-                            alt="Niko Hoffrén"
-                            className="w-full h-auto"
-                        />
+                        <CSSTransition
+                            in={inProp}
+                            timeout={500}
+                            classNames="slide"
+                        >
+                            <img
+                                src="NH-photo3.JPG.png"
+                                alt="Niko Hoffrén"
+                                className="w-full h-auto"
+                            />
+                        </CSSTransition>
                     </div>
                 </div>
             </section>
