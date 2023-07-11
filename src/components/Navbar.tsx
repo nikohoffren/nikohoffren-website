@@ -1,5 +1,4 @@
 import { useState, useContext } from "react";
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import LanguageSelector from "./LanguageSelector";
 import { LanguageContext } from "./LanguageContext";
 import { FiMenu, FiX } from "react-icons/fi";
