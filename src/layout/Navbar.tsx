@@ -1,9 +1,9 @@
 import { useState, useContext } from "react";
-import LanguageSelector from "./LanguageSelector";
-import { LanguageContext } from "./LanguageContext";
+import LanguageSelector from "../components/LanguageSelector";
+import { LanguageContext } from "../components/LanguageContext";
 import { FiMenu, FiX } from "react-icons/fi";
 import React from "react";
-import CustomLink from "./CustomLink";
+import CustomLink from "../components/CustomLink";
 
 interface NavbarProps {
     theme: string;

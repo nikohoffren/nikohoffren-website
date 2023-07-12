@@ -1,11 +1,11 @@
 import React, { useState, useMemo, useEffect } from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./layout/Navbar";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import { Route, Routes } from "react-router-dom";
-import Footer from "./pages/Footer";
+import Footer from "./layout/Footer";
 import "./tailwind.css";
 import { LanguageContext } from "./components/LanguageContext";
 
