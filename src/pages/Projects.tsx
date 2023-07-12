@@ -23,8 +23,8 @@ export default function Projects() {
 
                 <p className="mb-6 text-center">
                     {language === "en"
-                        ? "Find all of my projects on "
-                        : "Löydät kaikki projektini "}{" "}
+                        ? "Find all of my projects and open-source contributions on "
+                        : "Löydät kaikki projektini ja avoimen lähdekoodin kontribuutiot "}{" "}
                     <a
                         href="https://www.github.com/nikohoffren"
                         className="text-blue-500 hover:text-blue-700 underline"
@@ -35,7 +35,7 @@ export default function Projects() {
                     </a>
                     .
                 </p>
-                <p className="mb-6 text-center">
+                {/* <p className="mb-6 text-center">
                     {language === "en"
                         ? "Be sure to also check out my "
                         : "Tutustu myös "}{" "}
@@ -48,7 +48,7 @@ export default function Projects() {
                         freeCodeCamp
                     </a>{" "}
                     {language === "en" ? "account." : "tiliini."}
-                </p>
+                </p> */}
                 <p className="mb-6 text-center">
                     {language === "en"
                         ? "You can also find all of my music production related info on "

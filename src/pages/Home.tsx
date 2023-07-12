@@ -90,9 +90,19 @@ export default function Home() {
                                     </p>
                                     <p>
                                         {language === "en"
+                                        ? "Contributing to open-source software is one of the ways I've chosen to give back to the community. I believe that open-source not only promotes transparency and collaborative learning but also pushes the boundaries of technological innovation."
+                                        : "Avointen lähdekoodien ohjelmistojen kehittämiseen osallistuminen on yksi tapa, jolla olen valinnut antaa panokseni yhteisölle. Uskon, että avoimen lähdekoodin ohjelmistot eivät ainoastaan edistä läpinäkyvyyttä ja yhteisöllistä oppimista, vaan myös siirtävät teknologisen innovaation rajoja."}
+                                    </p>
+                                    <p>
+                                        {language === "en"
+                                            ? "I'm always eager to connect with like-minded individuals, potential collaborators, or anyone curious about my work. Feel free to reach out to me with any queries or opportunities. Let's code, collaborate, and create together!"
+                                            : "Olen aina innokas yhdistämään voimia samanhenkisten yksilöiden, potentiaalisten yhteistyökumppaneiden tai kenen tahansa kanssa, joka on utelias työstäni. Ota rohkeasti yhteyttä minuun, jos sinulla on kysyttävää tai mahdollisuuksia tarjolla. Koodataan, tehdään yhteistyötä ja luodaan yhdessä!"}
+                                    </p>
+                                    {/* <p>
+                                        {language === "en"
                                             ? "Since 2019, I have been working as a music producer, as well as an audio mixer and mastering engineer. I also have nearly eight years of experience in the logistics industry, where I have held managerial positions."
                                             : "Vuodesta 2019 olen työskennellyt musiikkituottajana sekä myös audiomiksaajana ja masteroijana. Minulla on myös lähes kahdeksan vuoden kokemus logistiikka-alalta, joissa olen toiminut myös esimiestehtävissä."}
-                                    </p>
+                                    </p> */}
                                 </div>
                             </CSSTransition>
                             <CSSTransition
