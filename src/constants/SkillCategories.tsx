@@ -2,8 +2,8 @@ export const skillCategories = {
   "frontEnd": ["HTML", "CSS", "JavaScript", "TypeScript", "React"],
   "backEnd": ["Node.js", "PHP", "Ruby (on Rails)", "Java"],
   "backEndFrameworks": ["Express.js", "Axios.js", "Netlify Functions"],
-  "databaseSystems": ["SQL (MySQL, MariaDB)"],
-  "mobileDevelopment": ["Dart (Flutter)"],
+  "databaseSystems": ["SQL (MySQL, MariaDB)", "Firebase"],
+  "mobileDevelopment": ["Dart", "Flutter"],
   "scriptingShellOS": ["Bash", "Fish", "GNU/Linux"],
 };
 
