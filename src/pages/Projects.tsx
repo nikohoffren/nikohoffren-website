@@ -24,7 +24,7 @@ export default function Projects() {
                 <p className="mb-6 text-center">
                     {language === "en"
                         ? "Find all of my projects and open-source contributions on "
-                        : "Löydät kaikki projektini ja avoimen lähdekoodin kontribuutiot "}{" "}
+                        : "Löydät kaikki projektini sekä avoimen lähdekoodin kontribuutioni "}{" "}
                     <a
                         href="https://www.github.com/nikohoffren"
                         className="text-blue-500 hover:text-blue-700 underline"
@@ -77,7 +77,7 @@ export default function Projects() {
                 </p>
 
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full cursor-pointer m-auto">
+                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
                             href="https://kuopionjulkinenliikenne.live"
                             target="_blank"
@@ -100,10 +100,8 @@ export default function Projects() {
                             <p className="text-md text-gray-800 dark:text-white py-2">
                                 {language === "en" ? (
                                     <>
-                                        Website for all the Kuopio/Siilinjärvi
-                                        region Vilkku busses, Vilkku bicycles,
-                                        and Biketaxis current locations, stops,
-                                        and routes.
+                                        This platform provides comprehensive real-time tracking and route information for all Vilkku buses, bicycles, and bike taxis operating within the Kuopio/Siilinjärvi region.
+                                        <br />
                                         <br />
                                         <br />
                                         Tools: JavaScript, Express.js & Netlify
@@ -111,35 +109,36 @@ export default function Projects() {
                                     </>
                                 ) : (
                                     <>
-                                        Verkkosivusto josta käyttäjä näkee
-                                        kaikki Kuopion sekä Siilinjärven alueen
-                                        Vilkku bussien,
-                                        <br />
-                                        Vilkku fillarien sekä Biketaxien
-                                        sijainnit, pysäkit sekä reitit.
+                                        Tämä alusta tarjoaa kattavaa reaaliaikaista seuranta- ja reittitietoa kaikille Vilkku-busseille, polkupyörille ja polkupyörätakseille, jotka toimivat Kuopion/Siilinjärven alueella.
                                         Työkalut: JavaScript, Express.js &
                                         Netlify functions.
                                     </>
                                 )}
                             </p>
                             <a
+                                href="https://kuopionjulkinenliikenne.live"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                kuopionjulkinenliikenne.live
+                            </a>
+                            <br />
+                            <a
                                 href="https://github.com/nikohoffren/kuopio-public-transport"
                                 target="_blank"
-                                className="text-blue-500 italic"
+                                className="text-blue-500 hover:text-blue-300 italic"
                             >
                                 {language === "en"
                                     ? "Github source code"
                                     : "Github lähdekoodi"}
                             </a>
                             <p className="text-sm text-gray-900 dark:text-white italic my-2">
-                                kuopionjulkinenliikenne.live
-                                <br />
                                 2023
                             </p>
                         </div>
                     </div>
 
-                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full cursor-pointer m-auto">
+                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
                             href="https://www.hunajaholisti.fi"
                             target="_blank"
@@ -163,19 +162,16 @@ export default function Projects() {
                                 {language === "en" ? (
                                     <>
                                         {" "}
-                                        Finnish commercial website for selling
-                                        honey-products, that has cart and
-                                        checkout functionality using Stripe.
-                                        Made with React, Vite, TypeScript,
+                                        Finnish e-commerce platform designed for the sale of honey products, featuring an integrated shopping cart and secure checkout functionality powered by Stripe.
+                                        Tools: React, Vite, TypeScript,
                                         Tailwind CSS, Netlify Functions,
                                         Firebase and Stripe.{" "}
                                     </>
                                 ) : (
                                     <>
                                         {" "}
-                                        Suomalainen hunajanmyyntisivusto, jossa
-                                        on ostoskori sekä kassa toiminnallisuus
-                                        joka on toteutettu Stripen avulla.
+                                        Suomalainen verkkokauppa-alusta hunajatuotteiden myyntiin, joka sisältää integroidun ostoskorin ja turvallisen Stripe-maksutoiminnon.
+                                        <br />
                                         <br />
                                         Työkalut: React, Vite, TypeScript,
                                         Tailwind CSS, Netlify Functions,
@@ -184,17 +180,23 @@ export default function Projects() {
                                 )}
                             </p>
                             <a
+                                href="https://www.hunajaholisti.fi"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                hunajaholisti.fi
+                            </a>
+                            <br />
+                            <a
                                 href="https://github.com/nikohoffren/hunajaholisti-homepage"
                                 target="_blank"
-                                className="text-blue-500 italic"
+                                className="text-blue-500 hover:text-blue-300 italic"
                             >
                                 {language === "en"
                                     ? "Github source code"
                                     : "Github lähdekoodi"}
                             </a>
                             <p className="text-sm text-gray-900 dark:text-white italic my-2">
-                                hunajaholisti.fi
-                                <br />
                                 {language === "en"
                                     ? "2021 - present"
                                     : "2021 - nykyhetki"}
@@ -202,7 +204,7 @@ export default function Projects() {
                         </div>
                     </div>
 
-                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full cursor-pointer m-auto">
+                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
                             href="https://play.google.com/store/apps/details?id=com.nikohoffren.stolen_gear_app"
                             target="_blank"
@@ -219,8 +221,8 @@ export default function Projects() {
                         <div className="bg-white dark:bg-gray-800 w-full p-4">
                             <h2 className="text-xl font-medium text-black dark:text-white pb-2">
                                 {language === "en"
-                                    ? "StolenOrNot? (Flutter App)"
-                                    : "StolenOrNot? (Flutter Mobiilisovellus)"}
+                                    ? "StolenOrNot? - Flutter App"
+                                    : "StolenOrNot? - Flutter Mobiilisovellus"}
                             </h2>
                             <p className="text-md text-gray-800 dark:text-white py-2">
                                 {language === "en" ? (
@@ -251,9 +253,19 @@ export default function Projects() {
                                 )}
                             </p>
                             <a
+                                href="https://play.google.com/store/apps/details?id=com.nikohoffren.stolen_gear_app"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                {language === "en"
+                                    ? "Download from Google Play Store"
+                                    : "Lataa Google Play Store:sta"}
+                            </a>
+                            <br />
+                            <a
                                 href="https://github.com/nikohoffren/stolen-or-not-app"
                                 target="_blank"
-                                className="text-blue-500 italic"
+                                className="text-blue-500 hover:text-blue-300 italic"
                             >
                                 {language === "en"
                                     ? "Github source code"
@@ -265,9 +277,9 @@ export default function Projects() {
                         </div>
                     </div>
 
-                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full cursor-pointer m-auto">
+                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
-                            href="https://github.com/nikohoffren/kiss-css"
+                            href="https://www.npmjs.com/package/kiss-css"
                             target="_blank"
                             className="w-full block h-full"
                         >
@@ -281,9 +293,7 @@ export default function Projects() {
                         </a>
                         <div className="bg-white dark:bg-gray-800 w-full p-4">
                             <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-                                {language === "en"
-                                    ? "KISS CSS Framework"
-                                    : "KISS CSS Kehys"}
+                                KISS CSS - Framework
                             </h2>
                             <p className="text-md text-gray-800 dark:text-white py-2">
                                 {language === "en" ? (
@@ -301,12 +311,11 @@ export default function Projects() {
                                 ) : (
                                     <>
                                         KISS (Keep It Simple Stylesheets) on
-                                        yksinkertainen ja kevyt CSS-kehys, joka
-                                        on suunniteltu helppokäyttöisyyttä
+                                        yksinkertainen ja kevyt CSS-kirjasto,
+                                        joka on suunniteltu helppokäyttöisyyttä
                                         ajatellen. Se tarjoaa kokoelman
                                         uudelleenkäytettäviä CSS-luokkia ja
-                                        komponentteja, joiden avulla voit
-                                        nopeasti tyylittää verkkoprojektejasi.
+                                        komponentteja.
                                         Julkaistu npm-pakettina. Web-sivusto ja
                                         tarkempi dokumentaatio on vielä
                                         tuotantovaiheessa. Työkalut: CSS,
@@ -315,9 +324,19 @@ export default function Projects() {
                                 )}
                             </p>
                             <a
+                                href="https://www.npmjs.com/package/kiss-css"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                {language === "en"
+                                    ? "Download NPM-package"
+                                    : "Lataa NPM-paketti"}
+                            </a>
+                            <br />
+                            <a
                                 href="https://github.com/nikohoffren/kiss-css"
                                 target="_blank"
-                                className="text-blue-500 italic"
+                                className="text-blue-500 hover:text-blue-300 italic"
                             >
                                 {language === "en"
                                     ? "Github source code"
@@ -329,7 +348,7 @@ export default function Projects() {
                         </div>
                     </div>
 
-                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full cursor-pointer m-auto">
+                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
                             href="https://chrome.google.com/webstore/detail/smart-meeting-scheduler/icaojehhbdenebdcahljjhnohnjmbpfa"
                             target="_blank"
@@ -338,7 +357,7 @@ export default function Projects() {
                             {isLoading && <Loader />}
                             <img
                                 src="smart-meeting-scheduler-logo.jpg"
-                                alt="KISS CSS logo"
+                                alt="Smart Meeting Scheduler logo"
                                 className="max-h-40 w-full object-cover"
                                 onLoad={imageLoaded}
                             />
@@ -346,8 +365,8 @@ export default function Projects() {
                         <div className="bg-white dark:bg-gray-800 w-full p-4">
                             <h2 className="text-xl font-medium text-black dark:text-white pb-2">
                                 {language === "en"
-                                    ? "Smart Meeting Scheduler Chrome Extension"
-                                    : "Smart Meeting Scheduler Chrome -laajennus"}
+                                    ? "Smart Meeting Scheduler - Chrome Extension"
+                                    : "Smart Meeting Scheduler - Chrome aajennus"}
                             </h2>
                             <p className="text-md text-gray-800 dark:text-white py-2">
                                 {language === "en" ? (
@@ -377,9 +396,19 @@ export default function Projects() {
                                 )}
                             </p>
                             <a
+                                href="https://chrome.google.com/webstore/detail/smart-meeting-scheduler/icaojehhbdenebdcahljjhnohnjmbpfa"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                {language === "en"
+                                    ? "Download from Chrome Web Store"
+                                    : "Lataa Chrome Web Store:sta"}
+                            </a>
+                            <br />
+                            <a
                                 href="https://github.com/nikohoffren/smart-meeting-scheduler"
                                 target="_blank"
-                                className="text-blue-500 italic"
+                                className="text-blue-500 hover:text-blue-300 italic"
                             >
                                 {language === "en"
                                     ? "Github source code"

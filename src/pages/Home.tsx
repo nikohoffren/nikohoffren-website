@@ -31,7 +31,7 @@ export default function Home() {
                                 timeout={500}
                                 classNames="slide-text"
                             >
-                                <h1 className="text-6xl font-semibold mb-2">
+                                <h1 className="text-center sm:text-left text-6xl font-semibold mb-2">
                                     {language === "en"
                                         ? "I'm Niko Hoffrén"
                                         : "Olen Niko Hoffrén"}
@@ -42,7 +42,7 @@ export default function Home() {
                                 timeout={500}
                                 classNames="slide-text"
                             >
-                                <h2 className="text-xl font-semibold mb-4 mt-4">
+                                <h2 className="text-center sm:text-left text-xl font-semibold mb-4 mt-4">
                                     {language === "en"
                                         ? "Software developer"
                                         : "Ohjelmistokehittäjä"}
@@ -53,20 +53,22 @@ export default function Home() {
                                 timeout={500}
                                 classNames="slide-text"
                             >
-                                <Link to="/contact">
-                                    <button className="btn btn-primary btn-ghost btn-shine text-white">
-                                        {language === "en"
-                                            ? "HIRE ME"
-                                            : "PALKKAA MINUT"}
-                                    </button>
-                                </Link>
+                                <div className="text-center sm:text-left">
+                                    <Link to="/contact">
+                                        <button className="btn btn-primary btn-ghost btn-shine text-white">
+                                            {language === "en"
+                                                ? "HIRE ME"
+                                                : "PALKKAA MINUT"}
+                                        </button>
+                                    </Link>
+                                </div>
                             </CSSTransition>
                             <CSSTransition
                                 in={textInProp}
                                 timeout={500}
                                 classNames="slide-text"
                             >
-                                <div className="mt-4 text-base space-y-4">
+                                <div className="text-center sm:text-left mt-4 text-base space-y-4">
                                     <p>
                                         {language === "en"
                                             ? "Welcome to my website! I'm a software developer from Kuopio, Finland. In my spare time, I like to spend time with my son, play video games, and code something interesting."
@@ -90,8 +92,8 @@ export default function Home() {
                                     </p>
                                     <p>
                                         {language === "en"
-                                        ? "Contributing to open-source software is one of the ways I've chosen to give back to the community. I believe that open-source not only promotes transparency and collaborative learning but also pushes the boundaries of technological innovation."
-                                        : "Avointen lähdekoodien ohjelmistojen kehittämiseen osallistuminen on yksi tapa, jolla olen valinnut antaa panokseni yhteisölle. Uskon, että avoimen lähdekoodin ohjelmistot eivät ainoastaan edistä läpinäkyvyyttä ja yhteisöllistä oppimista, vaan myös siirtävät teknologisen innovaation rajoja."}
+                                            ? "Contributing to open-source software is one of the ways I've chosen to give back to the community. I believe that open-source not only promotes transparency and collaborative learning but also pushes the boundaries of technological innovation."
+                                            : "Avointen lähdekoodien ohjelmistojen kehittämiseen osallistuminen on yksi tapa, jolla olen valinnut antaa panokseni yhteisölle. Uskon, että avoimen lähdekoodin ohjelmistot eivät ainoastaan edistä läpinäkyvyyttä ja yhteisöllistä oppimista, vaan myös siirtävät teknologisen innovaation rajoja."}
                                     </p>
                                     <p>
                                         {language === "en"
@@ -110,7 +112,7 @@ export default function Home() {
                                 timeout={500}
                                 classNames="slide-text"
                             >
-                                <h4 className="mt-4 text-lg font-semibold">
+                                <h4 className="text-center sm:text-left mt-4 text-lg font-semibold">
                                     {language === "en"
                                         ? "You can download my CV here:"
                                         : "Lataa CV:ni tästä linkistä:"}
@@ -121,15 +123,17 @@ export default function Home() {
                                 timeout={500}
                                 classNames="slide-text"
                             >
-                                <a
-                                    href={cvUrl}
-                                    download
-                                    className={`mt-2 inline-block py-3 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm uppercase tracking-widest`}
-                                >
-                                    {language === "en"
-                                        ? "Download CV"
-                                        : "Lataa CV"}
-                                </a>
+                                <div className="text-center sm:text-left">
+                                    <a
+                                        href={cvUrl}
+                                        download
+                                        className={`mt-2 inline-block py-3 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-sm uppercase tracking-widest`}
+                                    >
+                                        {language === "en"
+                                            ? "Download CV"
+                                            : "Lataa CV"}
+                                    </a>
+                                </div>
                             </CSSTransition>
                         </>
                     </div>
