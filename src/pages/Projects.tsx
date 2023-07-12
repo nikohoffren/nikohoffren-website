@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import { LanguageContext } from "../components/LanguageContext";
-import Loader from "../components/Loader";
+import { LanguageContext } from "../common/components/LanguageContext";
+import Loader from "../common/components/Loader";
 
 export default function Projects() {
     const { language } = useContext(LanguageContext) as {

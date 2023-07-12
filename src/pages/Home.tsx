@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import { LanguageContext } from "../components/LanguageContext";
+import { LanguageContext } from "../common/components/LanguageContext";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
-import Loader from "../components/Loader";
+import Loader from "../common/components/Loader";
 
 export default function Home() {
     const { language } = useContext(LanguageContext);

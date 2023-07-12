@@ -7,7 +7,7 @@ import Projects from "./pages/Projects";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./layout/Footer";
 import "./tailwind.css";
-import { LanguageContext } from "./components/LanguageContext";
+import { LanguageContext } from "./common/components/LanguageContext";
 
 function App() {
     const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "dark");

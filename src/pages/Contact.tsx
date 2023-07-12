@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "../components/LanguageContext";
+import { LanguageContext } from "../common/components/LanguageContext";
 
 export default function Contact() {
     const { language } = useContext(LanguageContext);

@@ -1,20 +1,24 @@
 {
     "compilerOptions": {
-      "target": "esnext",
-      "module": "esnext",
-      "jsx": "react-jsx",
-      "jsxImportSource": "react",
-      "strict": true,
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "typeRoots": ["./src/types", "./node_modules/@types"],
-      "forceConsistentCasingInFileNames": true,
-      "baseUrl": ".",
-      "paths": {
-        "src/*": ["src/*"]
-      }
+        "target": "esnext",
+        "module": "esnext",
+        "jsx": "react-jsx",
+        "jsxImportSource": "react",
+        "strict": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "typeRoots": ["./src/types", "./node_modules/@types"],
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": ".",
+        "paths": {
+            "src/*": ["src/*"]
+        }
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx, ../components/", "src/constants/SkillCategories.tsx"],
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx, ../components/",
+        "src/common/constants/SkillCategories.tsx"
+    ],
     "exclude": ["node_modules"]
-  }
+}
