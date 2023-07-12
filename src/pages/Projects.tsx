@@ -100,7 +100,11 @@ export default function Projects() {
                             <p className="text-md text-gray-800 dark:text-white py-2">
                                 {language === "en" ? (
                                     <>
-                                        This platform provides comprehensive real-time tracking and route information for all Vilkku buses, bicycles, and bike taxis operating within the Kuopio/Siilinjärvi region.
+                                        This platform provides comprehensive
+                                        real-time tracking and route information
+                                        for all Vilkku buses, bicycles, and bike
+                                        taxis operating within the
+                                        Kuopio/Siilinjärvi region.
                                         <br />
                                         <br />
                                         <br />
@@ -109,9 +113,13 @@ export default function Projects() {
                                     </>
                                 ) : (
                                     <>
-                                        Tämä alusta tarjoaa kattavaa reaaliaikaista seuranta- ja reittitietoa kaikille Vilkku-busseille, polkupyörille ja polkupyörätakseille, jotka toimivat Kuopion/Siilinjärven alueella.
-                                        Työkalut: JavaScript, Express.js &
-                                        Netlify functions.
+                                        Tämä alusta tarjoaa kattavaa
+                                        reaaliaikaista seuranta- ja reittitietoa
+                                        kaikille Vilkku-busseille, polkupyörille
+                                        ja polkupyörätakseille, jotka toimivat
+                                        Kuopion/Siilinjärven alueella. Työkalut:
+                                        JavaScript, Express.js & Netlify
+                                        functions.
                                     </>
                                 )}
                             </p>
@@ -162,15 +170,21 @@ export default function Projects() {
                                 {language === "en" ? (
                                     <>
                                         {" "}
-                                        Finnish e-commerce platform designed for the sale of honey products, featuring an integrated shopping cart and secure checkout functionality powered by Stripe.
-                                        Tools: React, Vite, TypeScript,
+                                        Finnish e-commerce platform designed for
+                                        the sale of honey products, featuring an
+                                        integrated shopping cart and secure
+                                        checkout functionality powered by
+                                        Stripe. Tools: React, Vite, TypeScript,
                                         Tailwind CSS, Netlify Functions,
                                         Firebase and Stripe.{" "}
                                     </>
                                 ) : (
                                     <>
                                         {" "}
-                                        Suomalainen verkkokauppa-alusta hunajatuotteiden myyntiin, joka sisältää integroidun ostoskorin ja turvallisen Stripe-maksutoiminnon.
+                                        Suomalainen verkkokauppa-alusta
+                                        hunajatuotteiden myyntiin, joka sisältää
+                                        integroidun ostoskorin ja turvallisen
+                                        Stripe-maksutoiminnon.
                                         <br />
                                         <br />
                                         Työkalut: React, Vite, TypeScript,
@@ -315,10 +329,9 @@ export default function Projects() {
                                         joka on suunniteltu helppokäyttöisyyttä
                                         ajatellen. Se tarjoaa kokoelman
                                         uudelleenkäytettäviä CSS-luokkia ja
-                                        komponentteja.
-                                        Julkaistu npm-pakettina. Web-sivusto ja
-                                        tarkempi dokumentaatio on vielä
-                                        tuotantovaiheessa. Työkalut: CSS,
+                                        komponentteja. Julkaistu npm-pakettina.
+                                        Web-sivusto ja tarkempi dokumentaatio on
+                                        vielä tuotantovaiheessa. Työkalut: CSS,
                                         JavaScript & Node.js.
                                     </>
                                 )}

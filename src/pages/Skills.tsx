@@ -32,7 +32,6 @@ export default function Skills() {
                                         rel="noopener noreferrer"
                                         className="text-xl"
                                     >
-
                                         <li className="flex items-center space-x-2 py-2 px-4 rounded-md shadow-sm hover:shadow-md transition duration-300 ease-in-out transform hover:scale-105 bg-white hover:bg-gray-200 cursor-pointer">
                                             <img
                                                 src={skillIcons[skill]}
@@ -41,7 +40,6 @@ export default function Skills() {
                                             />
                                             <span>{skill}</span>
                                         </li>
-
                                     </a>
                                 ))}
                             </ul>

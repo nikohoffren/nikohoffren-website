@@ -31,6 +31,14 @@ export default function Footer() {
                     >
                         <i className="fa fa-instagram"></i>
                     </a>
+                    {/* <a
+                        href="https://www.threads.com/nikohoffren"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-pink-500 hover:text-pink-400"
+                    >
+                        <img src="threads.png" alt="Threads logo" className="w-4 h-4 px-0 py-0" />
+                    </a> */}
                     <a
                         href="https://www.twitter.com/nikohoffren"
                         target="_blank"

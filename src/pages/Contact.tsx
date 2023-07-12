@@ -26,7 +26,9 @@ export default function Contact() {
                             className="block uppercase tracking-wide text-xs font-bold mb-2"
                             htmlFor="grid-email"
                         >
-                            {language === "en" ? "Your email:" : "Sähköpostisi:"}
+                            {language === "en"
+                                ? "Your email:"
+                                : "Sähköpostisi:"}
                         </label>
                         <input
                             className="appearance-none block w-full bg-gray-200 border rounded py-3 px-4 mb-3 text-gray-900 leading-tight focus:outline-none focus:bg-white"
@@ -60,6 +62,7 @@ export default function Contact() {
                     </div>
                 </div>
             </form>
+            <div className="py-10" />
         </div>
     );
 }

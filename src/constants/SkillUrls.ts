@@ -3,8 +3,7 @@ export const skillUrls: { [key: string]: string } = {
     TypeScript: "https://www.typescriptlang.org/",
     React: "https://reactjs.org/",
     HTML: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-    CSS:
-        "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    CSS: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     PHP: "https://www.php.net/",
     "SQL (MySQL, MariaDB)": "https://dev.mysql.com/",
     Java: "https://www.java.com/",
@@ -31,5 +30,4 @@ export const skillUrls: { [key: string]: string } = {
     "Express.js": "https://expressjs.com/",
     "Axios.js": "https://axios-http.com/docs/intro",
     "Netlify Functions": "https://www.netlify.com/products/functions/",
-
 };
