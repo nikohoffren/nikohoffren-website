@@ -371,6 +371,74 @@ export default function Projects() {
 
                     <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
+                            href="https://app-icon-generator.netlify.app/"
+                            target="_blank"
+                            className="w-full block h-full"
+                        >
+                            {isLoading && <Loader />}
+                            <img
+                                src="icon_512x512.png"
+                                alt="App Icon Generator logo"
+                                className="max-h-40 w-full object-cover"
+                                onLoad={imageLoaded}
+                            />
+                        </a>
+                        <div className="bg-white dark:bg-gray-800 w-full p-4">
+                            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
+                                {language === "en"
+                                    ? "ANDROID APP ICON GENERATOR - Web application"
+                                    : "ANDROID APP ICON GENERAATTORI - Verkkosivusto"}
+                            </h2>
+                            <p className="text-md text-gray-800 dark:text-white py-2">
+                                {language === "en" ? (
+                                    <>
+                                        {" "}
+                                        A modern web application for generating
+                                        Android app icons of various sizes.
+                                        <br /><br />
+                                        Built with React and Vite, and uses the
+                                        Fabric.js library for image
+                                        manipulation.{" "}
+                                    </>
+                                ) : (
+                                    <>
+                                        {" "}
+                                        Moderni verkkosovellus
+                                        Android-sovelluskuvakkeiden luomiseen
+                                        eri kokoisina.
+                                        <br /><br />
+                                        Rakennettu Reactin ja
+                                        Viten avulla, ja käyttää
+                                        Fabric.js-kirjastoa kuvankäsittelyyn.
+                                        <br /><br />{" "}
+                                    </>
+                                )}
+                            </p>
+                            <a
+                                href="https://app-icon-generator.netlify.app/"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                app-icon.generator.netlify.app
+                            </a>
+                            <br />
+                            <a
+                                href="https://github.com/nikohoffren/app-icon-generator-website"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                {language === "en"
+                                    ? "Github source code"
+                                    : "Github lähdekoodi"}
+                            </a>
+                            <p className="text-sm text-gray-900 dark:text-white italic my-2">
+                                2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
+                        <a
                             href="https://chrome.google.com/webstore/detail/smart-meeting-scheduler/icaojehhbdenebdcahljjhnohnjmbpfa"
                             target="_blank"
                             className="w-full block h-full"
