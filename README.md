@@ -1,4 +1,5 @@
 # Niko Hoffrén Homepage - Portfolio
+[![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ![Niko Hoffrén](https://github.com/nikohoffren/nikohoffren-homepage/blob/main/public/NHphoto3.png?raw=true)
 
