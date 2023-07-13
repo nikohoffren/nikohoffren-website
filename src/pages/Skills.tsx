@@ -2,7 +2,10 @@ import React, { useContext } from "react";
 import { LanguageContext } from "../common/components/LanguageContext";
 import { skillUrls } from "../common/constants/SkillUrls";
 import { skillIcons } from "../common/constants/SkillIcons";
-import { skillCategories, categoryNames } from "../common/constants/SkillCategories";
+import {
+    skillCategories,
+    categoryNames,
+} from "../common/constants/SkillCategories";
 
 export default function Skills() {
     const { language } = useContext(LanguageContext);

@@ -395,7 +395,8 @@ export default function Projects() {
                                         {" "}
                                         A modern web application for generating
                                         Android app icons of various sizes.
-                                        <br /><br />
+                                        <br />
+                                        <br />
                                         Built with React and Vite, and uses the
                                         Fabric.js library for image
                                         manipulation.{" "}
@@ -406,11 +407,13 @@ export default function Projects() {
                                         Moderni verkkosovellus
                                         Android-sovelluskuvakkeiden luomiseen
                                         eri kokoisina.
-                                        <br /><br />
-                                        Rakennettu Reactin ja
-                                        Viten avulla, ja käyttää
-                                        Fabric.js-kirjastoa kuvankäsittelyyn.
-                                        <br /><br />{" "}
+                                        <br />
+                                        <br />
+                                        Rakennettu Reactin ja Viten avulla, ja
+                                        käyttää Fabric.js-kirjastoa
+                                        kuvankäsittelyyn.
+                                        <br />
+                                        <br />{" "}
                                     </>
                                 )}
                             </p>
