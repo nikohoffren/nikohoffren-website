@@ -35,6 +35,14 @@ export default function Projects() {
                     </a>
                     .
                 </p>
+                <div className="flex justify-center items-center">
+                    <iframe
+                        src="https://github.com/sponsors/nikohoffren/card"
+                        title="Sponsor nikohoffren"
+                        className="w-full sm:w-700 h-220 sm:h-100 border-0 rounded-xl"
+                    ></iframe>
+                </div>
+
                 {/* <p className="mb-6 text-center">
                     {language === "en"
                         ? "Be sure to also check out my "
@@ -49,7 +57,7 @@ export default function Projects() {
                     </a>{" "}
                     {language === "en" ? "account." : "tiliini."}
                 </p> */}
-                <p className="mb-6 text-center">
+                <p className="mb-6 mt-6 text-center">
                     {language === "en"
                         ? "You can also find all of my music production related info on "
                         : "Löydät myös kaikki musiikkituotantooni liittyvät tiedot täältä: "}{" "}

@@ -95,6 +95,11 @@ export default function Home() {
                                             ? "Contributing to open-source software is one of the ways I've chosen to give back to the community. I believe that open-source not only promotes transparency and collaborative learning but also pushes the boundaries of technological innovation."
                                             : "Avointen lähdekoodien ohjelmistojen kehittämiseen osallistuminen on yksi tapa, jolla olen valinnut antaa panokseni yhteisölle. Uskon, että avoimen lähdekoodin ohjelmistot eivät ainoastaan edistä läpinäkyvyyttä ja yhteisöllistä oppimista, vaan myös siirtävät teknologisen innovaation rajoja."}
                                     </p>
+                                    <iframe
+                                        src="https://github.com/sponsors/nikohoffren/button"
+                                        title="Sponsor nikohoffren"
+                                        className="w-full sm:w-32 h-8 sm:h-8 border-0 ´"
+                                    />
                                     <p>
                                         {language === "en"
                                             ? "I'm always eager to connect with like-minded individuals, potential collaborators, or anyone curious about my work. Feel free to reach out to me with any queries or opportunities. Let's code, collaborate, and create together!"
