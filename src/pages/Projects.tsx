@@ -87,75 +87,6 @@ export default function Projects() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
-                            href="https://kuopionjulkinenliikenne.live"
-                            target="_blank"
-                            className="w-full block h-full"
-                        >
-                            {isLoading && <Loader />}
-                            <img
-                                alt="Vilkku logo"
-                                src="Vilkku_sydan_violetti.png"
-                                className="max-h-40 w-full object-cover"
-                                onLoad={imageLoaded}
-                            />
-                        </a>
-                        <div className="bg-white dark:bg-gray-800 w-full p-4">
-                            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-                                {language === "en"
-                                    ? "KUOPIO PUBLIC TRANSPORT - Website"
-                                    : "KUOPION JULKINEN LIIKENNE - Verkkosivusto"}
-                            </h2>
-                            <p className="text-md text-gray-800 dark:text-white py-2">
-                                {language === "en" ? (
-                                    <>
-                                        This platform provides comprehensive
-                                        real-time tracking and route information
-                                        for all Vilkku buses, bicycles, and bike
-                                        taxis operating within the
-                                        Kuopio/Siilinjärvi region.
-                                        <br />
-                                        <br />
-                                        <br />
-                                        Tools: JavaScript, Express.js & Netlify
-                                        functions.
-                                    </>
-                                ) : (
-                                    <>
-                                        Tämä alusta tarjoaa kattavaa
-                                        reaaliaikaista seuranta- ja reittitietoa
-                                        kaikille Vilkku-busseille, polkupyörille
-                                        ja polkupyörätakseille, jotka toimivat
-                                        Kuopion/Siilinjärven alueella. Työkalut:
-                                        JavaScript, Express.js & Netlify
-                                        functions.
-                                    </>
-                                )}
-                            </p>
-                            <a
-                                href="https://kuopionjulkinenliikenne.live"
-                                target="_blank"
-                                className="text-blue-500 hover:text-blue-300 italic"
-                            >
-                                kuopionjulkinenliikenne.live
-                            </a>
-                            <br />
-                            <a
-                                href="https://github.com/nikohoffren/kuopio-public-transport"
-                                target="_blank"
-                                className="text-blue-500 hover:text-blue-300 italic"
-                            >
-                                {language === "en"
-                                    ? "Github source code"
-                                    : "Github lähdekoodi"}
-                            </a>
-                            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-                                2023
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-                        <a
                             href="https://www.hunajaholisti.fi"
                             target="_blank"
                             className="w-full block h-full"
@@ -286,6 +217,75 @@ export default function Projects() {
                             <br />
                             <a
                                 href="https://github.com/nikohoffren/stolen-or-not-app"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                {language === "en"
+                                    ? "Github source code"
+                                    : "Github lähdekoodi"}
+                            </a>
+                            <p className="text-sm text-gray-900 dark:text-white italic my-2">
+                                2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
+                        <a
+                            href="https://kuopionjulkinenliikenne.live"
+                            target="_blank"
+                            className="w-full block h-full"
+                        >
+                            {isLoading && <Loader />}
+                            <img
+                                alt="Vilkku logo"
+                                src="Vilkku_sydan_violetti.png"
+                                className="max-h-40 w-full object-cover"
+                                onLoad={imageLoaded}
+                            />
+                        </a>
+                        <div className="bg-white dark:bg-gray-800 w-full p-4">
+                            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
+                                {language === "en"
+                                    ? "KUOPIO PUBLIC TRANSPORT - Website"
+                                    : "KUOPION JULKINEN LIIKENNE - Verkkosivusto"}
+                            </h2>
+                            <p className="text-md text-gray-800 dark:text-white py-2">
+                                {language === "en" ? (
+                                    <>
+                                        This platform provides comprehensive
+                                        real-time tracking and route information
+                                        for all Vilkku buses, bicycles, and bike
+                                        taxis operating within the
+                                        Kuopio/Siilinjärvi region.
+                                        <br />
+                                        <br />
+                                        <br />
+                                        Tools: JavaScript, Express.js & Netlify
+                                        functions.
+                                    </>
+                                ) : (
+                                    <>
+                                        Tämä alusta tarjoaa kattavaa
+                                        reaaliaikaista seuranta- ja reittitietoa
+                                        kaikille Vilkku-busseille, polkupyörille
+                                        ja polkupyörätakseille, jotka toimivat
+                                        Kuopion/Siilinjärven alueella. Työkalut:
+                                        JavaScript, Express.js & Netlify
+                                        functions.
+                                    </>
+                                )}
+                            </p>
+                            <a
+                                href="https://kuopionjulkinenliikenne.live"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                kuopionjulkinenliikenne.live
+                            </a>
+                            <br />
+                            <a
+                                href="https://github.com/nikohoffren/kuopio-public-transport"
                                 target="_blank"
                                 className="text-blue-500 hover:text-blue-300 italic"
                             >
