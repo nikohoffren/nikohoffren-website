@@ -40,7 +40,7 @@ export default function Footer() {
                         <img src="threads.png" alt="Threads logo" className="w-4 h-4 px-0 py-0" />
                     </a> */}
                     <a
-                        href="https://www.twitter.com/nikohoffren"
+                        href="https://www.twitter.com/nikohoffren86"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-400 hover:text-blue-300"
