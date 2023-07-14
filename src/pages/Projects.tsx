@@ -422,7 +422,7 @@ export default function Projects() {
                                 target="_blank"
                                 className="text-blue-500 hover:text-blue-300 italic"
                             >
-                                app-icon.generator.netlify.app
+                                app-icon-generator.netlify.app
                             </a>
                             <br />
                             <a
