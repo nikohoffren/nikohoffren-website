@@ -84,7 +84,7 @@ export default function Projects() {
                     .
                 </p>
 
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
                             href="https://www.hunajaholisti.fi"
@@ -232,6 +232,72 @@ export default function Projects() {
 
                     <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
+                            href="https://github.com/nikohoffren/puck-hub"
+                            target="_blank"
+                            className="w-full block h-full"
+                        >
+                            {isLoading && <Loader />}
+                            <img
+                                src="puck-hub-logo.jpg"
+                                alt="Puck Hub logo"
+                                className="max-h-40 w-full object-cover"
+                                onLoad={imageLoaded}
+                            />
+                        </a>
+                        <div className="bg-white dark:bg-gray-800 w-full p-4">
+                            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
+                                {language === "en"
+                                    ? "PUCK HUB - Flutter App"
+                                    : "PUCK HUB - Flutter Mobiilisovellus"}
+                            </h2>
+                            <p className="text-md text-gray-800 dark:text-white py-2">
+                                {language === "en" ? (
+                                    <>
+                                        Puck Hub is a modern, user-centric
+                                        hockey news mobile app, designed and
+                                        built using Flutter. It's your one-stop
+                                        destination for all news related to your
+                                        favorite hockey teams. Tailored
+                                        specifically to cater to dedicated
+                                        hockey fans, Puck Hub ensures you never
+                                        miss an update about your favorite
+                                        teams.
+                                        <br />
+                                        Tools: Flutter, RapidAPI.
+                                    </>
+                                ) : (
+                                    <>
+                                        Puck Hub on moderni, käyttäjäkeskeinen
+                                        jääkiekkouutisten mobiilisovellus, joka
+                                        on suunniteltu ja rakennettu käyttäen
+                                        Flutteria. Se on sinun yhden pysäkin
+                                        määränpääsi kaikille uutisille, jotka
+                                        liittyvät
+                                        suosikkijääkiekkojoukkueisiisi.
+                                        <br />
+                                        <br />
+                                        Työkalut: Flutter, RapidAPI
+                                    </>
+                                )}
+                            </p>
+
+                            <a
+                                href="https://github.com/nikohoffren/puck-hub"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                {language === "en"
+                                    ? "Github source code"
+                                    : "Github lähdekoodi"}
+                            </a>
+                            <p className="text-sm text-gray-900 dark:text-white italic my-2">
+                                2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
+                        <a
                             href="https://kuopionjulkinenliikenne.live"
                             target="_blank"
                             className="w-full block h-full"
@@ -295,6 +361,62 @@ export default function Projects() {
                             </a>
                             <p className="text-sm text-gray-900 dark:text-white italic my-2">
                                 2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
+                        <a
+                            href="https://nikohoffrenmusic.netlify.app"
+                            target="_blank"
+                            className="w-full block h-full"
+                        >
+                            {isLoading && <Loader />}
+                            <img
+                                alt="Niko Hoffrén logo"
+                                src="NHbackground.jpg"
+                                className="max-h-40 w-full object-cover"
+                                onLoad={imageLoaded}
+                            />
+                        </a>
+                        <div className="bg-white dark:bg-gray-800 w-full p-4">
+                            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
+                                {language === "en"
+                                    ? "NIKO HOFFRÉN MUSIC - Website"
+                                    : "NIKO HOFFRÉN MUSIC - Verkkosivusto"}
+                            </h2>
+                            <p className="text-md text-gray-800 dark:text-white py-2">
+                                {language === "en" ? (
+                                    <>
+                                        This website contains info of my music production related stuff. The website shows all the information you need with showcase of my music, videos and gear. It also supports language selection, allowing users to switch between Finnish and English languages seamlessly.
+                                        Tools: Vite, React, TypeScript.
+                                    </>
+                                ) : (
+                                    <>
+                                        Tämä verkkosivusto sisältää tietoa musiikkituotantooni liittyvistä asioista. Verkkosivusto näyttää kaiken tarvitsemasi tiedon musiikkini, videoideni ja soittimieni esittelyn avulla. Se tukee myös kielivalintaa, mahdollistaen käyttäjien vaihtaa saumattomasti suomen ja englannin kielen välillä.
+                                        Työkalut: Vite, React, TypeScript.
+                                    </>
+                                )}
+                            </p>
+                            <a
+                                href="https://nikohoffrenmusic.netlify.app"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                nikohoffrenmusic.netlify.app
+                            </a>
+                            <br />
+                            <a
+                                href="https://github.com/nikohoffren/nikohoffrenmusic-homepage"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                {language === "en"
+                                    ? "Github source code"
+                                    : "Github lähdekoodi"}
+                            </a>
+                            <p className="text-sm text-gray-900 dark:text-white italic my-2">
+                                2020-present
                             </p>
                         </div>
                     </div>
@@ -499,6 +621,79 @@ export default function Projects() {
                             <br />
                             <a
                                 href="https://github.com/nikohoffren/smart-meeting-scheduler"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                {language === "en"
+                                    ? "Github source code"
+                                    : "Github lähdekoodi"}
+                            </a>
+                            <p className="text-sm text-gray-900 dark:text-white italic my-2">
+                                2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
+                        <a
+                            href="https://doublewordle.netlify.app/"
+                            target="_blank"
+                            className="w-full block h-full"
+                        >
+                            {isLoading && <Loader />}
+                            <img
+                                src="double-wordle.png"
+                                alt="Double Wordle image"
+                                className="max-h-40 w-full object-cover"
+                                onLoad={imageLoaded}
+                            />
+                        </a>
+                        <div className="bg-white dark:bg-gray-800 w-full p-4">
+                            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
+                                {language === "en"
+                                    ? "Double Wordle - Web Game"
+                                    : "Double Wordle - Web peli"}
+                            </h2>
+                            <p className="text-md text-gray-800 dark:text-white py-2">
+                                {language === "en" ? (
+                                    <>
+                                        Simple wordle clone with two words in a
+                                        row combined. Letters that are found in
+                                        either of the words in a row, but in a
+                                        wrong position, are shown in yellow.
+                                        Letters that are in correct position on
+                                        the row are shown in green. If you guess
+                                        both words in a row correctly, you win!
+                                        You have ten tries. Tools: HTML, CSS,
+                                        JavaScript
+                                    </>
+                                ) : (
+                                    <>
+                                        Yksinkertainen Wordle-klooni, jossa on
+                                        kaksi riviin yhdistettyä sanaa.
+                                        Kirjaimet, jotka löytyvät kummastakin
+                                        sanasta rivillä, mutta ovat väärässä
+                                        paikassa, näkyvät keltaisina. Kirjaimet,
+                                        jotka ovat oikeassa paikassa rivillä,
+                                        näkyvät vihreinä. Jos arvaat molemmat
+                                        sanat rivillä oikein, voitat! Sinulla on
+                                        kymmenen yritystä. Työkalut: HTML, CSS,
+                                        JavaScript
+                                    </>
+                                )}
+                            </p>
+                            <a
+                                href="https://doublewordle.netlify.app/"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                {language === "en"
+                                    ? "Play Double Wordle here"
+                                    : "Pelaa Double Wordlea täällä"}
+                            </a>
+                            <br />
+                            <a
+                                href="https://github.com/nikohoffren/double-wordle"
                                 target="_blank"
                                 className="text-blue-500 hover:text-blue-300 italic"
                             >
