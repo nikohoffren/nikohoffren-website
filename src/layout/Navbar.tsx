@@ -18,7 +18,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
         setIsOpen(!isOpen);
     };
 
-    const bgClass = theme === "dark" ? "bg-gray-800" : "bg-gray-600";
+    const bgClass = theme === "dark" ? "header-bg-color-dark" : "header-bg-color-light";
     const textClass = "text-white";
 
     return (

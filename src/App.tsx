@@ -30,8 +30,8 @@ function App() {
         localStorage.setItem("theme", theme);
     }, [theme]);
 
-    const bgClass = theme === "dark" ? "bg-gray-700" : "bg-white";
-    const textClass = theme === "dark" ? "text-white" : "text-black";
+    const bgClass = theme === "dark" ? "bg-color-dark" : "bg-color-light";
+    const textClass = theme === "dark" ? "font-color-light" : "font-color-dark";
 
     return (
         <div className={`${bgClass} ${textClass} min-h-screen`}>
@@ -43,7 +43,7 @@ function App() {
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
-                <Footer />
+                <Footer theme={theme} toggleTheme={toggleTheme} />
             </LanguageContext.Provider>
         </div>
     );

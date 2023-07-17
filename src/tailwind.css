@@ -5,10 +5,34 @@
 
 :root {
     --ff-primary: "", sans-serif;
+    --bg-color-dark: #01020a;
+    --bg-color-light: #f5f0fa;
+    --header-bg-color-dark: #090b1a;
+    --header-bg-color-light: #1d2033;
+    --font-color-dark: #080808;
+    --font-color-light: #dddddd;
 }
 
 * {
     font-family: var(--ff-primary);
+}
+
+.bg-color-dark {
+    background-color: var(--bg-color-dark);
+    color: var(--font-color-light)
+}
+
+.header-bg-color-dark {
+    background-color: var(--header-bg-color-dark);
+}
+
+.header-bg-color-light {
+    background-color: var(--header-bg-color-light);
+}
+
+.bg-color-light {
+    background-color: var(--bg-color-light);
+    color: var(--font-color-dark)
 }
 
 .btn {
