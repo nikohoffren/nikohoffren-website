@@ -57,20 +57,8 @@ export default function Projects() {
                     </a>{" "}
                     {language === "en" ? "account." : "tiliini."}
                 </p> */}
-                <p className="mb-6 mt-6 text-center">
-                    {language === "en"
-                        ? "You can also find all of my music production related info on "
-                        : "Löydät myös kaikki musiikkituotantooni liittyvät tiedot täältä: "}{" "}
-                    <a
-                        href="https://nikohoffrenmusic.netlify.app"
-                        className="text-blue-500 hover:text-blue-700 underline"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        nikohoffrenmusic.netlify.app
-                    </a>{" "}
-                </p>
-                <p className="mb-6 text-center">
+
+                <p className="mb-6 mt-4 text-center">
                     {language === "en" ? "Download my CV " : "Lataa CV:ni "}{" "}
                     <a
                         href={cvUrl}
@@ -388,13 +376,27 @@ export default function Projects() {
                             <p className="text-md text-gray-800 dark:text-white py-2">
                                 {language === "en" ? (
                                     <>
-                                        This website contains info of my music production related stuff. The website shows all the information you need with showcase of my music, videos and gear. It also supports language selection, allowing users to switch between Finnish and English languages seamlessly.
-                                        Tools: Vite, React, TypeScript.
+                                        This website contains info of my music
+                                        production related stuff. The website
+                                        shows all the information you need with
+                                        showcase of my music, videos and gear.
+                                        It also supports language selection,
+                                        allowing users to switch between Finnish
+                                        and English languages seamlessly. Tools:
+                                        Vite, React, TypeScript.
                                     </>
                                 ) : (
                                     <>
-                                        Tämä verkkosivusto sisältää tietoa musiikkituotantooni liittyvistä asioista. Verkkosivusto näyttää kaiken tarvitsemasi tiedon musiikkini, videoideni ja soittimieni esittelyn avulla. Se tukee myös kielivalintaa, mahdollistaen käyttäjien vaihtaa saumattomasti suomen ja englannin kielen välillä.
-                                        Työkalut: Vite, React, TypeScript.
+                                        Tämä verkkosivusto sisältää tietoa
+                                        musiikkituotantooni liittyvistä
+                                        asioista. Verkkosivusto näyttää kaiken
+                                        tarvitsemasi tiedon musiikkini,
+                                        videoideni ja soittimieni esittelyn
+                                        avulla. Se tukee myös kielivalintaa,
+                                        mahdollistaen käyttäjien vaihtaa
+                                        saumattomasti suomen ja englannin kielen
+                                        välillä. Työkalut: Vite, React,
+                                        TypeScript.
                                     </>
                                 )}
                             </p>
@@ -580,7 +582,7 @@ export default function Projects() {
                             <h2 className="text-xl font-medium text-black dark:text-white pb-2">
                                 {language === "en"
                                     ? "Smart Meeting Scheduler - Chrome Extension"
-                                    : "Smart Meeting Scheduler - Chrome aajennus"}
+                                    : "Smart Meeting Scheduler - Chrome laajennus"}
                             </h2>
                             <p className="text-md text-gray-800 dark:text-white py-2">
                                 {language === "en" ? (
@@ -635,6 +637,73 @@ export default function Projects() {
                     </div>
 
                     <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
+                        <a
+                            href="https://github.com/nikohoffren/learn-to-contribute"
+                            target="_blank"
+                            className="w-full block h-full"
+                        >
+                            {isLoading && <Loader />}
+                            <img
+                                src="learn-to-contribute-logo.jpg"
+                                alt="Learn to Contribute logo"
+                                className="max-h-40 w-full object-cover"
+                                onLoad={imageLoaded}
+                            />
+                        </a>
+                        <div className="bg-white dark:bg-gray-800 w-full p-4">
+                            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
+                                {language === "en"
+                                    ? "Learn to Contribute - Github project"
+                                    : "Learn to Contribute - Github projekti"}
+                            </h2>
+                            <p className="text-md text-gray-800 dark:text-white py-2">
+                                {language === "en" ? (
+                                    <>
+                                        Learn to Contribute is a project
+                                        designed to help you familiarize
+                                        yourself with the open source
+                                        contribution workflow on GitHub! This
+                                        project involves a simple Book Library
+                                        application written in JavaScript. There
+                                        are some Jest tests for this
+                                        application, but they're failing... Your
+                                        task is to make these tests pass! Tools:
+                                        JavaScript, Node.js.{" "}
+                                    </>
+                                ) : (
+                                    <>
+                                        Learn to Contribute on projekti, jonka
+                                        tarkoituksena on auttaa sinua
+                                        tutustumaan avoimen lähdekoodin
+                                        kontribuutioiden työnkulkuun GitHubissa!
+                                        Tämä projekti sisältää yksinkertaisen
+                                        kirjastosovelluksen, joka on kirjoitettu
+                                        JavaScriptillä. Sovellukselle on
+                                        olemassa joitakin Jest-testejä, mutta ne
+                                        epäonnistuvat... Tehtäväsi on saada nämä
+                                        testit läpäisemään! Työkalut:
+                                        JavaScript, Node.js.{" "}
+                                    </>
+                                )}
+                            </p>
+
+                            <br />
+                            <a
+                                href="https://github.com/nikohoffren/learn-to-contribute"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                {language === "en"
+                                    ? "Github source code"
+                                    : "Github lähdekoodi"}
+                            </a>
+                            <p className="text-sm text-gray-900 dark:text-white italic my-2">
+                                2023
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
                             href="https://doublewordle.netlify.app/"
                             target="_blank"
@@ -705,7 +774,7 @@ export default function Projects() {
                                 2023
                             </p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </>
