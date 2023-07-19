@@ -83,7 +83,7 @@ export default function Footer({ theme }: NavbarProps) {
                         >
                             <img
                                 src="/react.svg"
-                                className="inline h-5 w-auto mx-1"
+                                className="inline h-5 w-auto mx-1 logos"
                                 alt="React logo"
                             />
                         </a>{" "}
