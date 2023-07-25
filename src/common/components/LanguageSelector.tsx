@@ -29,7 +29,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ setLanguage }) => {
                 className={language === "en" ? "active" : ""}
             >
                 <img
-                    src="./Flag_of_the_United_Kingdom_(1-2).svg.png"
+                    src="./flag-of-uk-and-us.jpg"
                     alt="British Flag"
                     className="language-flag h-6 w-10 hover:scale-110"
                 />
