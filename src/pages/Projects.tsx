@@ -147,6 +147,78 @@ export default function Projects() {
 
                     <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
+                            href="https://www.hunajaholisti.fi"
+                            target="_blank"
+                            className="w-full block h-full"
+                        >
+                            {isLoading && <Loader />}
+                            <img
+                                src="dev-gallery.jpg"
+                                alt="devgallery.io logo"
+                                className="max-h-40 w-full object-cover"
+                                onLoad={imageLoaded}
+                            />
+                        </a>
+                        <div className="bg-white dark:bg-gray-800 w-full p-4">
+                            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
+                                {language === "en"
+                                    ? "DEVGALLERY.IO - Website"
+                                    : "DEVGALLERY.IO - Verkkosivusto"}
+                            </h2>
+                            <p className="text-md text-gray-800 dark:text-white py-2">
+                                {language === "en" ? (
+                                    <>
+                                        {" "}
+                                        Devgallery.io serves as a platform where
+                                        talented developers can spotlight their
+                                        projects. It allows developers to not
+                                        only feature their works but also create
+                                        personal profiles for added visibility.
+                                        <br />
+                                        Tools: React, NextJS, TypeScript,
+                                        Tailwind CSS, MongoDB and AWS S3.{" "}
+                                    </>
+                                ) : (
+                                    <>
+                                        {" "}
+                                        Devgallery.io toimii alustana, jossa
+                                        lahjakkaat kehittäjät voivat esitellä
+                                        projektejaan. Se mahdollistaa
+                                        kehittäjille paitsi heidän teostensa
+                                        esittelyn, myös henkilökohtaisten
+                                        profiilien luomisen lisänäkyvyyttä
+                                        varten.
+                                        <br />
+                                        Työkalut: React, NextJS, TypeScript,
+                                        Tailwind CSS, MongoDB ja AWS S3.{" "}
+                                    </>
+                                )}
+                            </p>
+                            <a
+                                href="https://devgallery-io.vercel.app/"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                https://devgallery-io.vercel.app/
+                            </a>
+                            <br />
+                            <a
+                                href="https://github.com/nikohoffren/devgallery.io"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                {language === "en"
+                                    ? "Github source code"
+                                    : "Github lähdekoodi"}
+                            </a>
+                            <p className="text-sm text-gray-900 dark:text-white italic my-2">
+                                2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
+                        <a
                             href="https://play.google.com/store/apps/details?id=com.nikohoffren.stolen_gear_app"
                             target="_blank"
                             className="w-full block h-full"
@@ -162,8 +234,8 @@ export default function Projects() {
                         <div className="bg-white dark:bg-gray-800 w-full p-4">
                             <h2 className="text-xl font-medium text-black dark:text-white pb-2">
                                 {language === "en"
-                                    ? "StolenOrNot? - Flutter App"
-                                    : "StolenOrNot? - Flutter Mobiilisovellus"}
+                                    ? "Stolen Or Not? - Flutter App"
+                                    : "Stolen Or Not? - Flutter Mobiilisovellus"}
                             </h2>
                             <p className="text-md text-gray-800 dark:text-white py-2">
                                 {language === "en" ? (
@@ -242,10 +314,10 @@ export default function Projects() {
                                 {language === "en" ? (
                                     <>
                                         Puck Hub is a modern, user-centric
-                                        hockey news mobile app, designed and
-                                        built using Flutter. It's your one-stop
-                                        destination for all news related to your
-                                        favorite hockey teams. Tailored
+                                        hockey mobile app, designed and built
+                                        using Flutter. It's your one-stop
+                                        destination for all statistics related
+                                        to your favorite hockey teams. Tailored
                                         specifically to cater to dedicated
                                         hockey fans, Puck Hub ensures you never
                                         miss an update about your favorite
@@ -256,10 +328,10 @@ export default function Projects() {
                                 ) : (
                                     <>
                                         Puck Hub on moderni, käyttäjäkeskeinen
-                                        jääkiekkouutisten mobiilisovellus, joka
+                                        jääkiekkoaiheinen mobiilisovellus, joka
                                         on suunniteltu ja rakennettu käyttäen
                                         Flutteria. Se on sinun yhden pysäkin
-                                        määränpääsi kaikille uutisille, jotka
+                                        määränpääsi kaikille tilastoille, jotka
                                         liittyvät
                                         suosikkijääkiekkojoukkueisiisi.
                                         <br />
@@ -419,6 +491,73 @@ export default function Projects() {
                             </a>
                             <p className="text-sm text-gray-900 dark:text-white italic my-2">
                                 2020-present
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
+                        <a
+                            href="https://github.com/nikohoffren/learn-to-contribute"
+                            target="_blank"
+                            className="w-full block h-full"
+                        >
+                            {isLoading && <Loader />}
+                            <img
+                                src="learn-to-contribute-logo.jpg"
+                                alt="Learn to Contribute logo"
+                                className="max-h-40 w-full object-cover"
+                                onLoad={imageLoaded}
+                            />
+                        </a>
+                        <div className="bg-white dark:bg-gray-800 w-full p-4">
+                            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
+                                {language === "en"
+                                    ? "Learn to Contribute - Github project"
+                                    : "Learn to Contribute - Github projekti"}
+                            </h2>
+                            <p className="text-md text-gray-800 dark:text-white py-2">
+                                {language === "en" ? (
+                                    <>
+                                        Learn to Contribute is a project
+                                        designed to help you familiarize
+                                        yourself with the open source
+                                        contribution workflow on GitHub! This
+                                        project involves a simple Book Library
+                                        application written in JavaScript. There
+                                        are some Jest tests for this
+                                        application, but they're failing... Your
+                                        task is to make these tests pass! Tools:
+                                        JavaScript, Node.js.{" "}
+                                    </>
+                                ) : (
+                                    <>
+                                        Learn to Contribute on projekti, jonka
+                                        tarkoituksena on auttaa sinua
+                                        tutustumaan avoimen lähdekoodin
+                                        kontribuutioiden työnkulkuun GitHubissa!
+                                        Tämä projekti sisältää yksinkertaisen
+                                        kirjastosovelluksen, joka on kirjoitettu
+                                        JavaScriptillä. Sovellukselle on
+                                        olemassa joitakin Jest-testejä, mutta ne
+                                        epäonnistuvat... Tehtäväsi on saada nämä
+                                        testit läpäisemään! Työkalut:
+                                        JavaScript, Node.js.{" "}
+                                    </>
+                                )}
+                            </p>
+
+                            <br />
+                            <a
+                                href="https://github.com/nikohoffren/learn-to-contribute"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                {language === "en"
+                                    ? "Github source code"
+                                    : "Github lähdekoodi"}
+                            </a>
+                            <p className="text-sm text-gray-900 dark:text-white italic my-2">
+                                2023
                             </p>
                         </div>
                     </div>
@@ -636,74 +775,9 @@ export default function Projects() {
                         </div>
                     </div>
 
+
+
                     <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-                        <a
-                            href="https://github.com/nikohoffren/learn-to-contribute"
-                            target="_blank"
-                            className="w-full block h-full"
-                        >
-                            {isLoading && <Loader />}
-                            <img
-                                src="learn-to-contribute-logo.jpg"
-                                alt="Learn to Contribute logo"
-                                className="max-h-40 w-full object-cover"
-                                onLoad={imageLoaded}
-                            />
-                        </a>
-                        <div className="bg-white dark:bg-gray-800 w-full p-4">
-                            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-                                {language === "en"
-                                    ? "Learn to Contribute - Github project"
-                                    : "Learn to Contribute - Github projekti"}
-                            </h2>
-                            <p className="text-md text-gray-800 dark:text-white py-2">
-                                {language === "en" ? (
-                                    <>
-                                        Learn to Contribute is a project
-                                        designed to help you familiarize
-                                        yourself with the open source
-                                        contribution workflow on GitHub! This
-                                        project involves a simple Book Library
-                                        application written in JavaScript. There
-                                        are some Jest tests for this
-                                        application, but they're failing... Your
-                                        task is to make these tests pass! Tools:
-                                        JavaScript, Node.js.{" "}
-                                    </>
-                                ) : (
-                                    <>
-                                        Learn to Contribute on projekti, jonka
-                                        tarkoituksena on auttaa sinua
-                                        tutustumaan avoimen lähdekoodin
-                                        kontribuutioiden työnkulkuun GitHubissa!
-                                        Tämä projekti sisältää yksinkertaisen
-                                        kirjastosovelluksen, joka on kirjoitettu
-                                        JavaScriptillä. Sovellukselle on
-                                        olemassa joitakin Jest-testejä, mutta ne
-                                        epäonnistuvat... Tehtäväsi on saada nämä
-                                        testit läpäisemään! Työkalut:
-                                        JavaScript, Node.js.{" "}
-                                    </>
-                                )}
-                            </p>
-
-                            <br />
-                            <a
-                                href="https://github.com/nikohoffren/learn-to-contribute"
-                                target="_blank"
-                                className="text-blue-500 hover:text-blue-300 italic"
-                            >
-                                {language === "en"
-                                    ? "Github source code"
-                                    : "Github lähdekoodi"}
-                            </a>
-                            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-                                2023
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
                             href="https://doublewordle.netlify.app/"
                             target="_blank"
@@ -774,7 +848,7 @@ export default function Projects() {
                                 2023
                             </p>
                         </div>
-                    </div> */}
+                    </div>
                 </div>
             </section>
         </>

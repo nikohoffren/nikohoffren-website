@@ -3,7 +3,7 @@ import { LanguageContext } from "../common/components/LanguageContext";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import Loader from "../common/components/Loader";
-import { SectionRefContext } from '../common/components/SectionRefContext';
+import { SectionRefContext } from "../common/components/SectionRefContext";
 
 export default function Home() {
     const { language } = useContext(LanguageContext);
@@ -161,9 +161,10 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-
+            <div className="py-10" />
             <section ref={skillsSectionRef} className="bg-black bg-opacity-50">
                 <div className="py-10" />
+                <div className="py-5" />
                 <h1 className="text-4xl font-bold mb-10 text-center prose-lg prose-purple">
                     {language === "en" ? "SKILLS" : "TAIDOT"}
                 </h1>
@@ -171,7 +172,7 @@ export default function Home() {
                 <div className="flex flex-wrap justify-center lg:w-2/4 mx-auto">
                     <div className="m-4 text-center">
                         <img
-                            src="https://techstack-generator.vercel.app/react-icon.svg"
+                            src="https://skillicons.dev/icons?i=react"
                             alt="icon"
                             width="80"
                             height="80"
@@ -191,7 +192,7 @@ export default function Home() {
                     </div>
                     <div className="m-4 text-center">
                         <img
-                            src="https://techstack-generator.vercel.app/js-icon.svg"
+                            src="https://skillicons.dev/icons?i=javascript"
                             alt="icon"
                             width="80"
                             height="80"
@@ -201,7 +202,7 @@ export default function Home() {
                     </div>
                     <div className="m-4 text-center">
                         <img
-                            src="https://techstack-generator.vercel.app/ts-icon.svg"
+                            src="https://skillicons.dev/icons?i=typescript"
                             alt="icon"
                             width="80"
                             height="80"
