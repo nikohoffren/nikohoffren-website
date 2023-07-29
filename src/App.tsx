@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import Navbar from "./layout/Navbar";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
@@ -8,8 +8,10 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./layout/Footer";
 import "./tailwind.css";
 import { LanguageContext } from "./common/components/LanguageContext";
+import { SectionRefContext } from '../src/common/components/SectionRefContext';
 
 function App() {
+    const skillsSectionRef = useRef(null);
     const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "dark");
     const [language, setLanguage] = useState("en");
 
@@ -36,14 +38,15 @@ function App() {
     return (
         <div className={`${bgClass} ${textClass} min-h-screen`}>
             <LanguageContext.Provider value={value}>
+            <SectionRefContext.Provider value={skillsSectionRef}>
                 <Navbar theme={theme} toggleTheme={toggleTheme} />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/skills" element={<Skills />} />
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
                 <Footer theme={theme} toggleTheme={toggleTheme} />
+                </SectionRefContext.Provider>
             </LanguageContext.Provider>
         </div>
     );

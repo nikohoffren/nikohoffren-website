@@ -1,9 +1,12 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useRef } from "react";
 import LanguageSelector from "../common/components/LanguageSelector";
 import { LanguageContext } from "../common/components/LanguageContext";
 import { FiMenu, FiX } from "react-icons/fi";
 import React from "react";
 import CustomLink from "../common/components/CustomLink";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { SectionRefContext } from "../common/components/SectionRefContext";
 
 interface NavbarProps {
     theme: string;
@@ -13,6 +16,23 @@ interface NavbarProps {
 export default function Navbar({ theme, toggleTheme }: NavbarProps) {
     const { language, setLanguage } = useContext(LanguageContext);
     const [isOpen, setIsOpen] = useState(false);
+    const skillsSectionRef = useContext(SectionRefContext);
+    const navigate = useNavigate();
+
+    const navigateAndScrollToSection = (
+        path: string,
+        ref: React.RefObject<HTMLElement> | null
+    ) => {
+        navigate(path);
+        setTimeout(() => {
+            scrollToSection(ref);
+        }, 0);
+    };
+    const scrollToSection = (ref: React.RefObject<HTMLElement> | null) => {
+        if (ref?.current) {
+            ref.current.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
     const toggleSideNav = () => {
         setIsOpen(!isOpen);
@@ -40,9 +60,16 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                 <div className="hidden sm:block">
                     <ul className="flex space-x-6 justify-end pr-4">
                         <li className="hover:scale-110 p-1">
-                            <CustomLink to="/skills">
+                            <button
+                                onClick={() =>
+                                    navigateAndScrollToSection(
+                                        "/",
+                                        skillsSectionRef
+                                    )
+                                }
+                            >
                                 {language === "en" ? "SKILLS" : "TAIDOT"}
-                            </CustomLink>
+                            </button>
                         </li>
                         <li className="hover:scale-110 p-1">
                             <CustomLink to="/projects">
@@ -103,9 +130,16 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                             onClick={toggleSideNav}
                             className="hover:scale-110 p-1"
                         >
-                            <CustomLink to="/skills">
+                            <button
+                                onClick={() =>
+                                    navigateAndScrollToSection(
+                                        "/",
+                                        skillsSectionRef
+                                    )
+                                }
+                            >
                                 {language === "en" ? "SKILLS" : "TAIDOT"}
-                            </CustomLink>
+                            </button>
                         </li>
                         <li
                             onClick={toggleSideNav}

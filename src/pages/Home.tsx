@@ -1,8 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { LanguageContext } from "../common/components/LanguageContext";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import Loader from "../common/components/Loader";
+import { SectionRefContext } from '../common/components/SectionRefContext';
 
 export default function Home() {
     const { language } = useContext(LanguageContext);
@@ -13,6 +14,7 @@ export default function Home() {
     const imageLoaded = () => {
         setIsLoading(false);
     };
+    const skillsSectionRef = useContext(SectionRefContext);
 
     React.useEffect(() => {
         setInProp(true);
@@ -20,10 +22,10 @@ export default function Home() {
     }, []);
 
     return (
-        <div className={`mx-auto container px-4 sm:px-6 lg:px-8 mt-8`}>
+        <main className={`mt-8`}>
             <div className="py-10" />
             <section>
-                <div className="grid lg:grid-cols-2 gap-8 items-center">
+                <div className="grid lg:grid-cols-2 gap-8 items-center mx-auto container px-4 sm:px-6 lg:px-8">
                     <div>
                         <>
                             <CSSTransition
@@ -159,6 +161,157 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-        </div>
+
+            <section ref={skillsSectionRef} className="bg-black bg-opacity-50">
+                <div className="py-10" />
+                <h1 className="text-4xl font-bold mb-10 text-center prose-lg prose-purple">
+                    {language === "en" ? "SKILLS" : "TAIDOT"}
+                </h1>
+                <div className="py-5" />
+                <div className="flex flex-wrap justify-center lg:w-2/4 mx-auto">
+                    <div className="m-4 text-center">
+                        <img
+                            src="https://techstack-generator.vercel.app/react-icon.svg"
+                            alt="icon"
+                            width="80"
+                            height="80"
+                        />
+                        <br />
+                        React
+                    </div>
+                    <div className="m-4 text-center">
+                        <img
+                            src="https://skillicons.dev/icons?i=nextjs"
+                            alt="icon"
+                            width="80"
+                            height="80"
+                        />
+                        <br />
+                        NextJS
+                    </div>
+                    <div className="m-4 text-center">
+                        <img
+                            src="https://techstack-generator.vercel.app/js-icon.svg"
+                            alt="icon"
+                            width="80"
+                            height="80"
+                        />
+                        <br />
+                        JavaScript
+                    </div>
+                    <div className="m-4 text-center">
+                        <img
+                            src="https://techstack-generator.vercel.app/ts-icon.svg"
+                            alt="icon"
+                            width="80"
+                            height="80"
+                        />
+                        <br />
+                        TypeScript
+                    </div>
+                    <div className="m-4 text-center">
+                        <img
+                            src="https://skillicons.dev/icons?i=html"
+                            width="80"
+                            height="80"
+                            alt="HTML5"
+                        />
+                        <br />
+                        HTML5
+                    </div>
+                    <div className="m-4 text-center">
+                        <img
+                            src="https://skillicons.dev/icons?i=css"
+                            width="80"
+                            height="80"
+                            alt="css"
+                        />
+                        <br />
+                        CSS
+                    </div>
+                    <div className="m-4 text-center">
+                        <img
+                            src="https://skillicons.dev/icons?i=tailwind"
+                            width="80"
+                            height="80"
+                            alt="tailwind"
+                        />
+                        <br />
+                        Tailwind
+                    </div>
+                    <div className="m-4 text-center">
+                        <img
+                            src="https://skillicons.dev/icons?i=flutter"
+                            width="80"
+                            height="80"
+                            alt="flutter"
+                        />
+                        <br />
+                        Flutter
+                    </div>
+                    <div className="m-4 text-center">
+                        <img
+                            src="https://skillicons.dev/icons?i=dart"
+                            width="80"
+                            height="80"
+                            alt="dart"
+                        />
+                        <br />
+                        Dart
+                    </div>
+                    <div className="m-4 text-center">
+                        <img
+                            src="https://skillicons.dev/icons?i=mysql"
+                            width="80"
+                            height="80"
+                            alt="dart"
+                        />
+                        <br />
+                        MySQL
+                    </div>
+                    <div className="m-4 text-center">
+                        <img
+                            src="https://skillicons.dev/icons?i=firebase"
+                            width="80"
+                            height="80"
+                            alt="dart"
+                        />
+                        <br />
+                        Firebase
+                    </div>
+                    <div className="m-4 text-center">
+                        <img
+                            src="https://skillicons.dev/icons?i=nodejs"
+                            width="80"
+                            height="80"
+                            alt="nodejs"
+                        />
+                        <br />
+                        NodeJS
+                    </div>
+                    <div className="m-4 text-center">
+                        <img
+                            src="https://skillicons.dev/icons?i=linux"
+                            width="80"
+                            height="80"
+                            alt="linux"
+                        />
+                        <br />
+                        Linux
+                    </div>
+                    <div className="m-4 text-center">
+                        <img
+                            src="https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png"
+                            width="80"
+                            height="80"
+                            alt="Git"
+                        />
+                        <br />
+                        Git
+                    </div>
+                </div>
+                <div className="py-10" />
+            </section>
+        </main>
     );
 }
