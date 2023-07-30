@@ -43,21 +43,6 @@ export default function Projects() {
                     ></iframe>
                 </div>
 
-                {/* <p className="mb-6 text-center">
-                    {language === "en"
-                        ? "Be sure to also check out my "
-                        : "Tutustu myös "}{" "}
-                    <a
-                        href="https://www.freecodecamp.org/nikohoffren"
-                        className="text-blue-500 hover:text-blue-700 underline"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        freeCodeCamp
-                    </a>{" "}
-                    {language === "en" ? "account." : "tiliini."}
-                </p> */}
-
                 <p className="mb-6 mt-4 text-center">
                     {language === "en" ? "Download my CV " : "Lataa CV:ni "}{" "}
                     <a
@@ -147,14 +132,14 @@ export default function Projects() {
 
                     <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
-                            href="https://www.hunajaholisti.fi"
+                            href="https://forkcommitmerge.vercel.app/"
                             target="_blank"
                             className="w-full block h-full"
                         >
                             {isLoading && <Loader />}
                             <img
-                                src="dev-gallery.jpg"
-                                alt="devgallery.io logo"
+                                src="fork-commit-merge-web-banner.png"
+                                alt="Fork, Commit, Merge -banner"
                                 className="max-h-40 w-full object-cover"
                                 onLoad={imageLoaded}
                             />
@@ -162,48 +147,110 @@ export default function Projects() {
                         <div className="bg-white dark:bg-gray-800 w-full p-4">
                             <h2 className="text-xl font-medium text-black dark:text-white pb-2">
                                 {language === "en"
-                                    ? "DEVGALLERY.IO - Website"
-                                    : "DEVGALLERY.IO - Verkkosivusto"}
+                                    ? "FORK, COMMIT, MERGE - Website"
+                                    : "FORK, COMMIT, MERGE - Verkkosivusto"}
                             </h2>
                             <p className="text-md text-gray-800 dark:text-white py-2">
                                 {language === "en" ? (
                                     <>
                                         {" "}
-                                        Devgallery.io serves as a platform where
-                                        talented developers can spotlight their
-                                        projects. It allows developers to not
-                                        only feature their works but also create
-                                        personal profiles for added visibility.
-                                        <br />
-                                        Tools: React, NextJS, TypeScript,
-                                        Tailwind CSS, MongoDB and AWS S3.{" "}
+                                        Welcome to Fork, Commit, Merge! Your
+                                        one-stop resource hub for mastering
+                                        GitHub contributions! Whether you're a
+                                        novice coder or an experienced
+                                        developer, our comprehensive guides are
+                                        designed to streamline your GitHub
+                                        journey. Tools: React, NextJS,
+                                        TypeScript, Tailwind CSS, MongoDB and
+                                        AWS S3.{" "}
                                     </>
                                 ) : (
                                     <>
                                         {" "}
-                                        Devgallery.io toimii alustana, jossa
-                                        lahjakkaat kehittäjät voivat esitellä
-                                        projektejaan. Se mahdollistaa
-                                        kehittäjille paitsi heidän teostensa
-                                        esittelyn, myös henkilökohtaisten
-                                        profiilien luomisen lisänäkyvyyttä
-                                        varten.
-                                        <br />
-                                        Työkalut: React, NextJS, TypeScript,
-                                        Tailwind CSS, MongoDB ja AWS S3.{" "}
+                                        Tämä sivusto on yhden pysähdyksen
+                                        resurssikeskus GitHub-kontribuutioiden
+                                        hallitsemiseen! Riippumatta siitä,
+                                        oletko aloitteleva koodaaja vai kokenut
+                                        kehittäjä, kattavat oppaamme on
+                                        suunniteltu helpottamaan
+                                        GitHub-matkaasi. Työkalut: React,
+                                        NextJS, TypeScript, Tailwind CSS,
+                                        MongoDB ja AWS S3.{" "}
                                     </>
                                 )}
                             </p>
                             <a
-                                href="https://devgallery-io.vercel.app/"
+                                href="https://forkcommitmerge.vercel.app/"
                                 target="_blank"
                                 className="text-blue-500 hover:text-blue-300 italic"
                             >
-                                https://devgallery-io.vercel.app/
+                                https://forkcommitmerge.vercel.app/
                             </a>
                             <br />
                             <a
-                                href="https://github.com/nikohoffren/devgallery.io"
+                                href="https://github.com/nikohoffren/fork-commit-merge-web"
+                                target="_blank"
+                                className="text-blue-500 hover:text-blue-300 italic"
+                            >
+                                {language === "en"
+                                    ? "Github source code"
+                                    : "Github lähdekoodi"}
+                            </a>
+                            <p className="text-sm text-gray-900 dark:text-white italic my-2">
+                                2023
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
+                        <a
+                            href="https://github.com/nikohoffren/fork-commit-merge"
+                            target="_blank"
+                            className="w-full block h-full"
+                        >
+                            {isLoading && <Loader />}
+                            <img
+                                src="fork-commit-merge-logo.jpg"
+                                alt="Fork, Commit, Merge -logo"
+                                className="max-h-40 w-full object-cover"
+                                onLoad={imageLoaded}
+                            />
+                        </a>
+                        <div className="bg-white dark:bg-gray-800 w-full p-4">
+                            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
+                                {language === "en"
+                                    ? "FORK, COMMIT, MERGE - Github project for learning to contribute"
+                                    : "FORK, COMMIT, MERGE - Github projekti kontribuutioiden opettelemiseen"}
+                            </h2>
+                            <p className="text-md text-gray-800 dark:text-white py-2">
+                                {language === "en" ? (
+                                    <>
+                                        A project designed to help you
+                                        familiarize yourself with the open
+                                        source contribution workflow on GitHub!
+                                        We present tasks of varying difficulty.
+                                        You're free to choose either the easy or
+                                        medium issue, depending on your
+                                        proficiency in HTML or JavaScript Tools:
+                                        JavaScript, Node.js.{" "}
+                                    </>
+                                ) : (
+                                    <>
+                                        Projekti, joka on suunniteltu auttamaan
+                                        sinua perehtymään avoimen lähdekoodin
+                                        kontribuutioiden työnkulkuun GitHubissa!
+                                        Tarjoamme kaksi tehtävää eri
+                                        vaikeusasteilla. Voit vapaasti valita
+                                        joko helpomman tai keskitasoisen
+                                        tehtävän riippuen taitotasostasi
+                                        HTML:ssä tai JavaScriptissä. Työkalut:
+                                        JavaScript, Node.js.{" "}
+                                    </>
+                                )}
+                            </p>
+
+                            <a
+                                href="https://github.com/nikohoffren/fork-commit-merge"
                                 target="_blank"
                                 className="text-blue-500 hover:text-blue-300 italic"
                             >
@@ -497,73 +544,6 @@ export default function Projects() {
 
                     <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
-                            href="https://github.com/nikohoffren/learn-to-contribute"
-                            target="_blank"
-                            className="w-full block h-full"
-                        >
-                            {isLoading && <Loader />}
-                            <img
-                                src="learn-to-contribute-logo.jpg"
-                                alt="Learn to Contribute logo"
-                                className="max-h-40 w-full object-cover"
-                                onLoad={imageLoaded}
-                            />
-                        </a>
-                        <div className="bg-white dark:bg-gray-800 w-full p-4">
-                            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-                                {language === "en"
-                                    ? "Learn to Contribute - Github project"
-                                    : "Learn to Contribute - Github projekti"}
-                            </h2>
-                            <p className="text-md text-gray-800 dark:text-white py-2">
-                                {language === "en" ? (
-                                    <>
-                                        Learn to Contribute is a project
-                                        designed to help you familiarize
-                                        yourself with the open source
-                                        contribution workflow on GitHub! This
-                                        project involves a simple Book Library
-                                        application written in JavaScript. There
-                                        are some Jest tests for this
-                                        application, but they're failing... Your
-                                        task is to make these tests pass! Tools:
-                                        JavaScript, Node.js.{" "}
-                                    </>
-                                ) : (
-                                    <>
-                                        Learn to Contribute on projekti, jonka
-                                        tarkoituksena on auttaa sinua
-                                        tutustumaan avoimen lähdekoodin
-                                        kontribuutioiden työnkulkuun GitHubissa!
-                                        Tämä projekti sisältää yksinkertaisen
-                                        kirjastosovelluksen, joka on kirjoitettu
-                                        JavaScriptillä. Sovellukselle on
-                                        olemassa joitakin Jest-testejä, mutta ne
-                                        epäonnistuvat... Tehtäväsi on saada nämä
-                                        testit läpäisemään! Työkalut:
-                                        JavaScript, Node.js.{" "}
-                                    </>
-                                )}
-                            </p>
-
-                            <br />
-                            <a
-                                href="https://github.com/nikohoffren/learn-to-contribute"
-                                target="_blank"
-                                className="text-blue-500 hover:text-blue-300 italic"
-                            >
-                                {language === "en"
-                                    ? "Github source code"
-                                    : "Github lähdekoodi"}
-                            </a>
-                            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-                                2023
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-                        <a
                             href="https://www.npmjs.com/package/kiss-css"
                             target="_blank"
                             className="w-full block h-full"
@@ -774,8 +754,6 @@ export default function Projects() {
                             </p>
                         </div>
                     </div>
-
-
 
                     <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a

@@ -161,7 +161,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <div className="py-10" />
+
             <section ref={skillsSectionRef} className="bg-black bg-opacity-50">
                 <div className="py-10" />
                 <div className="py-5" />
