@@ -132,7 +132,7 @@ export default function Projects() {
 
                     <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
-                            href="https://forkcommitmerge.vercel.app/"
+                            href="https://forkcommitmerge.io/"
                             target="_blank"
                             className="w-full block h-full"
                         >
@@ -180,11 +180,11 @@ export default function Projects() {
                                 )}
                             </p>
                             <a
-                                href="https://forkcommitmerge.vercel.app/"
+                                href="https://forkcommitmerge.io/"
                                 target="_blank"
                                 className="text-blue-500 hover:text-blue-300 italic"
                             >
-                                https://forkcommitmerge.vercel.app/
+                                https://forkcommitmerge.io/
                             </a>
                             <br />
                             <a
