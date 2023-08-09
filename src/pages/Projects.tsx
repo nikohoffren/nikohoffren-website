@@ -337,7 +337,7 @@ export default function Projects() {
                         </div>
                     </div>
 
-                    <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
+                    {/* <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
                             href="https://github.com/nikohoffren/puck-hub"
                             target="_blank"
@@ -401,7 +401,7 @@ export default function Projects() {
                                 2023
                             </p>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
                         <a
