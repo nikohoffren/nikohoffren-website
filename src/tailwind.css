@@ -4,160 +4,160 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
 :root {
-    --ff-primary: "", sans-serif;
-    --bg-color-dark: #01020a;
-    --bg-color-light: #f5f0fa;
-    --header-bg-color-dark: #090b1a;
-    --header-bg-color-light: #1d2033;
-    --font-color-dark: #080808;
-    --font-color-light: #dddddd;
+  --ff-primary: "", sans-serif;
+  --bg-color-dark: #01020a;
+  --bg-color-light: #f5f0fa;
+  --header-bg-color-dark: #090b1a;
+  --header-bg-color-light: #1d2033;
+  --font-color-dark: #080808;
+  --font-color-light: #dddddd;
 }
 
 * {
-    font-family: var(--ff-primary);
+  font-family: var(--ff-primary);
 }
 
 .bg-color-dark {
-    background-color: var(--bg-color-dark);
-    color: var(--font-color-light);
+  background-color: var(--bg-color-dark);
+  color: var(--font-color-light);
 }
 
 .header-bg-color-dark {
-    background-color: var(--header-bg-color-dark);
+  background-color: var(--header-bg-color-dark);
 }
 
 .header-bg-color-light {
-    background-color: var(--header-bg-color-light);
+  background-color: var(--header-bg-color-light);
 }
 
 .bg-color-light {
-    background-color: var(--bg-color-light);
-    color: var(--font-color-dark);
+  background-color: var(--bg-color-light);
+  color: var(--font-color-dark);
 }
 
 .btn {
-    --hue: 190;
-    position: relative;
-    padding: 1rem 3rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: hsl(var(--hue), 100%, 41%);
-    border: 1px solid hsl(var(--hue), 100%, 41%);
-    border-radius: 5px;
-    outline: transparent;
-    overflow: hidden;
-    cursor: pointer;
-    user-select: none;
-    white-space: nowrap;
-    transition: 0.25s;
+  --hue: 190;
+  position: relative;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: hsl(var(--hue), 100%, 41%);
+  border: 1px solid hsl(var(--hue), 100%, 41%);
+  border-radius: 5px;
+  outline: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: 0.25s;
+
+  &:hover {
+    background: hsl(var(--hue), 100%, 31%);
+  }
+
+  &-primary {
+    --hue: 187;
+  }
+
+  &-ghost {
+    background-color: rgb(130, 112, 233);
+    border-color: hsl(var(--hue), 100%, 41%);
+  }
+
+  &-shine {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        hsla(var(--hue), 100%, 41%, 0.5),
+        transparent
+      );
+      transform: translateX(-100%);
+      transition: 0.6s;
+    }
 
     &:hover {
-        background: hsl(var(--hue), 100%, 31%);
+      background: rgb(105, 90, 187);
+      box-shadow: 0 0 20px 10px hsla(var(--hue), 100%, 41%, 0.5);
     }
 
-    &-primary {
-        --hue: 187;
+    &:hover::before {
+      transform: translateX(100%);
     }
-
-    &-ghost {
-        background-color: rgb(130, 112, 233);
-        border-color: hsl(var(--hue), 100%, 41%);
-    }
-
-    &-shine {
-        &::before {
-            position: absolute;
-            content: "";
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                120deg,
-                transparent,
-                hsla(var(--hue), 100%, 41%, 0.5),
-                transparent
-            );
-            transform: translateX(-100%);
-            transition: 0.6s;
-        }
-
-        &:hover {
-            background: rgb(105, 90, 187);
-            box-shadow: 0 0 20px 10px hsla(var(--hue), 100%, 41%, 0.5);
-        }
-
-        &:hover::before {
-            transform: translateX(100%);
-        }
-    }
+  }
 }
 
 .slide-enter {
-    transform: translateX(100%);
-    opacity: 0;
+  transform: translateX(100%);
+  opacity: 0;
 }
 
 .slide-enter-active {
-    transform: translateX(0);
-    opacity: 1;
-    transition: transform 500ms, opacity 500ms;
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 500ms, opacity 500ms;
 }
 
 .slide-exit {
-    transform: translateX(0);
-    opacity: 1;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .slide-exit-active {
-    transform: translateX(100%);
-    opacity: 0;
-    transition: transform 500ms, opacity 500ms;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 500ms, opacity 500ms;
 }
 
 .slide-text-enter {
-    transform: translateX(-100%);
-    opacity: 0;
+  transform: translateX(-100%);
+  opacity: 0;
 }
 
 .slide-text-enter-active {
-    transform: translateX(0);
-    opacity: 1;
-    transition: transform 500ms, opacity 500ms;
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 500ms, opacity 500ms;
 }
 
 .slide-text-exit {
-    transform: translateX(0);
-    opacity: 1;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .slide-text-exit-active {
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: transform 500ms, opacity 500ms;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 500ms, opacity 500ms;
 }
 
 .logos {
-    will-change: filter;
+  will-change: filter;
 }
 
 .logos:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
 
 @keyframes logos-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    a:nth-of-type(1) .logos {
-        animation: logos-spin infinite 20s linear;
-    }
+  a:nth-of-type(1) .logos {
+    animation: logos-spin infinite 20s linear;
+  }
 }
