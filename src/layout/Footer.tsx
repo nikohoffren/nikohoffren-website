@@ -39,21 +39,13 @@ export default function Footer({ theme }: NavbarProps) {
           >
             <i className="fa fa-instagram"></i>
           </a>
-          {/* <a
-                        href="https://www.threads.com/nikohoffren"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-pink-500 hover:text-pink-400"
-                    >
-                        <img src="threads.png" alt="Threads logo" className="w-4 h-4 px-0 py-0" />
-                    </a> */}
           <a
             href="https://www.twitter.com/nikohoffren86"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-400 hover:text-blue-300"
           >
-            <i className="fa fa-twitter"></i>
+            <img src="x-logo.svg" alt="X icon" className="w-3 pt-1.5" />
           </a>
         </div>
         <p className="text-center mb-2">Email: niko.hoffren@gmail.com</p>
