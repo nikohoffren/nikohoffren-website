@@ -63,8 +63,8 @@ export default function Footer({ theme }: NavbarProps) {
         <div className="text-center text-sm space-y-2">
           <p>
             {language === "en"
-              ? "Copyright © 2020-2023 Niko Hoffrén"
-              : "Tekijänoikeus © 2020-2023 Niko Hoffrén"}
+              ? "Copyright © 2020-2024 Niko Hoffrén"
+              : "Tekijänoikeus © 2020-2024 Niko Hoffrén"}
           </p>
           <p>
             {language === "en" ? "Coded with React " : "React "}

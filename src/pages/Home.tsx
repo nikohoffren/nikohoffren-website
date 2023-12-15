@@ -43,7 +43,7 @@ export default function Home() {
             >
               <h2 className="text-center sm:text-left text-xl font-semibold mb-4 mt-4">
                 {language === "en"
-                  ? "Software developer"
+                  ? "Software Engineer"
                   : "Ohjelmistokehittäjä"}
               </h2>
             </CSSTransition>
@@ -52,7 +52,7 @@ export default function Home() {
               timeout={500}
               classNames="slide-text"
             >
-              <div className="text-center sm:text-left">
+              <div className="text-center sm:text-left mb-10">
                 <Link to="/contact">
                   <button className="btn btn-primary btn-ghost btn-shine text-white">
                     {language === "en" ? "HIRE ME" : "PALKKAA MINUT"}
@@ -68,8 +68,8 @@ export default function Home() {
               <div className="text-center sm:text-left mt-4 text-base space-y-4">
                 <p>
                   {language === "en"
-                    ? "Welcome to my website! I'm a software developer from Kuopio, Finland. In my spare time, I like to spend time with my son, play video games, and code something interesting."
-                    : "Tervetuloa kotisivuilleni! Olen ohjelmistokehittäjä Kuopiosta. Vapaa-aikanani tykkään viettää aikaa poikani kanssa, pelata videopelejä sekä koodata jotain mielenkiintoista."}
+                    ? "Welcome to my website! I'm a software engineer from Kuopio, Finland. In my spare time, I like to spend time with my son, play video games, and code something interesting. I am presently employed as a software engineer at Dyme Solutions, where I specialize in technologies like Infrastructure as Code (IaC), TypeScript, and Node.js."
+                    : "Tervetuloa kotisivuilleni! Olen ohjelmistokehittäjä Kuopiosta. Vapaa-aikanani tykkään viettää aikaa poikani kanssa, pelata videopelejä sekä koodata jotain mielenkiintoista. Tällä hetkellä työskentelen ohjelmistokehittäjänä Dyme Solutionsilla, jossa erikoistun teknologioihin kuten Infrastructure as Code (IaC), TypeScript ja Node.js."}
                 </p>
                 <p>
                   {language === "en"
@@ -88,11 +88,11 @@ export default function Home() {
                     ? "Contributing to open-source software is one of the ways I've chosen to give back to the community. I believe that open-source help to push the boundaries of technological innovation."
                     : "Osallistuminen avointen lähdekoodien ohjelmistojen kehittämiseen on yksi tapa, jolla olen valinnut antaa panokseni yhteisölle. Uskon, että avoimen lähdekoodin ohjelmistot auttavat siirtämään teknologisen innovaation rajoja."}
                 </p>
-                <iframe
+                {/* <iframe
                   src="https://github.com/sponsors/nikohoffren/button"
                   title="Sponsor nikohoffren"
                   className="w-full sm:w-32 h-8 sm:h-8 border-0 ´"
-                />
+                /> */}
                 <p>
                   {language === "en"
                     ? "I'm always eager to connect with like-minded individuals, potential collaborators, or anyone curious about my work. Feel free to reach out to me with any queries or opportunities. Let's code, collaborate, and create together!"
@@ -100,7 +100,7 @@ export default function Home() {
                 </p>
               </div>
             </CSSTransition>
-            <CSSTransition
+            {/* <CSSTransition
               in={textInProp}
               timeout={500}
               classNames="slide-text"
@@ -125,7 +125,7 @@ export default function Home() {
                   {language === "en" ? "Download CV" : "Lataa CV"}
                 </a>
               </div>
-            </CSSTransition>
+            </CSSTransition> */}
           </div>
           <div>
             {isLoading && <Loader />}
