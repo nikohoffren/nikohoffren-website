@@ -123,7 +123,7 @@ export default function Projects() {
 
         <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
           <a
-            href="https://forkcommitmerge.io/"
+            href="https://forkcommitmerge.vercel.app/"
             target="_blank"
             className="w-full block h-full"
           >
@@ -164,11 +164,11 @@ export default function Projects() {
               )}
             </p>
             <a
-              href="https://forkcommitmerge.io/"
+              href="https://forkcommitmerge.vercel.app/"
               target="_blank"
               className="text-blue-500 hover:text-blue-300 italic"
             >
-              https://forkcommitmerge.io/
+              https://forkcommitmerge.vercel.app/
             </a>
             <br />
             <a
@@ -283,15 +283,6 @@ export default function Projects() {
                 </>
               )}
             </p>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.nikohoffren.stolen_gear_app"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              {language === "en"
-                ? "Download from Google Play Store"
-                : "Lataa Google Play Store:sta"}
-            </a>
             <br />
             <a
               href="https://github.com/nikohoffren/stolen-or-not-app"
@@ -301,7 +292,7 @@ export default function Projects() {
               {language === "en" ? "Github source code" : "Github lähdekoodi"}
             </a>
             <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2023
+              2023 - present
             </p>
           </div>
         </div>
@@ -429,7 +420,7 @@ export default function Projects() {
               {language === "en" ? "Github source code" : "Github lähdekoodi"}
             </a>
             <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2023
+              2023 - present
             </p>
           </div>
         </div>
@@ -551,7 +542,7 @@ export default function Projects() {
               {language === "en" ? "Github source code" : "Github lähdekoodi"}
             </a>
             <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2023
+              2023 - present
             </p>
           </div>
         </div>
@@ -617,7 +608,7 @@ export default function Projects() {
               {language === "en" ? "Github source code" : "Github lähdekoodi"}
             </a>
             <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2023
+              2023 - present
             </p>
           </div>
         </div>
@@ -683,7 +674,7 @@ export default function Projects() {
               {language === "en" ? "Github source code" : "Github lähdekoodi"}
             </a>
             <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2023
+              2023 - present
             </p>
           </div>
         </div>
