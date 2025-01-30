@@ -179,7 +179,7 @@ export default function Projects() {
               {language === "en" ? "Github source code" : "Github lähdekoodi"}
             </a>
             <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2023
+              2023 - present
             </p>
           </div>
         </div>
@@ -233,7 +233,7 @@ export default function Projects() {
               {language === "en" ? "Github source code" : "Github lähdekoodi"}
             </a>
             <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2023
+              2023 - present
             </p>
           </div>
         </div>
