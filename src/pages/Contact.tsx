@@ -17,8 +17,35 @@ export default function Contact() {
       >
         <p className="mb-8 text-xl">
           {language === "en"
-            ? "Contact me via this form for job opportunities or other requests, and I'll get back to you as soon as I can!"
-            : "Ota minuun yhteyttä työtarjouksien tai muiden pyyntöjen kanssa tämän lomakkeen avulla, niin palaan asiaan mahdollisimman pian!"}
+            ? "Contact me via this form for job opportunities or other requests, and I'll get back to you as soon as I can! You can also contact me by sending a DM on "
+            : "Ota minuun yhteyttä työtarjouksien tai muiden pyyntöjen kanssa tämän lomakkeen avulla, niin palaan asiaan mahdollisimman pian! Voit myös ottaa minuun yhteyttä lähettämällä viestin "}
+          <a
+            href="https://www.twitter.com/nikohoffren86"
+            className="text-blue-500 hover:text-blue-700 underline"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {language === "en" ? "X" : "X:ssä"}
+          </a>
+          {", "}
+          <a
+            href="https://www.instagram.com/nikohoffren"
+            className="text-blue-500 hover:text-blue-700 underline"
+            target="_blank"
+            rel="noreferrer"
+          >
+          {language === "en" ? "Istagram" : "Instagramissa"}
+          </a>
+          {language === "en" ? ", or " : ", tai "}
+          <a
+            href="https://www.linkedin.com/in/nikohoffren"
+            className="text-blue-500 hover:text-blue-700 underline"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {language === "en" ? "LinkedIn" : "LinkedInissä"}
+          </a>
+          {"."}
         </p>
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-full px-3 mb-6 md:mb-0">
