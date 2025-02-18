@@ -41,7 +41,7 @@ export default function Home() {
               timeout={500}
               classNames="slide-text"
             >
-              <h2 className="text-center sm:text-left text-xl font-semibold mb-4 mt-4">
+              <h2 className="text-center sm:text-left text-3xl font-semibold mb-4 mt-4">
                 {language === "en"
                   ? "Software Engineer"
                   : "Ohjelmistokehittäjä"}
@@ -68,8 +68,8 @@ export default function Home() {
               <div className="text-center sm:text-left mt-4 text-base space-y-4">
                 <p>
                   {language === "en"
-                    ? "Welcome to my website! I'm a software engineer from Kuopio, Finland. In my spare time, I like to spend time with my son, play video games, go to gym and code something interesting. In my working career I have specialized in technologies such as Infrastructure as Code (IaC), TypeScript, Flutter and Node.js."
-                    : "Tervetuloa kotisivuilleni! Olen ohjelmistokehittäjä Kuopiosta. Vapaa-aikanani tykkään viettää aikaa poikani kanssa, pelata videopelejä, käydä salilla sekä koodata jotain mielenkiintoista. Työurallani olen työskennellyt teknologioiden kuten Infrastructure as Code (IaC), TypeScript, Flutter ja Node.js parissa."}
+                    ? "Welcome to my website! I'm a software engineer from Kuopio, Finland. In my spare time, I like to spend time with my son, go to gym, play video games, or code something interesting. In my working career I have specialized in technologies such as Infrastructure as Code (IaC), TypeScript, Flutter and Node.js."
+                    : "Tervetuloa kotisivuilleni! Olen ohjelmistokehittäjä Kuopiosta. Vapaa-aikanani tykkään viettää aikaa poikani kanssa, käydä salilla, pelata videopelejä, tai koodata jotain mielenkiintoista. Työurallani olen työskennellyt teknologioiden kuten Infrastructure as Code (IaC), TypeScript, Flutter ja Node.js parissa."}
                 </p>
                 <p>
                   {language === "en"
@@ -131,9 +131,9 @@ export default function Home() {
             {isLoading && <Loader />}
             <CSSTransition in={inProp} timeout={500} classNames="slide">
               <img
-                src="NH-photo3.JPG.png"
+                src="nikohoffren_new3.jpg"
                 alt="Niko Hoffrén"
-                className="w-full h-auto"
+                className="rounded-full mx-auto"
                 onLoad={imageLoaded}
               />
             </CSSTransition>
@@ -141,10 +141,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section ref={skillsSectionRef} className="bg-black bg-opacity-50">
+      <section ref={skillsSectionRef} className="bg-black bg-opacity-10 mt-6">
         <div className="py-10" />
         <div className="py-5" />
-        <h1 className="text-4xl font-bold mb-10 text-center prose-lg prose-purple">
+        <h1 className="text-5xl font-bold mb-10 text-center prose-lg prose-purple">
           {language === "en" ? "SKILLS" : "TAIDOT"}
         </h1>
         <div className="py-5" />
@@ -251,13 +251,53 @@ export default function Home() {
           </div>
           <div className="m-4 text-center">
             <img
-              src="https://skillicons.dev/icons?i=firebase"
+              src="https://skillicons.dev/icons?i=aws"
               width="80"
               height="80"
               alt="dart"
             />
             <br />
-            Firebase
+            AWS
+          </div>
+          <div className="m-4 text-center">
+            <img
+              src="https://skillicons.dev/icons?i=gcp"
+              width="80"
+              height="80"
+              alt="dart"
+            />
+            <br />
+            GCP
+          </div>
+          <div className="m-4 text-center">
+            <img
+              src="https://skillicons.dev/icons?i=terraform"
+              width="80"
+              height="80"
+              alt="dart"
+            />
+            <br />
+            Terraform
+          </div>
+          <div className="m-4 text-center">
+            <img
+              src="https://skillicons.dev/icons?i=docker"
+              width="80"
+              height="80"
+              alt="dart"
+            />
+            <br />
+            Docker
+          </div>
+          <div className="m-4 text-center">
+            <img
+              src="https://skillicons.dev/icons?i=maven"
+              width="80"
+              height="80"
+              alt="dart"
+            />
+            <br />
+            Maven
           </div>
           <div className="m-4 text-center">
             <img

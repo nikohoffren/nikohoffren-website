@@ -14,6 +14,7 @@
     "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.14",
     "clsx": "^1.2.1",
+    "niko-hoffren-homepage": "file:",
     "postcss": "^8.4.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
