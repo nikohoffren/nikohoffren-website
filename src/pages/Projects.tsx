@@ -59,6 +59,69 @@ export default function Projects() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
           <a
+            href="https://marketplace.visualstudio.com/items?itemName=niko-hoffren.dead-code-hunter"
+            target="_blank"
+            className="w-full block h-full"
+          >
+            {isLoading && <Loader />}
+            <img
+              src="dead-code-hunter-logo.png"
+              alt="Dead Code Hunter -logo"
+              className="max-h-40 w-full object-cover"
+              onLoad={imageLoaded}
+            />
+          </a>
+          <div className="bg-white dark:bg-gray-800 w-full p-4">
+            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
+              {language === "en"
+                ? "DEAD CODE HUNTER - VS Code Extension"
+                : "DEAD CODE HUNTER - VS Code Laajennus"}
+            </h2>
+            <p className="text-md text-gray-800 dark:text-white py-2">
+              {language === "en" ? (
+                <>
+                  {" "}
+                  Dead Code Hunter is a Visual Studio Code extension designed to
+                  help developers track and manage unused code in their
+                  projects. It integrates with the VS Code diagnostic system to
+                  detect errors, warnings, and dead code across your files and lists them in an
+                  easy-to-navigate panel. Tools: TypeScript.{" "}
+                </>
+              ) : (
+                <>
+                  {" "}
+                  Dead Code Hunter on Visual Studio Code -laajennus, joka auttaa
+                  kehittäjiä jäljittämään ja hallitsemaan käyttämätöntä koodia
+                  projekteissaan. Se integroituu VS Coden
+                  diagnostiikkajärjestelmään havaitakseen virheet, varoitukset
+                  ja kuolleen koodin ja listaa ne helposti selattavaan
+                  paneeliin. Työkalut: TypeScript.{" "}
+                </>
+              )}
+            </p>
+            <a
+              href="https://marketplace.visualstudio.com/items?itemName=niko-hoffren.dead-code-hunter"
+              target="_blank"
+              className="text-blue-500 hover:text-blue-300 italic"
+            >
+              Dead Code Hunter in VS Code Marketplace
+            </a>
+            <br />
+            <a
+              href="https://github.com/nikohoffren/dead-code-hunter"
+              target="_blank"
+              className="text-blue-500 hover:text-blue-300 italic"
+            >
+              {language === "en" ? "Github source code" : "Github lähdekoodi"}
+            </a>
+            <p className="text-sm text-gray-900 dark:text-white italic my-2">
+              2025 - present
+            </p>
+          </div>
+        </div>
+
+        <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
+          <a
             href="https://www.hunajaholisti.fi"
             target="_blank"
             className="w-full block h-full"
@@ -85,7 +148,9 @@ export default function Projects() {
                   products, featuring an integrated shopping cart and secure
                   checkout functionality powered by Stripe. Tools: React, Vite,
                   TypeScript, Tailwind CSS, Netlify Functions, Firebase and
-                  Stripe.{" "}
+                  Stripe.
+                  <br />
+                  <br />{" "}
                 </>
               ) : (
                 <>
@@ -149,7 +214,10 @@ export default function Projects() {
                   mastering GitHub contributions! Whether you're a novice coder
                   or an experienced developer, our comprehensive guides are
                   designed to streamline your GitHub journey. Tools: React,
-                  NextJS, TypeScript, Tailwind CSS, MongoDB and AWS S3.{" "}
+                  NextJS, TypeScript, Tailwind CSS, MongoDB and AWS S3.
+                  <br />
+                  <br />
+                  <br />{" "}
                 </>
               ) : (
                 <>
@@ -159,7 +227,9 @@ export default function Projects() {
                   oletko aloitteleva koodaaja vai kokenut kehittäjä, kattavat
                   oppaamme on suunniteltu helpottamaan GitHub-matkaasi.
                   Työkalut: React, NextJS, TypeScript, Tailwind CSS, MongoDB ja
-                  AWS S3.{" "}
+                  AWS S3.
+                  <br />
+                  <br />{" "}
                 </>
               )}
             </p>
@@ -209,17 +279,15 @@ export default function Projects() {
                 <>
                   A project designed to help you familiarize yourself with the
                   open source contribution workflow on GitHub! We present tasks
-                  of varying difficulty. You're free to choose either the easy
-                  or medium issue, depending on your proficiency in HTML or
-                  JavaScript Tools: JavaScript, Node.js.{" "}
+                  of varying difficulty. You're free to choose of many different
+                  languages and frameworks. Tools: JavaScript, Node.js.
+                  <br />{" "}
                 </>
               ) : (
                 <>
                   Projekti, joka on suunniteltu auttamaan sinua perehtymään
                   avoimen lähdekoodin kontribuutioiden työnkulkuun GitHubissa!
-                  Tarjoamme kaksi tehtävää eri vaikeusasteilla. Voit vapaasti
-                  valita joko helpomman tai keskitasoisen tehtävän riippuen
-                  taitotasostasi HTML:ssä tai JavaScriptissä. Työkalut:
+                  Tarjoamme useita eri tehtäviä eri vaikeusasteilla. Työkalut:
                   JavaScript, Node.js.{" "}
                 </>
               )}
@@ -265,9 +333,7 @@ export default function Projects() {
                   This Flutter application is built to help people keep track of
                   their valuable devices and protect them from theft. It allows
                   users to register their devices, such as computers, cars,
-                  musical instruments, and more.
-                  <br />
-                  Available in Google Play Store. Tools: Flutter, Dart &
+                  musical instruments, and more. Tools: Flutter, Dart &
                   Firebase.{" "}
                 </>
               ) : (
@@ -390,8 +456,6 @@ export default function Projects() {
                   route information for all Vilkku buses, bicycles, and bike
                   taxis operating within the Kuopio/Siilinjärvi region.
                   <br />
-                  <br />
-                  <br />
                   Tools: JavaScript, Express.js & Netlify functions.
                 </>
               ) : (
@@ -454,6 +518,8 @@ export default function Projects() {
                   language selection, allowing users to switch between Finnish
                   and English languages seamlessly. Tools: Vite, React,
                   TypeScript.
+                  <br />
+                  <br />
                 </>
               ) : (
                 <>
@@ -461,8 +527,8 @@ export default function Projects() {
                   liittyvistä asioista. Verkkosivusto näyttää kaiken
                   tarvitsemasi tiedon musiikkini, videoideni ja soittimieni
                   esittelyn avulla. Se tukee myös kielivalintaa, mahdollistaen
-                  käyttäjien vaihtaa saumattomasti suomen ja englannin kielen
-                  välillä. Työkalut: Vite, React, TypeScript.
+                  käyttäjien vaihtaa saumattomasti kielien välillä. Työkalut:
+                  Vite, React, TypeScript.
                 </>
               )}
             </p>
@@ -549,72 +615,6 @@ export default function Projects() {
 
         <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
           <a
-            href="https://app-icon-generator.netlify.app/"
-            target="_blank"
-            className="w-full block h-full"
-          >
-            {isLoading && <Loader />}
-            <img
-              src="icon_512x512.png"
-              alt="App Icon Generator logo"
-              className="max-h-40 w-full object-cover"
-              onLoad={imageLoaded}
-            />
-          </a>
-          <div className="bg-white dark:bg-gray-800 w-full p-4">
-            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-              {language === "en"
-                ? "ANDROID APP ICON GENERATOR - Web application"
-                : "ANDROID APP ICON GENERAATTORI - Verkkosivusto"}
-            </h2>
-            <p className="text-md text-gray-800 dark:text-white py-2">
-              {language === "en" ? (
-                <>
-                  {" "}
-                  A modern web application for generating Android app icons of
-                  various sizes.
-                  <br />
-                  <br />
-                  Built with React and Vite, and uses the Fabric.js library for
-                  image manipulation.{" "}
-                </>
-              ) : (
-                <>
-                  {" "}
-                  Moderni verkkosovellus Android-sovelluskuvakkeiden luomiseen
-                  eri kokoisina.
-                  <br />
-                  <br />
-                  Rakennettu Reactin ja Viten avulla, ja käyttää
-                  Fabric.js-kirjastoa kuvankäsittelyyn.
-                  <br />
-                  <br />{" "}
-                </>
-              )}
-            </p>
-            <a
-              href="https://app-icon-generator.netlify.app/"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              app-icon-generator.netlify.app
-            </a>
-            <br />
-            <a
-              href="https://github.com/nikohoffren/app-icon-generator-website"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              {language === "en" ? "Github source code" : "Github lähdekoodi"}
-            </a>
-            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2023 - present
-            </p>
-          </div>
-        </div>
-
-        <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-          <a
             href="https://chrome.google.com/webstore/detail/smart-meeting-scheduler/icaojehhbdenebdcahljjhnohnjmbpfa"
             target="_blank"
             className="w-full block h-full"
@@ -650,9 +650,8 @@ export default function Projects() {
                   joka on suunniteltu helpottamaan ja tehostamaan kokousten
                   ajanvaraamisprosessia käyttäen Google-kalenteria.
                   <br />
-                  <br />
-                  Ladattavissa Chrome Webstoresta! Työkalut: JavaScript,
-                  Node.js.
+                  Ladattavissa Chrome Webstoresta! <br />
+                  Työkalut: JavaScript, Node.js.
                 </>
               )}
             </p>
