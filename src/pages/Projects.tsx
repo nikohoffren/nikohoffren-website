@@ -2,22 +2,6 @@ import React, { useContext, useEffect, useRef } from "react";
 import { LanguageContext } from "../common/components/LanguageContext";
 import { projects } from "../data/projects";
 
-interface Project {
-  title: string;
-  titleFi?: string;
-  type: string;
-  description: string;
-  descriptionFi: string;
-  image: string;
-  links: {
-    type: "external" | "github" | "playstore" | "npm" | "chrome";
-    url: string;
-    text: string;
-    textFi: string;
-  }[];
-  technologies: string[];
-}
-
 export default function Projects() {
   const { language } = useContext(LanguageContext);
   const sponsorIframeRef = useRef<HTMLIFrameElement>(null);
