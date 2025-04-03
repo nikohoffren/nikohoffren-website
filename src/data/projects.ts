@@ -59,7 +59,7 @@ export const projects: Project[] = [
     links: [
       {
         type: "external",
-        url: "https://forkcommitmerge.vercel.app/",
+        url: "https://forkcommitmerge.dev/",
         text: "Visit Site",
         textFi: "Vieraile Sivustolla",
       },
