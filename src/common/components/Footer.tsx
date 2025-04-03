@@ -1,16 +1,11 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "../common/components/LanguageContext";
+import { LanguageContext } from "./LanguageContext";
 
-interface NavbarProps {
-  theme: string;
-  toggleTheme: () => void;
-}
-
-export default function Footer({ theme }: NavbarProps) {
+export default function Footer() {
   const { language } = useContext(LanguageContext);
 
   return (
-    <footer className="relative">
+    <footer className="relative mt-20">
       {/* Decorative top border with gradient */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200/20 dark:via-gray-700/20 to-transparent"></div>
 
@@ -107,45 +102,36 @@ export default function Footer({ theme }: NavbarProps) {
               </p>
               <div className="flex items-center space-x-2">
                 <span className="text-sm text-gray-500 dark:text-gray-400">
-                  {language === "en" ? "Made with" : ""}
+                  {language === "en" ? "Built with" : ""}
                 </span>
-                <img
-                  src="/react.svg"
-                  alt="React"
-                  className="h-4 w-4 animate-spin-slow"
-                />
-                <a
-                  href="https://react.dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
-                >
-                  React
-                </a>
-                <span className="text-gray-400 dark:text-gray-600">•</span>
-                <img
-                  src="/typescript.png"
-                  alt="TypeScript"
-                  className="h-4 w-4"
-                />
-                <a
-                  href="https://www.typescriptlang.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
-                >
-                  TypeScript
-                </a>
-                <span className="text-gray-400 dark:text-gray-600">•</span>
-                <img src="/netlify.png" alt="Netlify" className="h-4 w-4" />
-                <a
-                  href="https://www.netlify.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
-                >
-                  {language === "en" ? "Hosted by Netlify" : "Netlify"}
-                </a>
+                <div className="flex items-center space-x-2">
+                  <img
+                    src="https://laravel.com/img/favicon/favicon.ico"
+                    alt="Laravel"
+                    className="h-4 w-4"
+                  />
+                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                    Laravel
+                  </span>
+                  <span className="text-gray-400 dark:text-gray-600">•</span>
+                  <img
+                    src="https://www.php.net/favicon.ico"
+                    alt="PHP"
+                    className="h-4 w-4"
+                  />
+                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                    PHP
+                  </span>
+                  <span className="text-gray-400 dark:text-gray-600">•</span>
+                  <img
+                    src="https://www.linode.com/favicon.ico"
+                    alt="Linode"
+                    className="h-4 w-4"
+                  />
+                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                    Linode
+                  </span>
+                </div>
               </div>
             </div>
           </div>

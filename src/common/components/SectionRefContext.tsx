@@ -1,3 +1,3 @@
 import { createContext, MutableRefObject } from 'react';
 
-export const SectionRefContext = createContext<MutableRefObject<null> | null>(null);
+export const SectionRefContext = createContext<MutableRefObject<HTMLElement | null> | null>(null);

@@ -1,756 +1,385 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { LanguageContext } from "../common/components/LanguageContext";
-import Loader from "../common/components/Loader";
+
+interface Project {
+  title: string;
+  titleFi?: string;
+  type: string;
+  description: string;
+  descriptionFi: string;
+  image: string;
+  links: {
+    type: "external" | "github" | "playstore" | "npm" | "chrome";
+    url: string;
+    text: string;
+    textFi: string;
+  }[];
+  technologies: string[];
+}
+
+const projects: Project[] = [
+  {
+    title: "Dead Code Hunter",
+    type: "VS Code Extension",
+    description:
+      "A powerful VS Code extension for tracking and managing unused code in your projects.",
+    descriptionFi:
+      "Tehokas VS Code -laajennus käyttämättömän koodin jäljittämiseen ja hallintaan projekteissasi.",
+    image: "/dead-code-hunter-logo.png",
+    links: [
+      {
+        type: "external",
+        url: "https://marketplace.visualstudio.com/items?itemName=niko-hoffren.dead-code-hunter",
+        text: "View Project",
+        textFi: "Katso Projekti",
+      },
+      {
+        type: "github",
+        url: "https://github.com/nikohoffren/dead-code-hunter",
+        text: "Source",
+        textFi: "Lähdekoodi",
+      },
+    ],
+    technologies: ["TypeScript", "VS Code API"],
+  },
+  {
+    title: "Hunajaholistin Hunaja",
+    type: "E-Commerce",
+    description:
+      "Modern e-commerce platform for honey products with integrated shopping cart and Stripe payments.",
+    descriptionFi:
+      "Moderni verkkokauppa-alusta hunajatuotteille integroidulla ostoskorilla ja Stripe-maksuilla.",
+    image: "/HHlahja.jpg",
+    links: [
+      {
+        type: "external",
+        url: "https://www.hunajaholisti.fi",
+        text: "Visit Site",
+        textFi: "Vieraile Sivustolla",
+      },
+      {
+        type: "github",
+        url: "https://github.com/nikohoffren/hunajaholisti-homepage",
+        text: "Source",
+        textFi: "Lähdekoodi",
+      },
+    ],
+    technologies: ["React", "TypeScript", "Stripe", "Firebase"],
+  },
+  {
+    title: "Fork, Commit, Merge -website",
+    titleFi: "Fork, Commit, Merge -verkkosivusto",
+    type: "Website",
+    description: "Website of Fork, Commit, Merge project.",
+    descriptionFi: "Fork, Commit, Merge -projektin verkkosivusto.",
+    image: "/fork-commit-merge-web-banner.png",
+    links: [
+      {
+        type: "external",
+        url: "https://forkcommitmerge.vercel.app/",
+        text: "Visit Site",
+        textFi: "Vieraile Sivustolla",
+      },
+      {
+        type: "github",
+        url: "https://github.com/nikohoffren/fork-commit-merge-web",
+        text: "Source",
+        textFi: "Lähdekoodi",
+      },
+    ],
+    technologies: ["Next.js", "TypeScript", "MongoDB"],
+  },
+  {
+    title: "Fork, Commit, Merge",
+    type: "Learning",
+    description:
+      "A comprehensive platform for learning GitHub contributions and open source development.",
+    descriptionFi:
+      "Kattava alusta GitHub-kontribuutioiden ja avoimen lähdekoodin kehityksen oppimiseen.",
+    image: "/fork-commit-merge-logo.jpg",
+    links: [
+      {
+        type: "github",
+        url: "https://github.com/nikohoffren/fork-commit-merge",
+        text: "Source",
+        textFi: "Lähdekoodi",
+      },
+    ],
+    technologies: ["JavaScript", "Node.js"],
+  },
+  {
+    title: "Stolen Or Not?",
+    type: "Mobile App",
+    description:
+      "Flutter app for tracking valuable devices and protecting them from theft.",
+    descriptionFi:
+      "Flutter-sovellus arvokkaiden laitteiden seurantaan ja suojaamiseen varkauksilta.",
+    image: "/stolen-gear-logo.jpeg",
+    links: [
+      {
+        type: "playstore",
+        url: "https://play.google.com/store/apps/details?id=com.nikohoffren.stolen_gear_app",
+        text: "Play Store",
+        textFi: "Play Store",
+      },
+      {
+        type: "github",
+        url: "https://github.com/nikohoffren/stolen-or-not-app",
+        text: "Source",
+        textFi: "Lähdekoodi",
+      },
+    ],
+    technologies: ["Flutter", "Dart", "Firebase"],
+  },
+  {
+    title: "Kuopio Public Transport",
+    titleFi: "Kuopion Julkinen Liikenne",
+    type: "Web App",
+    description:
+      "Real-time tracking and route information for Kuopio public transport.",
+    descriptionFi:
+      "Reaaliaikainen seuranta ja reittitiedot Kuopion julkiselle liikenteelle.",
+    image: "/Vilkku_sydan_violetti.png",
+    links: [
+      {
+        type: "external",
+        url: "https://kuopionjulkinenliikenne.live",
+        text: "Visit Site",
+        textFi: "Vieraile Sivustolla",
+      },
+    ],
+    technologies: ["React", "Maps API"],
+  },
+  {
+    title: "Niko Hoffrén Music",
+    type: "Website",
+    description:
+      "Website showcasing my music production work, featuring music samples, videos, and gear information.",
+    descriptionFi:
+      "Verkkosivusto musiikkituotantooni liittyvistä asioista, sisältäen musiikkinäytteitä, videoita ja soitintietoja.",
+    image: "/NHbackground.jpg",
+    links: [
+      {
+        type: "external",
+        url: "https://nikohoffrenmusic.netlify.app",
+        text: "Visit Site",
+        textFi: "Vieraile Sivustolla",
+      },
+      {
+        type: "github",
+        url: "https://github.com/nikohoffren/nikohoffrenmusic-homepage",
+        text: "Source",
+        textFi: "Lähdekoodi",
+      },
+    ],
+    technologies: ["Vite", "React", "TypeScript"],
+  },
+  {
+    title: "KISS CSS",
+    type: "Framework",
+    description:
+      "A simple, lightweight CSS framework designed for ease of use, providing reusable CSS classes and components.",
+    descriptionFi:
+      "Yksinkertainen ja kevyt CSS-kirjasto, joka on suunniteltu helppokäyttöisyyttä ajatellen, tarjoten uudelleenkäytettäviä CSS-luokkia.",
+    image: "/kiss-css-logo.jpg",
+    links: [
+      {
+        type: "npm",
+        url: "https://www.npmjs.com/package/kiss-css",
+        text: "NPM Package",
+        textFi: "NPM Paketti",
+      },
+      {
+        type: "github",
+        url: "https://github.com/nikohoffren/kiss-css",
+        text: "Source",
+        textFi: "Lähdekoodi",
+      },
+    ],
+    technologies: ["CSS", "JavaScript", "Node.js"],
+  },
+  {
+    title: "Smart Meeting Scheduler",
+    type: "Chrome Extension",
+    description:
+      "Chrome extension for streamlining meeting scheduling with Google Calendar integration.",
+    descriptionFi:
+      "Chrome-laajennus kokousten ajanvaraamisen helpottamiseen Google Calendar -integraatiolla.",
+    image: "/smart-meeting-scheduler-logo.jpg",
+    links: [
+      {
+        type: "chrome",
+        url: "https://chrome.google.com/webstore/detail/smart-meeting-scheduler/icaojehhbdenebdcahljjhnohnjmbpfa",
+        text: "Web Store",
+        textFi: "Web Store",
+      },
+      {
+        type: "github",
+        url: "https://github.com/nikohoffren/smart-meeting-scheduler",
+        text: "Source",
+        textFi: "Lähdekoodi",
+      },
+    ],
+    technologies: ["JavaScript", "Node.js", "Chrome API"],
+  },
+];
 
 export default function Projects() {
-  const { language } = useContext(LanguageContext) as {
-    language: string;
-    setLanguage: (language: string) => void;
-  };
-  const cvUrl = "/nikohoffren-cv.pdf";
-  const [isLoading, setIsLoading] = useState(true);
-  const imageLoaded = () => {
-    setIsLoading(false);
+  const { language } = useContext(LanguageContext);
+  const sponsorIframeRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    const adjustSponsorHeight = () => {
+      if (sponsorIframeRef.current) {
+        sponsorIframeRef.current.style.height =
+          window.innerWidth < 550 ? "170px" : "110px";
+      }
+    };
+
+    adjustSponsorHeight();
+    window.addEventListener("resize", adjustSponsorHeight);
+    return () => window.removeEventListener("resize", adjustSponsorHeight);
+  }, []);
+
+  const getLinkIcon = (type: string) => {
+    switch (type) {
+      case "external":
+        return "fas fa-external-link-alt";
+      case "github":
+        return "fab fa-github";
+      case "playstore":
+        return "fab fa-google-play";
+      case "npm":
+        return "fab fa-npm";
+      case "chrome":
+        return "fab fa-chrome";
+      default:
+        return "fas fa-link";
+    }
   };
 
   return (
-    <section className="py-10 px-8 md:px-16 rounded-lg my-10 mx-4 md:mx-8 lg:mx-16">
-      <div className="py-10" />
-      <h1 className="text-4xl font-bold mb-10 text-center">
-        {language === "en" ? "PROJECTS" : "PROJEKTIT"}
-      </h1>
+    <div className="pt-6 bg-white/80 dark:bg-gray-900/50">
+      {/* Hero Section */}
+      <div className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            {language === "en" ? "Projects " : "Projektit "}
+            <span className="text-indigo-600 dark:text-indigo-400">
+              Portfolio
+            </span>
+          </h1>
+          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-300 sm:mt-4">
+            {language === "en"
+              ? "Explore my collection of projects and open-source contributions"
+              : "Tutustu projekteihini ja avoimen lähdekoodin kontribuutioihini"}
+          </p>
+          <div className="mt-8 mb-6">
+            <a
+              href="https://github.com/nikohoffren"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-200"
+            >
+              <i className="fab fa-github mr-2"></i>
+              {language === "en" ? "View on GitHub" : "Katso Githubissa"}
+            </a>
+          </div>
+        </div>
 
-      <p className="mb-6 text-center">
-        {language === "en"
-          ? "Find all of my projects and open-source contributions on "
-          : "Löydät kaikki projektini sekä avoimen lähdekoodin kontribuutioni "}{" "}
-        <a
-          href="https://www.github.com/nikohoffren"
-          className="text-blue-500 hover:text-blue-700 underline"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {language === "en" ? "Github" : "Githubista"}
-        </a>
-        .
-      </p>
-      <div className="flex justify-center items-center">
-        <iframe
-          src="https://github.com/sponsors/nikohoffren/card"
-          title="Sponsor nikohoffren"
-          className="w-full sm:w-700 h-220 sm:h-100 border-0 rounded-xl"
-        ></iframe>
+        {/* Decorative background pattern */}
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10 dark:opacity-20"></div>
       </div>
 
-      {/* <p className="mb-6 mt-4 text-center">
-        {language === "en" ? "Download my CV " : "Lataa CV:ni "}{" "}
-        <a
-          href={cvUrl}
-          download
-          className="text-blue-500 hover:text-blue-700 underline"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {language === "en" ? "here" : "täältä"}
-        </a>
-        .
-      </p> */}
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-          <a
-            href="https://marketplace.visualstudio.com/items?itemName=niko-hoffren.dead-code-hunter"
-            target="_blank"
-            className="w-full block h-full"
+      {/* GitHub Sponsors Section */}
+      <div className="relative -mt-20 z-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl pb-6">
+        <div className="bg-white/80 dark:bg-gray-800/10 backdrop-blur-lg rounded-xl shadow-lg border border-gray-200/20 dark:border-gray-700/20 overflow-hidden">
+          <div
+            className="sponsor-container p-4"
+            style={{ width: "100%", overflow: "hidden" }}
           >
-            {isLoading && <Loader />}
-            <img
-              src="dead-code-hunter-logo.png"
-              alt="Dead Code Hunter -logo"
-              className="max-h-40 w-full object-cover"
-              onLoad={imageLoaded}
+            <iframe
+              ref={sponsorIframeRef}
+              src="https://github.com/sponsors/nikohoffren/card"
+              title="Sponsor nikohoffren"
+              style={{
+                width: "100%",
+                border: "0",
+                borderRadius: "0.75rem",
+                transform: "scale(0.97)",
+              }}
+              scrolling="no"
             />
-          </a>
-          <div className="bg-white dark:bg-gray-800 w-full p-4">
-            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-              {language === "en"
-                ? "DEAD CODE HUNTER - VS Code Extension"
-                : "DEAD CODE HUNTER - VS Code Laajennus"}
-            </h2>
-            <p className="text-md text-gray-800 dark:text-white py-2">
-              {language === "en" ? (
-                <>
-                  {" "}
-                  Dead Code Hunter is a Visual Studio Code extension designed to
-                  help developers track and manage unused code in their
-                  projects. It integrates with the VS Code diagnostic system to
-                  detect errors, warnings, and dead code across your files and lists them in an
-                  easy-to-navigate panel. Tools: TypeScript.{" "}
-                </>
-              ) : (
-                <>
-                  {" "}
-                  Dead Code Hunter on Visual Studio Code -laajennus, joka auttaa
-                  kehittäjiä jäljittämään ja hallitsemaan käyttämätöntä koodia
-                  projekteissaan. Se integroituu VS Coden
-                  diagnostiikkajärjestelmään havaitakseen virheet, varoitukset
-                  ja kuolleen koodin ja listaa ne helposti selattavaan
-                  paneeliin. Työkalut: TypeScript.{" "}
-                </>
-              )}
-            </p>
-            <a
-              href="https://marketplace.visualstudio.com/items?itemName=niko-hoffren.dead-code-hunter"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              Dead Code Hunter in VS Code Marketplace
-            </a>
-            <br />
-            <a
-              href="https://github.com/nikohoffren/dead-code-hunter"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              {language === "en" ? "Github source code" : "Github lähdekoodi"}
-            </a>
-            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2025 - present
-            </p>
           </div>
         </div>
-
-        <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-          <a
-            href="https://www.hunajaholisti.fi"
-            target="_blank"
-            className="w-full block h-full"
-          >
-            {isLoading && <Loader />}
-            <img
-              src="HHlahja.jpg"
-              alt="Bottle of delicious honey from Hunajaholistin Hunaja"
-              className="max-h-40 w-full object-cover"
-              onLoad={imageLoaded}
-            />
-          </a>
-          <div className="bg-white dark:bg-gray-800 w-full p-4">
-            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-              {language === "en"
-                ? "HUNAJAHOLISTIN HUNAJA - E-Commerce Website"
-                : "HUNAJAHOLISTIN HUNAJA - Verkkosivusto"}
-            </h2>
-            <p className="text-md text-gray-800 dark:text-white py-2">
-              {language === "en" ? (
-                <>
-                  {" "}
-                  Finnish e-commerce platform designed for the sale of honey
-                  products, featuring an integrated shopping cart and secure
-                  checkout functionality powered by Stripe. Tools: React, Vite,
-                  TypeScript, Tailwind CSS, Netlify Functions, Firebase and
-                  Stripe.
-                  <br />
-                  <br />{" "}
-                </>
-              ) : (
-                <>
-                  {" "}
-                  Suomalainen verkkokauppa-alusta hunajatuotteiden myyntiin,
-                  joka sisältää integroidun ostoskorin ja turvallisen
-                  Stripe-maksutoiminnon.
-                  <br />
-                  <br />
-                  Työkalut: React, Vite, TypeScript, Tailwind CSS, Netlify
-                  Functions, Firebase ja Stripe.{" "}
-                </>
-              )}
-            </p>
-            <a
-              href="https://www.hunajaholisti.fi"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              hunajaholisti.fi
-            </a>
-            <br />
-            <a
-              href="https://github.com/nikohoffren/hunajaholisti-homepage"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              {language === "en" ? "Github source code" : "Github lähdekoodi"}
-            </a>
-            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              {language === "en" ? "2021 - present" : "2021 - nykyhetki"}
-            </p>
-          </div>
-        </div>
-
-        <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-          <a
-            href="https://forkcommitmerge.vercel.app/"
-            target="_blank"
-            className="w-full block h-full"
-          >
-            {isLoading && <Loader />}
-            <img
-              src="fork-commit-merge-web-banner.png"
-              alt="Fork, Commit, Merge -banner"
-              className="max-h-40 w-full object-cover"
-              onLoad={imageLoaded}
-            />
-          </a>
-          <div className="bg-white dark:bg-gray-800 w-full p-4">
-            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-              {language === "en"
-                ? "FORK, COMMIT, MERGE - Website"
-                : "FORK, COMMIT, MERGE - Verkkosivusto"}
-            </h2>
-            <p className="text-md text-gray-800 dark:text-white py-2">
-              {language === "en" ? (
-                <>
-                  {" "}
-                  Welcome to Fork, Commit, Merge! Your one-stop resource hub for
-                  mastering GitHub contributions! Whether you're a novice coder
-                  or an experienced developer, our comprehensive guides are
-                  designed to streamline your GitHub journey. Tools: React,
-                  NextJS, TypeScript, Tailwind CSS, MongoDB and AWS S3.
-                  <br />
-                  <br />
-                  <br />{" "}
-                </>
-              ) : (
-                <>
-                  {" "}
-                  Tämä sivusto on yhden pysähdyksen resurssikeskus
-                  GitHub-kontribuutioiden hallitsemiseen! Riippumatta siitä,
-                  oletko aloitteleva koodaaja vai kokenut kehittäjä, kattavat
-                  oppaamme on suunniteltu helpottamaan GitHub-matkaasi.
-                  Työkalut: React, NextJS, TypeScript, Tailwind CSS, MongoDB ja
-                  AWS S3.
-                  <br />
-                  <br />{" "}
-                </>
-              )}
-            </p>
-            <a
-              href="https://forkcommitmerge.vercel.app/"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              https://forkcommitmerge.vercel.app/
-            </a>
-            <br />
-            <a
-              href="https://github.com/nikohoffren/fork-commit-merge-web"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              {language === "en" ? "Github source code" : "Github lähdekoodi"}
-            </a>
-            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2023 - present
-            </p>
-          </div>
-        </div>
-
-        <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-          <a
-            href="https://github.com/nikohoffren/fork-commit-merge"
-            target="_blank"
-            className="w-full block h-full"
-          >
-            {isLoading && <Loader />}
-            <img
-              src="fork-commit-merge-logo.jpg"
-              alt="Fork, Commit, Merge -logo"
-              className="max-h-40 w-full object-cover"
-              onLoad={imageLoaded}
-            />
-          </a>
-          <div className="bg-white dark:bg-gray-800 w-full p-4">
-            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-              {language === "en"
-                ? "FORK, COMMIT, MERGE - Github project for learning to contribute"
-                : "FORK, COMMIT, MERGE - Github projekti kontribuutioiden opettelemiseen"}
-            </h2>
-            <p className="text-md text-gray-800 dark:text-white py-2">
-              {language === "en" ? (
-                <>
-                  A project designed to help you familiarize yourself with the
-                  open source contribution workflow on GitHub! We present tasks
-                  of varying difficulty. You're free to choose of many different
-                  languages and frameworks. Tools: JavaScript, Node.js.
-                  <br />{" "}
-                </>
-              ) : (
-                <>
-                  Projekti, joka on suunniteltu auttamaan sinua perehtymään
-                  avoimen lähdekoodin kontribuutioiden työnkulkuun GitHubissa!
-                  Tarjoamme useita eri tehtäviä eri vaikeusasteilla. Työkalut:
-                  JavaScript, Node.js.{" "}
-                </>
-              )}
-            </p>
-
-            <a
-              href="https://github.com/nikohoffren/fork-commit-merge"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              {language === "en" ? "Github source code" : "Github lähdekoodi"}
-            </a>
-            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2023 - present
-            </p>
-          </div>
-        </div>
-
-        <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-          <a
-            href="https://play.google.com/store/apps/details?id=com.nikohoffren.stolen_gear_app"
-            target="_blank"
-            className="w-full block h-full"
-          >
-            {isLoading && <Loader />}
-            <img
-              src="stolen-gear-logo.jpeg"
-              alt="StolenOrNot? app logo"
-              className="max-h-40 w-full object-cover"
-              onLoad={imageLoaded}
-            />
-          </a>
-          <div className="bg-white dark:bg-gray-800 w-full p-4">
-            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-              {language === "en"
-                ? "Stolen Or Not? - Flutter App"
-                : "Stolen Or Not? - Flutter Mobiilisovellus"}
-            </h2>
-            <p className="text-md text-gray-800 dark:text-white py-2">
-              {language === "en" ? (
-                <>
-                  {" "}
-                  This Flutter application is built to help people keep track of
-                  their valuable devices and protect them from theft. It allows
-                  users to register their devices, such as computers, cars,
-                  musical instruments, and more. Tools: Flutter, Dart &
-                  Firebase.{" "}
-                </>
-              ) : (
-                <>
-                  {" "}
-                  Tämä Flutter-sovellus on rakennettu auttamaan ihmisiä pitämään
-                  kirjaa arvokkaista laitteistaan ja suojaamaan niitä
-                  varkauksilta.
-                  <br />
-                  <br />
-                  Saatavilla Google Play Store:sta. Työkalut: Flutter, Dart &
-                  Firebase.{" "}
-                </>
-              )}
-            </p>
-            <br />
-            <a
-              href="https://github.com/nikohoffren/stolen-or-not-app"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              {language === "en" ? "Github source code" : "Github lähdekoodi"}
-            </a>
-            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2023 - present
-            </p>
-          </div>
-        </div>
-
-        {/* <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-                        <a
-                            href="https://github.com/nikohoffren/puck-hub"
-                            target="_blank"
-                            className="w-full block h-full"
-                        >
-                            {isLoading && <Loader />}
-                            <img
-                                src="puck-hub-logo.jpg"
-                                alt="Puck Hub logo"
-                                className="max-h-40 w-full object-cover"
-                                onLoad={imageLoaded}
-                            />
-                        </a>
-                        <div className="bg-white dark:bg-gray-800 w-full p-4">
-                            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-                                {language === "en"
-                                    ? "PUCK HUB - Flutter App"
-                                    : "PUCK HUB - Flutter Mobiilisovellus"}
-                            </h2>
-                            <p className="text-md text-gray-800 dark:text-white py-2">
-                                {language === "en" ? (
-                                    <>
-                                        Puck Hub is a modern, user-centric
-                                        hockey mobile app, designed and built
-                                        using Flutter. It's your one-stop
-                                        destination for all statistics related
-                                        to your favorite hockey teams. Tailored
-                                        specifically to cater to dedicated
-                                        hockey fans, Puck Hub ensures you never
-                                        miss an update about your favorite
-                                        teams.
-                                        <br />
-                                        Tools: Flutter, RapidAPI.
-                                    </>
-                                ) : (
-                                    <>
-                                        Puck Hub on moderni, käyttäjäkeskeinen
-                                        jääkiekkoaiheinen mobiilisovellus, joka
-                                        on suunniteltu ja rakennettu käyttäen
-                                        Flutteria. Se on sinun yhden pysäkin
-                                        määränpääsi kaikille tilastoille, jotka
-                                        liittyvät
-                                        suosikkijääkiekkojoukkueisiisi.
-                                        <br />
-                                        <br />
-                                        Työkalut: Flutter, RapidAPI
-                                    </>
-                                )}
-                            </p>
-
-                            <a
-                                href="https://github.com/nikohoffren/puck-hub"
-                                target="_blank"
-                                className="text-blue-500 hover:text-blue-300 italic"
-                            >
-                                {language === "en"
-                                    ? "Github source code"
-                                    : "Github lähdekoodi"}
-                            </a>
-                            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-                                2023
-                            </p>
-                        </div>
-                    </div> */}
-
-        <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-          <a
-            href="https://kuopionjulkinenliikenne.live"
-            target="_blank"
-            className="w-full block h-full"
-          >
-            {isLoading && <Loader />}
-            <img
-              alt="Vilkku logo"
-              src="Vilkku_sydan_violetti.png"
-              className="max-h-40 w-full object-cover"
-              onLoad={imageLoaded}
-            />
-          </a>
-          <div className="bg-white dark:bg-gray-800 w-full p-4">
-            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-              {language === "en"
-                ? "KUOPIO PUBLIC TRANSPORT - Website"
-                : "KUOPION JULKINEN LIIKENNE - Verkkosivusto"}
-            </h2>
-            <p className="text-md text-gray-800 dark:text-white py-2">
-              {language === "en" ? (
-                <>
-                  This platform provides comprehensive real-time tracking and
-                  route information for all Vilkku buses, bicycles, and bike
-                  taxis operating within the Kuopio/Siilinjärvi region.
-                  <br />
-                  Tools: JavaScript, Express.js & Netlify functions.
-                </>
-              ) : (
-                <>
-                  Tämä alusta tarjoaa kattavaa reaaliaikaista seuranta- ja
-                  reittitietoa kaikille Vilkku-busseille, polkupyörille ja
-                  polkupyörätakseille, jotka toimivat Kuopion/Siilinjärven
-                  alueella. Työkalut: JavaScript, Express.js & Netlify
-                  functions.
-                </>
-              )}
-            </p>
-            <a
-              href="https://kuopionjulkinenliikenne.live"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              kuopionjulkinenliikenne.live
-            </a>
-            <br />
-            <a
-              href="https://github.com/nikohoffren/kuopio-public-transport"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              {language === "en" ? "Github source code" : "Github lähdekoodi"}
-            </a>
-            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2023 - present
-            </p>
-          </div>
-        </div>
-
-        <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-          <a
-            href="https://nikohoffrenmusic.netlify.app"
-            target="_blank"
-            className="w-full block h-full"
-          >
-            {isLoading && <Loader />}
-            <img
-              alt="Niko Hoffrén logo"
-              src="NHbackground.jpg"
-              className="max-h-40 w-full object-cover"
-              onLoad={imageLoaded}
-            />
-          </a>
-          <div className="bg-white dark:bg-gray-800 w-full p-4">
-            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-              {language === "en"
-                ? "NIKO HOFFRÉN MUSIC - Website"
-                : "NIKO HOFFRÉN MUSIC - Verkkosivusto"}
-            </h2>
-            <p className="text-md text-gray-800 dark:text-white py-2">
-              {language === "en" ? (
-                <>
-                  This website contains info of my music production related
-                  stuff. The website shows all the information you need with
-                  showcase of my music, videos and gear. It also supports
-                  language selection, allowing users to switch between Finnish
-                  and English languages seamlessly. Tools: Vite, React,
-                  TypeScript.
-                  <br />
-                  <br />
-                </>
-              ) : (
-                <>
-                  Tämä verkkosivusto sisältää tietoa musiikkituotantooni
-                  liittyvistä asioista. Verkkosivusto näyttää kaiken
-                  tarvitsemasi tiedon musiikkini, videoideni ja soittimieni
-                  esittelyn avulla. Se tukee myös kielivalintaa, mahdollistaen
-                  käyttäjien vaihtaa saumattomasti kielien välillä. Työkalut:
-                  Vite, React, TypeScript.
-                </>
-              )}
-            </p>
-            <a
-              href="https://nikohoffrenmusic.netlify.app"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              nikohoffrenmusic.netlify.app
-            </a>
-            <br />
-            <a
-              href="https://github.com/nikohoffren/nikohoffrenmusic-homepage"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              {language === "en" ? "Github source code" : "Github lähdekoodi"}
-            </a>
-            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2020-present
-            </p>
-          </div>
-        </div>
-
-        <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-          <a
-            href="https://www.npmjs.com/package/kiss-css"
-            target="_blank"
-            className="w-full block h-full"
-          >
-            {isLoading && <Loader />}
-            <img
-              src="kiss-css-logo.jpg"
-              alt="KISS CSS logo"
-              className="max-h-40 w-full object-cover"
-              onLoad={imageLoaded}
-            />
-          </a>
-          <div className="bg-white dark:bg-gray-800 w-full p-4">
-            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-              KISS CSS - Framework
-            </h2>
-            <p className="text-md text-gray-800 dark:text-white py-2">
-              {language === "en" ? (
-                <>
-                  KISS (Keep It Simple Stylesheets) is a simple, lightweight CSS
-                  framework designed for ease of use. It provides a collection
-                  of reusable CSS classes and components to quickly style your
-                  web projects. Published as npm-package. The website and
-                  detailed documentation are still in the production phase.
-                  Tools: CSS, JavaScript & Node.js.{" "}
-                </>
-              ) : (
-                <>
-                  KISS (Keep It Simple Stylesheets) on yksinkertainen ja kevyt
-                  CSS-kirjasto, joka on suunniteltu helppokäyttöisyyttä
-                  ajatellen. Se tarjoaa kokoelman uudelleenkäytettäviä
-                  CSS-luokkia ja komponentteja. Julkaistu npm-pakettina.
-                  Web-sivusto ja tarkempi dokumentaatio on vielä
-                  tuotantovaiheessa. Työkalut: CSS, JavaScript & Node.js.
-                </>
-              )}
-            </p>
-            <a
-              href="https://www.npmjs.com/package/kiss-css"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              {language === "en" ? "Download NPM-package" : "Lataa NPM-paketti"}
-            </a>
-            <br />
-            <a
-              href="https://github.com/nikohoffren/kiss-css"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              {language === "en" ? "Github source code" : "Github lähdekoodi"}
-            </a>
-            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2023 - present
-            </p>
-          </div>
-        </div>
-
-        <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-          <a
-            href="https://chrome.google.com/webstore/detail/smart-meeting-scheduler/icaojehhbdenebdcahljjhnohnjmbpfa"
-            target="_blank"
-            className="w-full block h-full"
-          >
-            {isLoading && <Loader />}
-            <img
-              src="smart-meeting-scheduler-logo.jpg"
-              alt="Smart Meeting Scheduler logo"
-              className="max-h-40 w-full object-cover"
-              onLoad={imageLoaded}
-            />
-          </a>
-          <div className="bg-white dark:bg-gray-800 w-full p-4">
-            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-              {language === "en"
-                ? "Smart Meeting Scheduler - Chrome Extension"
-                : "Smart Meeting Scheduler - Chrome laajennus"}
-            </h2>
-            <p className="text-md text-gray-800 dark:text-white py-2">
-              {language === "en" ? (
-                <>
-                  The Smart Meeting Scheduler Chrome Extension is a powerful
-                  tool designed to simplify and streamline the process of
-                  scheduling meetings using Google Calendar. Downloadable in
-                  Chrome Webstore!
-                  <br />
-                  <br />
-                  Tools: JavaScript, Node.js.{" "}
-                </>
-              ) : (
-                <>
-                  Smart Meeting Scheduler Chrome -laajennus on tehokas työkalu,
-                  joka on suunniteltu helpottamaan ja tehostamaan kokousten
-                  ajanvaraamisprosessia käyttäen Google-kalenteria.
-                  <br />
-                  Ladattavissa Chrome Webstoresta! <br />
-                  Työkalut: JavaScript, Node.js.
-                </>
-              )}
-            </p>
-            <a
-              href="https://chrome.google.com/webstore/detail/smart-meeting-scheduler/icaojehhbdenebdcahljjhnohnjmbpfa"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              {language === "en"
-                ? "Download from Chrome Web Store"
-                : "Lataa Chrome Web Store:sta"}
-            </a>
-            <br />
-            <a
-              href="https://github.com/nikohoffren/smart-meeting-scheduler"
-              target="_blank"
-              className="text-blue-500 hover:text-blue-300 italic"
-            >
-              {language === "en" ? "Github source code" : "Github lähdekoodi"}
-            </a>
-            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-              2023 - present
-            </p>
-          </div>
-        </div>
-
-        {/* <div className="overflow-hidden shadow-lg rounded-lg h-auto md:h-120 w-full md:w-full m-auto">
-                        <a
-                            href="https://doublewordle.netlify.app/"
-                            target="_blank"
-                            className="w-full block h-full"
-                        >
-                            {isLoading && <Loader />}
-                            <img
-                                src="double-wordle.png"
-                                alt="Double Wordle image"
-                                className="max-h-40 w-full object-cover"
-                                onLoad={imageLoaded}
-                            />
-                        </a>
-                        <div className="bg-white dark:bg-gray-800 w-full p-4">
-                            <h2 className="text-xl font-medium text-black dark:text-white pb-2">
-                                {language === "en"
-                                    ? "Double Wordle - Web Game"
-                                    : "Double Wordle - Web peli"}
-                            </h2>
-                            <p className="text-md text-gray-800 dark:text-white py-2">
-                                {language === "en" ? (
-                                    <>
-                                        Simple wordle clone with two words in a
-                                        row combined. Letters that are found in
-                                        either of the words in a row, but in a
-                                        wrong position, are shown in yellow.
-                                        Letters that are in correct position on
-                                        the row are shown in green. If you guess
-                                        both words in a row correctly, you win!
-                                        You have ten tries. Tools: HTML, CSS,
-                                        JavaScript
-                                    </>
-                                ) : (
-                                    <>
-                                        Yksinkertainen Wordle-klooni, jossa on
-                                        kaksi riviin yhdistettyä sanaa.
-                                        Kirjaimet, jotka löytyvät kummastakin
-                                        sanasta rivillä, mutta ovat väärässä
-                                        paikassa, näkyvät keltaisina. Kirjaimet,
-                                        jotka ovat oikeassa paikassa rivillä,
-                                        näkyvät vihreinä. Jos arvaat molemmat
-                                        sanat rivillä oikein, voitat! Sinulla on
-                                        kymmenen yritystä. Työkalut: HTML, CSS,
-                                        JavaScript
-                                    </>
-                                )}
-                            </p>
-                            <a
-                                href="https://doublewordle.netlify.app/"
-                                target="_blank"
-                                className="text-blue-500 hover:text-blue-300 italic"
-                            >
-                                {language === "en"
-                                    ? "Play Double Wordle here"
-                                    : "Pelaa Double Wordlea täällä"}
-                            </a>
-                            <br />
-                            <a
-                                href="https://github.com/nikohoffren/double-wordle"
-                                target="_blank"
-                                className="text-blue-500 hover:text-blue-300 italic"
-                            >
-                                {language === "en"
-                                    ? "Github source code"
-                                    : "Github lähdekoodi"}
-                            </a>
-                            <p className="text-sm text-gray-900 dark:text-white italic my-2">
-                                2023
-                            </p>
-                        </div>
-                    </div> */}
       </div>
-    </section>
+
+      {/* Projects Portfolio */}
+      <section className="relative -mt-20 py-20 bg-white/80 dark:bg-gray-900/50 backdrop-blur-lg">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-500/5 to-transparent"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-6">
+            {projects.map((project) => (
+              <div
+                key={project.title}
+                className="group relative bg-white/80 dark:bg-gray-800/10 backdrop-blur-lg rounded-xl shadow-lg border border-gray-200/20 dark:border-gray-700/20 overflow-hidden transition-all duration-300 hover:transform hover:scale-[1.02]"
+              >
+                <div className="h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                      {language === "en"
+                        ? project.title
+                        : project.titleFi || project.title}
+                    </h3>
+                    <span className="px-3 py-1 text-sm text-indigo-600 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-900/30 rounded-full">
+                      {project.type}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
+                    {language === "en"
+                      ? project.description
+                      : project.descriptionFi}
+                  </p>
+                  <div className="mt-auto">
+                    <div className="flex items-center space-x-4 mb-4">
+                      {project.links.map((link) => (
+                        <a
+                          key={link.url}
+                          href={link.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-200"
+                        >
+                          <i className={`${getLinkIcon(link.type)} mr-1`}></i>
+                          {language === "en" ? link.text : link.textFi}
+                        </a>
+                      ))}
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
