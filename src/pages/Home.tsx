@@ -2,6 +2,7 @@ import React, { useContext, useRef, useState, useEffect } from "react";
 import { LanguageContext } from "../common/components/LanguageContext";
 import { Link, useLocation } from "react-router-dom";
 import Loader from "../common/components/Loader";
+import { skills } from "../data/skills";
 
 export default function Home() {
   const { language } = useContext(LanguageContext);
@@ -28,12 +29,12 @@ export default function Home() {
       }
     };
 
-    // Check if we have a hash in the URL
+    //* Check if we have a hash in the URL
     if (location.hash === "#skills") {
       scrollToSkills();
     }
 
-    // Listen for hash changes
+    //* Listen for hash changes
     const handleHashChange = () => {
       if (location.hash === "#skills") {
         scrollToSkills();
@@ -46,27 +47,6 @@ export default function Home() {
       window.removeEventListener("hashchange", handleHashChange);
     };
   }, [location]);
-
-  const skills = [
-    { name: "React", icon: "react" },
-    { name: "NextJS", icon: "nextjs" },
-    { name: "JavaScript", icon: "javascript" },
-    { name: "TypeScript", icon: "typescript" },
-    { name: "HTML5", icon: "html" },
-    { name: "CSS", icon: "css" },
-    { name: "Tailwind", icon: "tailwind" },
-    { name: "Flutter", icon: "flutter" },
-    { name: "Dart", icon: "dart" },
-    { name: "MySQL", icon: "mysql" },
-    { name: "AWS", icon: "aws" },
-    { name: "GCP", icon: "gcp" },
-    { name: "Terraform", icon: "terraform" },
-    { name: "Docker", icon: "docker" },
-    { name: "Maven", icon: "maven" },
-    { name: "NodeJS", icon: "nodejs" },
-    { name: "Linux", icon: "linux" },
-    { name: "Git", icon: "git" },
-  ];
 
   return (
     <main className="relative">
