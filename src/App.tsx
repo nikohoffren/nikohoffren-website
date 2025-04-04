@@ -17,6 +17,11 @@ function App() {
   const [language, setLanguage] = useState("en");
   const location = useLocation();
 
+  //* Scroll restoration effect
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
@@ -35,7 +40,7 @@ function App() {
   }, [theme]);
 
   useEffect(() => {
-    // Scroll Progress Bar
+    //* Scroll Progress Bar
     const handleScroll = () => {
       const winScroll =
         document.body.scrollTop || document.documentElement.scrollTop;
@@ -51,7 +56,7 @@ function App() {
       }
     };
 
-    // Section Animations
+    //* Section Animations
     const observerOptions = {
       root: null,
       rootMargin: "0px",
