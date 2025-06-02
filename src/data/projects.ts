@@ -100,12 +100,6 @@ export const projects: Project[] = [
     image: "/stolen-gear-logo.jpeg",
     links: [
       {
-        type: "playstore",
-        url: "https://play.google.com/store/apps/details?id=com.nikohoffren.stolen_gear_app",
-        text: "Play Store",
-        textFi: "Play Store",
-      },
-      {
         type: "github",
         url: "https://github.com/nikohoffren/stolen-or-not-app",
         text: "Source",
@@ -126,7 +120,7 @@ export const projects: Project[] = [
     links: [
       {
         type: "external",
-        url: "https://kuopionjulkinenliikenne.live",
+        url: "https://kuopio-public-transport.netlify.app",
         text: "Visit Site",
         textFi: "Vieraile Sivustolla",
       },
