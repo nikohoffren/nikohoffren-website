@@ -89,16 +89,53 @@ export default function Home() {
               </div>
 
               <div className="prose prose-lg max-w-none space-y-6 dark:prose-invert">
-                <p className="text-gray-600 dark:text-gray-300">
-                  {language === "en"
-                    ? "Welcome to my website! I'm a software engineer from Kuopio, Finland. In my spare time, I like to spend time with my son, go to gym, play video games, or code something interesting. In my working career I have specialized in technologies such as Infrastructure as Code (IaC), TypeScript, Flutter and Node.js."
-                    : "Tervetuloa kotisivuilleni! Olen ohjelmistokehittäjä Kuopiosta. Vapaa-aikanani tykkään viettää aikaa poikani kanssa, käydä salilla, pelata videopelejä, tai koodata jotain mielenkiintoista. Työurallani olen työskennellyt teknologioiden kuten Infrastructure as Code (IaC), TypeScript, Flutter ja Node.js parissa."}
-                </p>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {language === "en"
-                    ? "I like contributing to open-source software and it's one of the ways I've chosen to give back to the community. I'm always eager to connect with like-minded individuals, potential collaborators, or anyone curious about my work."
-                    : "Pidän osallistumisesta avointen lähdekoodien ohjelmistojen kehittämiseen ja se on yksi tapa, jolla olen valinnut antaa panokseni yhteisölle. Olen aina innokas tekemään yhteistyötä samanhenkisten yksilöiden tai potentiaalisten yhteistyökumppaneiden kanssa."}
-                </p>
+                {language === "en" ? (
+                  <ul className="list-disc pl-6 text-gray-600 dark:text-gray-300 space-y-2">
+                    <li>10+ years of experience with Linux systems</li>
+                    <li>
+                      Strong expertise in CI/CD, containerization, and
+                      automation (GitHub Actions, Docker, Podman, Jenkins,
+                      Terraform, Maven)
+                    </li>
+                    <li>
+                      Integration development with TypeScript & Node.js
+                      (Serverless)
+                    </li>
+                    <li>Website creation with React and Next.js</li>
+                    <li>Mobile application development with Flutter (Dart)</li>
+                    <li>
+                      Hands-on experience with cloud platforms (AWS, Azure,
+                      GCP), infrastructure as code (IaC), and modern DevOps
+                      practices
+                    </li>
+                    <li>6+ years contributing to open-source projects</li>
+                  </ul>
+                ) : (
+                  <ul className="list-disc pl-6 text-gray-600 dark:text-gray-300 space-y-2">
+                    <li>Yli 10 vuoden kokemus Linux-järjestelmistä</li>
+                    <li>
+                      Vankka osaaminen CI/CD:ssä, konttiteknologioissa ja
+                      automaatiossa (GitHub Actions, Docker, Podman, Jenkins,
+                      Terraform, Maven)
+                    </li>
+                    <li>
+                      Integraatiokehitystä TypeScriptillä & Node.js:llä
+                      (Serverless)
+                    </li>
+                    <li>
+                      Verkkosivustojen toteutusta Reactilla ja Next.js:llä
+                    </li>
+                    <li>Mobiilisovellusten kehitystä Flutterilla (Dart)</li>
+                    <li>
+                      Käytännön kokemusta pilvipalveluista (AWS, Azure, GCP),
+                      infrastructure as code (IaC) ja moderneista
+                      DevOps-käytännöistä
+                    </li>
+                    <li>
+                      Yli 6 vuoden kokemus avoimen lähdekoodin projekteista
+                    </li>
+                  </ul>
+                )}
               </div>
 
               {/* Social Links */}
