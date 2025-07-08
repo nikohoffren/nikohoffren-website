@@ -182,11 +182,11 @@ export default function Home() {
                 <div className="absolute -inset-1 bg-gray-900/10 dark:bg-gray-900/30 rounded-full blur opacity-50 group-hover:opacity-70 transition duration-1000"></div>
                 {isLoading && <Loader />}
                 <img
-                  src="/nikohoffren-profile-image.jpg"
+                  src="/nikohoffren-profile-image2.jpg"
                   alt="Niko Hoffrén"
                   className="relative rounded-full mx-auto shadow-2xl transform group-hover:scale-105 transition duration-500"
-                  width="500"
-                  height="500"
+                  width="600"
+                  height="600"
                   onLoad={imageLoaded}
                 />
               </div>
