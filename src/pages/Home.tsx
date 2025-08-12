@@ -71,7 +71,7 @@ export default function Home() {
                 </h1>
                 <h2 className="text-3xl md:text-4xl font-semibold text-indigo-600 dark:text-indigo-400">
                   {language === "en"
-                    ? "Software Engineer"
+                    ? "Software Developer"
                     : "Ohjelmistokehittäjä"}
                 </h2>
               </div>
@@ -282,6 +282,74 @@ export default function Home() {
                 </div>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section className="relative py-20 bg-gray-50 dark:bg-gray-900/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              {language === "en" ? "Certifications" : "Sertifikaatit"}
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+              {language === "en"
+                ? "Certifications and achievements"
+                : "Sertifikaatit ja saavutukset"}
+            </p>
+          </div>
+
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+              <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
+                  {language === "en"
+                    ? "HackerRank Java (Basic) Certification"
+                    : "HackerRank Java (Basic) Sertifikaatti"}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {language === "en"
+                    ? "Certified in Java programming fundamentals"
+                    : "Sertifioitu Java-ohjelmoinnin perusteissa"}
+                </p>
+              </div>
+              <div className="p-6">
+                <div className="relative group flex justify-center">
+                  <img
+                    src="/hackerrank_java_basic_certification.png"
+                    alt="HackerRank Java Basic Certification"
+                    className="max-w-md w-full h-auto rounded-lg shadow-lg transform group-hover:scale-[1.02] transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg flex items-center justify-center">
+                    <a
+                      href="https://www.hackerrank.com/certificates/iframe/903421a5c703"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-6 py-3 rounded-lg shadow-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transform hover:scale-105 transition-all duration-200"
+                    >
+                      <i className="fas fa-external-link-alt mr-2"></i>
+                      {language === "en"
+                        ? "View Certificate"
+                        : "Katso sertifikaatti"}
+                    </a>
+                  </div>
+                </div>
+                <div className="mt-4 text-center">
+                  <a
+                    href="https://www.hackerrank.com/certificates/iframe/903421a5c703"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium transition-colors duration-200"
+                  >
+                    <i className="fas fa-external-link-alt mr-2"></i>
+                    {language === "en"
+                      ? "View on HackerRank"
+                      : "Katso HackerRankissa"}
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
