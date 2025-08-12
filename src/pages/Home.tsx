@@ -300,13 +300,20 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="max-w-2xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Java Basic Certificate */}
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
               <div className="p-6 border-b border-gray-200 dark:border-gray-700">
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
-                  {language === "en"
-                    ? "HackerRank Java (Basic) Certification"
-                    : "HackerRank Java (Basic) Sertifikaatti"}
+                  {language === "en" ? (
+                    <>
+                      HackerRank Java (Basic)
+                      <br />
+                      Certification
+                    </>
+                  ) : (
+                    "HackerRank Java (Basic) Sertifikaatti"
+                  )}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
                   {language === "en"
@@ -338,6 +345,57 @@ export default function Home() {
                 <div className="mt-4 text-center">
                   <a
                     href="https://www.hackerrank.com/certificates/iframe/903421a5c703"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium transition-colors duration-200"
+                  >
+                    <i className="fas fa-external-link-alt mr-2"></i>
+                    {language === "en"
+                      ? "View on HackerRank"
+                      : "Katso HackerRankissa"}
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Software Engineer Certificate */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+              <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
+                  {language === "en"
+                    ? "HackerRank Software Engineer Certification"
+                    : "HackerRank Software Engineer Sertifikaatti"}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {language === "en"
+                    ? "Certified in Problem Solving, SQL, and REST API"
+                    : "Sertifioitu ongelmanratkaisussa, SQL:ssä ja REST API:ssa"}
+                </p>
+              </div>
+              <div className="p-6">
+                <div className="relative group flex justify-center">
+                  <img
+                    src="/hackerrank_software_engineer_sertificate.png"
+                    alt="HackerRank Software Engineer Certification"
+                    className="max-w-md w-full h-auto rounded-lg shadow-lg transform group-hover:scale-[1.02] transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-lg flex items-center justify-center">
+                    <a
+                      href="https://www.hackerrank.com/certificates/4626b4e966da"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-6 py-3 rounded-lg shadow-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transform hover:scale-105 transition-all duration-200"
+                    >
+                      <i className="fas fa-external-link-alt mr-2"></i>
+                      {language === "en"
+                        ? "View Certificate"
+                        : "Katso sertifikaatti"}
+                    </a>
+                  </div>
+                </div>
+                <div className="mt-4 text-center">
+                  <a
+                    href="https://www.hackerrank.com/certificates/4626b4e966da"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium transition-colors duration-200"
