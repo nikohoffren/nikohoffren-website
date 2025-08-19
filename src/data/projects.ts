@@ -124,6 +124,12 @@ export const projects: Project[] = [
         text: "Visit Site",
         textFi: "Vieraile Sivustolla",
       },
+      {
+        type: "github",
+        url: "https://github.com/nikohoffren/kuopio-public-transport",
+        text: "Source",
+        textFi: "Lähdekoodi",
+      },
     ],
     technologies: ["React", "Maps API"],
   },
