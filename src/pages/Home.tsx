@@ -98,6 +98,10 @@ export default function Home() {
                       Terraform, Maven)
                     </li>
                     <li>
+                      Backend development with Java and Spring Boot, including
+                      microservices architecture and security implementations
+                    </li>
+                    <li>
                       Integration development with TypeScript & Node.js
                       (Serverless)
                     </li>
@@ -117,6 +121,10 @@ export default function Home() {
                       Vankka osaaminen CI/CD:ssä, konttiteknologioissa ja
                       automaatiossa (GitHub Actions, Docker, Podman, Jenkins,
                       Terraform, Maven)
+                    </li>
+                    <li>
+                      Backend-kehitystä Javalla ja Spring Bootilla, mukaan
+                      lukien mikropalveluarkkitehtuuri ja tietoturvatoteutukset
                     </li>
                     <li>
                       Integraatiokehitystä TypeScriptillä & Node.js:llä
@@ -250,16 +258,24 @@ export default function Home() {
                     ? "https://dart.dev"
                     : skill.name === "MySQL"
                     ? "https://www.mysql.com"
+                    : skill.name === "Spring Boot"
+                    ? "https://spring.io/projects/spring-boot"
+                    : skill.name === "Java"
+                    ? "https://www.java.com"
+                    : skill.name === "Kubernetes"
+                    ? "https://kubernetes.io"
                     : skill.name === "AWS"
                     ? "https://aws.amazon.com"
+                    : skill.name === "Azure"
+                    ? "https://azure.microsoft.com"
                     : skill.name === "GCP"
                     ? "https://cloud.google.com"
                     : skill.name === "Terraform"
                     ? "https://www.terraform.io"
                     : skill.name === "Docker"
                     ? "https://www.docker.com"
-                    : skill.name === "Maven"
-                    ? "https://maven.apache.org"
+                    : skill.name === "Jenkins"
+                    ? "https://www.jenkins.io"
                     : skill.name === "NodeJS"
                     ? "https://nodejs.org"
                     : skill.name === "Linux"
