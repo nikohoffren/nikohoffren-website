@@ -39,11 +39,11 @@ export default function Projects() {
   return (
     <div className="pt-6 bg-white/80 dark:bg-gray-900/50">
       {/* Hero Section */}
-      <div className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-center">
+      <div className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900 text-center">
         <div className="relative z-10 max-w-7xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {language === "en" ? "Projects " : "Projektit "}
-            <span className="text-indigo-600 dark:text-indigo-400">
+            <span className="text-green-600 dark:text-green-400">
               Portfolio
             </span>
           </h1>
@@ -57,7 +57,7 @@ export default function Projects() {
               href="https://github.com/nikohoffren"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-200"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors duration-200"
             >
               <i className="fab fa-github mr-2"></i>
               {language === "en" ? "View on GitHub" : "Katso Githubissa"}
@@ -66,7 +66,7 @@ export default function Projects() {
         </div>
 
         {/* Decorative background pattern */}
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10 dark:opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10 dark:opacity-20"></div>
       </div>
 
       {/* GitHub Sponsors Section */}
@@ -94,7 +94,7 @@ export default function Projects() {
 
       {/* Projects Portfolio */}
       <section className="relative -mt-20 py-20 bg-white/80 dark:bg-gray-900/50 backdrop-blur-lg">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-500/5 to-transparent"></div>
+        <div className="absolute inset-0 bg-green-500/5"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-6">
@@ -117,7 +117,7 @@ export default function Projects() {
                         ? project.title
                         : project.titleFi || project.title}
                     </h3>
-                    <span className="px-3 py-1 text-sm text-indigo-600 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-900/30 rounded-full">
+                    <span className="px-3 py-1 text-sm text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30 rounded-full">
                       {project.type}
                     </span>
                   </div>
@@ -134,7 +134,7 @@ export default function Projects() {
                           href={link.url}
                           target="_blank"
                           rel="noreferrer"
-                          className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-200"
+                          className="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 transition-colors duration-200"
                         >
                           <i className={`${getLinkIcon(link.type)} mr-1`}></i>
                           {language === "en" ? link.text : link.textFi}

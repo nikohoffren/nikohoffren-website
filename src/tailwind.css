@@ -169,7 +169,7 @@
   left: 0;
   width: 0%;
   height: 2px;
-  background: linear-gradient(to right, #6366f1, #a855f7);
+  background: #22c55e;
   z-index: 10000;
   transition: width 0.2s ease-out;
 }

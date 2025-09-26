@@ -8,7 +8,7 @@ export default function Contact() {
     <div className="pt-6 bg-white/80 dark:bg-gray-900/50">
       {/* Get in Touch */}
       <section className="relative py-20 bg-white/80 dark:bg-gray-900/50 backdrop-blur-lg">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-500/5 to-transparent"></div>
+        <div className="absolute inset-0 bg-green-500/5"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -41,7 +41,7 @@ export default function Contact() {
                     {language === "en" ? "Email" : "Sähköposti"}
                   </label>
                   <input
-                    className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200"
+                    className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors duration-200"
                     type="email"
                     name="email"
                     id="grid-email"
@@ -61,7 +61,7 @@ export default function Contact() {
                     {language === "en" ? "Message" : "Viesti"}
                   </label>
                   <textarea
-                    className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200"
+                    className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors duration-200"
                     name="message"
                     id="grid-message"
                     rows={6}
@@ -74,7 +74,7 @@ export default function Contact() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium transition-colors duration-200 transform hover:scale-[1.02]"
+                    className="w-full px-6 py-3 rounded-lg bg-green-600 hover:bg-green-700 text-white font-medium transition-colors duration-200 transform hover:scale-[1.02]"
                   >
                     {language === "en" ? "Send Message" : "Lähetä viesti"}
                   </button>
@@ -150,7 +150,7 @@ export default function Contact() {
                   href="mailto:niko.hoffren@gmail.com"
                   className="flex items-center p-4 rounded-lg bg-white/5 hover:bg-white/10 dark:bg-gray-800/5 dark:hover:bg-gray-800/10 transition-colors duration-200 group"
                 >
-                  <i className="fas fa-envelope text-2xl text-indigo-500 group-hover:scale-110 transition-transform duration-200"></i>
+                  <i className="fas fa-envelope text-2xl text-green-500 group-hover:scale-110 transition-transform duration-200"></i>
                   <span className="ml-3 text-gray-700 dark:text-gray-300">
                     niko.hoffren@gmail.com
                   </span>

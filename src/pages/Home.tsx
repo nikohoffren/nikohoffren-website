@@ -53,9 +53,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"></div>
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-5 dark:opacity-20 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-purple-500/5 dark:from-indigo-500/20 dark:to-purple-500/20"></div>
+        <div className="absolute inset-0 bg-gray-50 dark:bg-gray-900"></div>
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-5 dark:opacity-20"></div>
 
         {/* Content */}
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-screen flex items-center">
@@ -64,12 +63,11 @@ export default function Home() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                  {language === "en" ? "I'm " : "Olen "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
+                  <span className="text-green-600 dark:text-green-400">
                     Niko Hoffrén
                   </span>
                 </h1>
-                <h2 className="text-3xl md:text-4xl font-semibold text-indigo-600 dark:text-indigo-400">
+                <h2 className="text-3xl md:text-4xl font-semibold text-green-500 dark:text-green-200">
                   {language === "en"
                     ? "Software Developer"
                     : "Ohjelmistokehittäjä"}
@@ -79,10 +77,10 @@ export default function Home() {
               <div className="flex space-x-4">
                 <Link
                   to="/contact"
-                  className="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transform hover:scale-[1.02] transition-all duration-200 flex items-center space-x-2"
+                  className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transform hover:scale-[1.02] transition-all duration-200 flex items-center space-x-2"
                 >
                   <span>
-                    {language === "en" ? "Let's Talk" : "Ota yhteyttä"}
+                    {language === "en" ? "Contact Me" : "Ota yhteyttä"}
                   </span>
                   <i className="fas fa-arrow-right"></i>
                 </Link>
@@ -185,14 +183,14 @@ export default function Home() {
 
             {/* Profile Image */}
             <div className="relative">
-              <div className="absolute inset-0 bg-gray-900/5 dark:bg-gray-900/20 rounded-full blur-3xl"></div>
+              <div className="absolute inset-0 bg-gray-900/3 dark:bg-gray-900/10 rounded-full blur-xl"></div>
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gray-900/10 dark:bg-gray-900/30 rounded-full blur opacity-50 group-hover:opacity-70 transition duration-1000"></div>
+                <div className="absolute -inset-0.5 bg-gray-900/5 dark:bg-gray-900/15 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
                 {isLoading && <Loader />}
                 <img
                   src="/nikohoffren-profile-image2.jpg"
                   alt="Niko Hoffrén"
-                  className="relative rounded-full mx-auto shadow-2xl transform group-hover:scale-105 transition duration-500"
+                  className="relative rounded-full mx-auto shadow-sm transform group-hover:scale-105 transition duration-500"
                   width="600"
                   height="600"
                   onLoad={imageLoaded}
@@ -363,7 +361,7 @@ export default function Home() {
                     href="https://www.hackerrank.com/certificates/iframe/903421a5c703"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium transition-colors duration-200"
+                    className="text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 font-medium transition-colors duration-200"
                   >
                     <i className="fas fa-external-link-alt mr-2"></i>
                     {language === "en"
@@ -414,7 +412,7 @@ export default function Home() {
                     href="https://www.hackerrank.com/certificates/4626b4e966da"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium transition-colors duration-200"
+                    className="text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 font-medium transition-colors duration-200"
                   >
                     <i className="fas fa-external-link-alt mr-2"></i>
                     {language === "en"

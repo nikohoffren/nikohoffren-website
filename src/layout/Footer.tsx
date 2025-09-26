@@ -39,7 +39,7 @@ export default function Footer({ theme }: NavbarProps) {
                   rel="noopener noreferrer"
                   className="transform hover:scale-110 transition-all duration-200"
                 >
-                  <i className="fab fa-linkedin text-2xl text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400"></i>
+                  <i className="fab fa-linkedin text-2xl text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400"></i>
                 </a>
                 <a
                   href="https://www.github.com/nikohoffren"
@@ -47,7 +47,7 @@ export default function Footer({ theme }: NavbarProps) {
                   rel="noopener noreferrer"
                   className="transform hover:scale-110 transition-all duration-200"
                 >
-                  <i className="fab fa-github text-2xl text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400"></i>
+                  <i className="fab fa-github text-2xl text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white"></i>
                 </a>
                 <a
                   href="https://www.twitter.com/nikohoffren86"
@@ -55,7 +55,7 @@ export default function Footer({ theme }: NavbarProps) {
                   rel="noopener noreferrer"
                   className="transform hover:scale-110 transition-all duration-200"
                 >
-                  <i className="fa-brands fa-x text-2xl text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400"></i>
+                  <i className="fa-brands fa-x text-2xl text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white"></i>
                 </a>
                 <a
                   href="https://www.instagram.com/nikohoffren"
@@ -63,7 +63,7 @@ export default function Footer({ theme }: NavbarProps) {
                   rel="noopener noreferrer"
                   className="transform hover:scale-110 transition-all duration-200"
                 >
-                  <i className="fab fa-instagram text-2xl text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400"></i>
+                  <i className="fab fa-instagram text-2xl text-gray-600 dark:text-gray-400 hover:text-pink-500 dark:hover:text-pink-500"></i>
                 </a>
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function Footer({ theme }: NavbarProps) {
               </h3>
               <a
                 href="mailto:niko.hoffren@gmail.com"
-                className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 transform hover:scale-105"
+                className="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200 transform hover:scale-105"
               >
                 niko.hoffren@gmail.com
               </a>
@@ -90,7 +90,7 @@ export default function Footer({ theme }: NavbarProps) {
                 href="https://nikohoffrenmusic.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-200 transform hover:scale-105"
+                className="text-green-600 dark:text-green-400 hover:text-green-500 dark:hover:text-green-300 transition-colors duration-200 transform hover:scale-105"
               >
                 nikohoffrenmusic.netlify.app
               </a>
@@ -118,7 +118,7 @@ export default function Footer({ theme }: NavbarProps) {
                   href="https://react.dev"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
+                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
                 >
                   React
                 </a>
@@ -132,7 +132,7 @@ export default function Footer({ theme }: NavbarProps) {
                   href="https://www.typescriptlang.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
+                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
                 >
                   TypeScript
                 </a>
@@ -142,7 +142,7 @@ export default function Footer({ theme }: NavbarProps) {
                   href="https://www.netlify.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
+                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
                 >
                   {language === "en" ? "Hosted by Netlify" : "Netlify"}
                 </a>
