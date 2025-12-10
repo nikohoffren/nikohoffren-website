@@ -91,24 +91,45 @@ export default function Home() {
                   <ul className="list-disc pl-6 text-gray-600 dark:text-gray-300 space-y-2">
                     <li>10+ years of experience with Linux systems</li>
                     <li>
-                      Strong expertise in CI/CD, containerization, and
-                      automation (GitHub Actions, Docker, Podman, Jenkins,
-                      Terraform, Maven)
+                      CI/CD, automation, and DevOps tooling: GitHub Actions,
+                      GitLab CI, Jenkins, Travis, Bamboo, Ansible, Flux
                     </li>
                     <li>
-                      Backend development with Java and Spring Boot, including
-                      microservices architecture and security implementations
+                      Containers & orchestration: Docker, Podman, Kubernetes,
+                      Helm
                     </li>
                     <li>
-                      Integration development with TypeScript & Node.js
-                      (Serverless)
+                      Cloud & infrastructure: AWS (EC2, S3, EKS, ECS, Lambda,
+                      Cognito), Azure (AKS, Functions, Keycloak, Azure AD, VMs,
+                      SQL Server, App Services), IaC with Terraform,
+                      CloudFormation, Packer
                     </li>
-                    <li>Website creation with React and Next.js</li>
-                    <li>Mobile application development with Flutter (Dart)</li>
                     <li>
-                      Hands-on experience with cloud platforms (AWS, Azure,
-                      GCP), infrastructure as code (IaC), and modern DevOps
-                      practices
+                      Backend development: Java & Spring Boot (microservices)
+                    </li>
+                    <li>
+                      Integrations & serverless: TypeScript/Node.js (Serverless)
+                    </li>
+                    <li>
+                      Frontend & mobile: React, Next.js, Android (Kotlin),
+                      Flutter (Dart)
+                    </li>
+                    <li>
+                      Databases: PostgreSQL, MySQL/MariaDB, MongoDB, SQL
+                      Server
+                    </li>
+                    <li>
+                      IIoT & streaming: MQTT, Kafka, SCADA systems,
+                      Progress OpenEdge
+                    </li>
+                    <li>
+                      Observability & networking: Prometheus, Grafana,
+                      ElasticSearch, Jaeger, Kiali, Istio, Envoy, Nginx, Traefik
+                    </li>
+                    <li>Build & tooling: Maven, Gradle, Ant, Postman</li>
+                    <li>
+                      Version control & collaboration: Git, GitHub, GitLab,
+                      Bitbucket, Atlassian tools (JIRA, Confluence)
                     </li>
                     <li>6+ years contributing to open-source projects</li>
                   </ul>
@@ -116,26 +137,43 @@ export default function Home() {
                   <ul className="list-disc pl-6 text-gray-600 dark:text-gray-300 space-y-2">
                     <li>Yli 10 vuoden kokemus Linux-järjestelmistä</li>
                     <li>
-                      Vankka osaaminen CI/CD:ssä, konttiteknologioissa ja
-                      automaatiossa (GitHub Actions, Docker, Podman, Jenkins,
-                      Terraform, Maven)
+                      CI/CD, automaatio ja DevOps-työkalut: GitHub Actions,
+                      GitLab CI, Jenkins, Travis, Bamboo, Ansible, Flux
                     </li>
                     <li>
-                      Backend-kehitystä Javalla ja Spring Bootilla, mukaan
-                      lukien mikropalveluarkkitehtuuri ja tietoturvatoteutukset
+                      Kontit ja orkestrointi: Docker, Podman, Kubernetes, Helm
                     </li>
                     <li>
-                      Integraatiokehitystä TypeScriptillä & Node.js:llä
+                      Pilvi ja infrastruktuuri: AWS (EC2, S3, EKS, ECS, Lambda,
+                      Cognito), Azure (AKS, Functions, Keycloak, Azure AD, VMs,
+                      SQL Server, App Services), IaC Terraformilla,
+                      CloudFormationilla, Packerilla
+                    </li>
+                    <li>Backend-kehitys: Java & Spring Boot (mikropalvelut)</li>
+                    <li>
+                      Integraatiot ja serverless: TypeScript/Node.js
                       (Serverless)
                     </li>
                     <li>
-                      Verkkosivustojen toteutusta Reactilla ja Next.js:llä
+                      Frontend ja mobiili: React, Next.js, Android (Kotlin),
+                      Flutter (Dart)
                     </li>
-                    <li>Mobiilisovellusten kehitystä Flutterilla (Dart)</li>
                     <li>
-                      Käytännön kokemusta pilvipalveluista (AWS, Azure, GCP),
-                      infrastructure as code (IaC) ja moderneista
-                      DevOps-käytännöistä
+                      Tietokannat: PostgreSQL, MySQL/MariaDB, MongoDB,
+                      SQL Server
+                    </li>
+                    <li>
+                      IIoT ja streaming: MQTT, Kafka,
+                      SCADA-järjestelmät, Progress OpenEdge
+                    </li>
+                    <li>
+                      Havainnointi ja verkko: Prometheus, Grafana,
+                      ElasticSearch, Jaeger, Kiali, Istio, Envoy, Nginx, Traefik
+                    </li>
+                    <li>Build ja työkalut: Maven, Gradle, Ant, Postman</li>
+                    <li>
+                      Versionhallinta: Git, GitHub, GitLab,
+                      Bitbucket, Atlassian-työkalut (JIRA, Confluence)
                     </li>
                     <li>
                       Yli 6 vuoden kokemus avoimen lähdekoodin projekteista
@@ -423,6 +461,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+
         </div>
       </section>
     </main>
