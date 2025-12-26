@@ -4,7 +4,7 @@ import Navbar from "./layout/Navbar";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 import Footer from "./layout/Footer";
 import "./tailwind.css";
 import { LanguageContext } from "./common/components/LanguageContext";
@@ -117,6 +117,7 @@ function App() {
                     </PageTransition>
                   }
                 />
+                <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             </AnimatePresence>
           </div>
