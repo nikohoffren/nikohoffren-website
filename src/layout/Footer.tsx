@@ -102,8 +102,8 @@ export default function Footer({ theme }: NavbarProps) {
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 {language === "en"
-                  ? "Copyright © 2020-2025 Niko Hoffrén"
-                  : "Tekijänoikeus © 2020-2025 Niko Hoffrén"}
+                  ? "Copyright © 2020-2026 Niko Hoffrén"
+                  : "Tekijänoikeus © 2020-2026 Niko Hoffrén"}
               </p>
               <div className="flex items-center space-x-2">
                 <span className="text-sm text-gray-500 dark:text-gray-400">
