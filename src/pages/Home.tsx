@@ -339,9 +339,9 @@ export default function Home() {
       </section>
 
       {/* Certifications Section */}
-      <section className="relative py-20 bg-gray-50 dark:bg-gray-900/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
+      {/* <section className="relative py-20 bg-gray-50 dark:bg-gray-900/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative"> */}
+          {/* <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               {language === "en" ? "Certifications" : "Sertifikaatit"}
             </h2>
@@ -350,11 +350,11 @@ export default function Home() {
                 ? "Certifications and achievements"
                 : "Sertifikaatit ja saavutukset"}
             </p>
-          </div>
+          </div> */}
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"> */}
             {/* Java Basic Certificate */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+            {/* <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
               <div className="p-6 border-b border-gray-200 dark:border-gray-700">
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
                   {language === "en" ? (
@@ -407,11 +407,11 @@ export default function Home() {
                       : "Katso HackerRankissa"}
                   </a>
                 </div>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
 
             {/* Software Engineer Certificate */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+            {/* <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
               <div className="p-6 border-b border-gray-200 dark:border-gray-700">
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
                   {language === "en"
@@ -460,10 +460,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-        </div>
-      </section>
+        {/* </div> */}
+      {/* </section> */}
     </main>
   );
 }
