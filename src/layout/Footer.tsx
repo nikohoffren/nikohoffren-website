@@ -16,7 +16,7 @@ export default function Footer({ theme }: NavbarProps) {
 
       {/* Main footer content */}
       <section
-        className="relative bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border-t border-gray-200/20 dark:border-gray-700/20 py-12 transition-all duration-300"
+        className="relative bg-white/80 dark:bg-neutral-950/80 backdrop-blur-lg border-t border-neutral-200/30 dark:border-neutral-800/50 py-12 transition-all duration-300"
         style={{
           WebkitBackdropFilter: "blur(12px)",
           backdropFilter: "blur(12px)",
@@ -24,7 +24,7 @@ export default function Footer({ theme }: NavbarProps) {
           WebkitTransform: "translateZ(0)",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[90rem] mx-auto px-6 sm:px-10 lg:px-16">
           {/* Grid layout for larger screens */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
             {/* Social Links */}
@@ -39,7 +39,7 @@ export default function Footer({ theme }: NavbarProps) {
                   rel="noopener noreferrer"
                   className="transform hover:scale-110 transition-all duration-200"
                 >
-                  <i className="fab fa-linkedin text-2xl text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400"></i>
+                  <i className="fab fa-linkedin text-2xl text-gray-600 dark:text-gray-400 hover:text-neutral-800 dark:hover:text-neutral-200"></i>
                 </a>
                 <a
                   href="https://www.github.com/nikohoffren"
@@ -75,7 +75,7 @@ export default function Footer({ theme }: NavbarProps) {
               </h3>
               <a
                 href="mailto:niko.hoffren@gmail.com"
-                className="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200 transform hover:scale-105"
+                className="text-gray-600 dark:text-gray-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors duration-200 transform hover:scale-105"
               >
                 niko.hoffren@gmail.com
               </a>
@@ -90,7 +90,7 @@ export default function Footer({ theme }: NavbarProps) {
                 href="https://nikohoffrenmusic.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-600 dark:text-green-400 hover:text-green-500 dark:hover:text-green-300 transition-colors duration-200 transform hover:scale-105"
+                className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200 transform hover:scale-105"
               >
                 nikohoffrenmusic.netlify.app
               </a>
@@ -118,7 +118,7 @@ export default function Footer({ theme }: NavbarProps) {
                   href="https://react.dev"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
+                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors duration-200"
                 >
                   React
                 </a>
@@ -132,7 +132,7 @@ export default function Footer({ theme }: NavbarProps) {
                   href="https://www.typescriptlang.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
+                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors duration-200"
                 >
                   TypeScript
                 </a>
@@ -142,7 +142,7 @@ export default function Footer({ theme }: NavbarProps) {
                   href="https://www.netlify.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
+                  className="text-sm text-gray-500 dark:text-gray-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors duration-200"
                 >
                   {language === "en" ? "Hosted by Netlify" : "Netlify"}
                 </a>

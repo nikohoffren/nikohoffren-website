@@ -21,7 +21,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
 
   return (
     <div
-      className="fixed top-0 left-0 right-0 z-[9999] w-full bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border-b border-gray-200/20 dark:border-gray-700/20"
+      className="fixed top-0 left-0 right-0 z-[9999] w-full bg-white/80 dark:bg-neutral-950/80 backdrop-blur-lg border-b border-neutral-200/30 dark:border-neutral-800/50"
       style={{
         WebkitBackdropFilter: "blur(12px)",
         backdropFilter: "blur(12px)",
@@ -30,7 +30,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
       }}
     >
       <nav
-        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        className="relative max-w-[90rem] mx-auto px-6 sm:px-10 lg:px-16"
         style={{
           transform: "translateZ(0)",
           WebkitTransform: "translateZ(0)",
@@ -78,7 +78,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
             {/* Language Selector */}
             <select
               id="language-selector"
-              className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg px-3 py-1.5 text-sm font-medium border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg px-3 py-1.5 text-sm font-medium border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-neutral-500"
               style={{
                 transform: "translateZ(0)",
                 WebkitTransform: "translateZ(0)",
@@ -237,7 +237,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
               <div className="flex justify-start">
                 <select
                   id="mobile-language-selector"
-                  className="w-32 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg px-3 py-2 text-base font-medium border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-32 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg px-3 py-2 text-base font-medium border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-neutral-500"
                   value={language}
                   onChange={handleLanguageChange}
                 >

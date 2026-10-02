@@ -10,7 +10,7 @@ export default function Projects() {
     const adjustSponsorHeight = () => {
       if (sponsorIframeRef.current) {
         sponsorIframeRef.current.style.height =
-          window.innerWidth < 550 ? "170px" : "110px";
+          window.innerWidth < 550 ? "180px" : "125px";
       }
     };
 
@@ -37,27 +37,24 @@ export default function Projects() {
   };
 
   return (
-    <div className="pt-6 bg-white/80 dark:bg-gray-900/50">
+    <div className="pt-6 bg-neutral-100/80 dark:bg-neutral-950/50">
       {/* Hero Section */}
-      <div className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900 text-center">
+      <div className="relative py-20 px-4 sm:px-6 lg:px-8 bg-neutral-100 dark:bg-neutral-950 text-center">
         <div className="relative z-10 max-w-7xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            {language === "en" ? "Projects " : "Projektit "}
-            <span className="text-green-600 dark:text-green-400">
-              Portfolio
-            </span>
+          <h1 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            {language === "en" ? "Projects" : "Projektit"}
           </h1>
-          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-300 sm:mt-4">
+          <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300 sm:mt-4">
             {language === "en"
-              ? "Explore my collection of projects and open-source contributions"
-              : "Tutustu projekteihini ja avoimen lähdekoodin kontribuutioihini"}
+              ? "Selected projects and open-source contributions"
+              : "Valikoima projekteja ja avoimen lähdekoodin kontribuutioita"}
           </p>
           <div className="mt-8 mb-6">
             <a
               href="https://github.com/nikohoffren"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors duration-200"
+              className="inline-flex items-center px-6 py-3 text-base font-medium rounded-md text-white bg-neutral-900 hover:bg-black dark:bg-neutral-100 dark:hover:bg-white dark:text-neutral-900 transition-colors duration-200"
             >
               <i className="fab fa-github mr-2"></i>
               {language === "en" ? "View on GitHub" : "Katso Githubissa"}
@@ -70,10 +67,10 @@ export default function Projects() {
       </div>
 
       {/* GitHub Sponsors Section */}
-      <div className="relative -mt-20 z-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl pb-6">
-        <div className="bg-white/80 dark:bg-gray-800/10 backdrop-blur-lg rounded-xl shadow-lg border border-gray-200/20 dark:border-gray-700/20 overflow-hidden">
+      <div className="relative -mt-20 z-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl pb-6">
+        <div className="bg-white/80 dark:bg-neutral-900/80 backdrop-blur-lg rounded-xl shadow-lg border border-gray-200/20 dark:border-neutral-700/40 overflow-hidden">
           <div
-            className="sponsor-container p-4"
+            className="sponsor-container p-4 sm:p-5"
             style={{ width: "100%", overflow: "hidden" }}
           >
             <iframe
@@ -84,7 +81,6 @@ export default function Projects() {
                 width: "100%",
                 border: "0",
                 borderRadius: "0.75rem",
-                transform: "scale(0.97)",
               }}
               scrolling="no"
             />
@@ -93,8 +89,8 @@ export default function Projects() {
       </div>
 
       {/* Projects Portfolio */}
-      <section className="relative -mt-20 py-20 bg-white/80 dark:bg-gray-900/50 backdrop-blur-lg">
-        <div className="absolute inset-0 bg-green-500/5"></div>
+      <section className="relative -mt-20 py-20 bg-neutral-50/80 dark:bg-neutral-950/50 backdrop-blur-lg">
+        <div className="absolute inset-0 bg-neutral-500/5"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-6">
@@ -117,7 +113,7 @@ export default function Projects() {
                         ? project.title
                         : project.titleFi || project.title}
                     </h3>
-                    <span className="px-3 py-1 text-sm text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30 rounded-full">
+                    <span className="px-3 py-1 text-sm text-neutral-700 dark:text-neutral-300 bg-neutral-200 dark:bg-neutral-800 rounded-full">
                       {project.type}
                     </span>
                   </div>
@@ -134,7 +130,7 @@ export default function Projects() {
                           href={link.url}
                           target="_blank"
                           rel="noreferrer"
-                          className="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 transition-colors duration-200"
+                          className="text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors duration-200"
                         >
                           <i className={`${getLinkIcon(link.type)} mr-1`}></i>
                           {language === "en" ? link.text : link.textFi}

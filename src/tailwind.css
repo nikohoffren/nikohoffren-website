@@ -4,17 +4,23 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
 :root {
-  --ff-primary: "", sans-serif;
-  --bg-color-dark: #01020a;
-  --bg-color-light: #f5f0fa;
-  --header-bg-color-dark: #090b1a;
-  --header-bg-color-light: #1d2033;
-  --font-color-dark: #080808;
-  --font-color-light: #dddddd;
+  --ff-primary: "Inter", sans-serif;
+  --ff-display: "Poppins", "Inter", sans-serif;
+  --accent: #6b7280;
+  --bg-color-dark: #0f0f0f;
+  --bg-color-light: #f5f5f5;
+  --header-bg-color-dark: #171717;
+  --header-bg-color-light: #262626;
+  --font-color-dark: #171717;
+  --font-color-light: #e5e5e5;
 }
 
 * {
-  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--ff-primary), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--ff-display);
 }
 
 .bg-color-dark {
@@ -169,7 +175,7 @@
   left: 0;
   width: 0%;
   height: 2px;
-  background: #22c55e;
+  background: #a3a3a3;
   z-index: 10000;
   transition: width 0.2s ease-out;
 }

@@ -5,19 +5,19 @@ export default function Contact() {
   const { language } = useContext(LanguageContext);
 
   return (
-    <div className="pt-6 bg-white/80 dark:bg-gray-900/50">
+    <div className="pt-6 bg-neutral-100/80 dark:bg-neutral-950/50">
       {/* Get in Touch */}
-      <section className="relative py-20 bg-white/80 dark:bg-gray-900/50 backdrop-blur-lg">
-        <div className="absolute inset-0 bg-green-500/5"></div>
+      <section className="relative py-20 bg-neutral-50/80 dark:bg-neutral-950/50 backdrop-blur-lg">
+        <div className="absolute inset-0 bg-neutral-500/5"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               {language === "en" ? "Get in Touch" : "Ota Yhteyttä"}
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               {language === "en"
-                ? "Have a question or want to work together? Let's connect via email or social media"
-                : "Onko sinulla kysyttävää tai haluatko tehdä yhteistyötä? Ota yhteyttä viestillä tai sosiaalisen median kautta"}
+                ? "Looking to connect or discuss a project? Reach out via email or social media."
+                : "Haluatko olla yhteydessä tai keskustella projektista? Ota yhteyttä sähköpostitse tai sosiaalisessa mediassa."}
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -41,7 +41,7 @@ export default function Contact() {
                     {language === "en" ? "Email" : "Sähköposti"}
                   </label>
                   <input
-                    className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors duration-200"
+                    className="w-full px-4 py-3 rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-600 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-neutral-500 transition-colors duration-200"
                     type="email"
                     name="email"
                     id="grid-email"
@@ -61,7 +61,7 @@ export default function Contact() {
                     {language === "en" ? "Message" : "Viesti"}
                   </label>
                   <textarea
-                    className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors duration-200"
+                    className="w-full px-4 py-3 rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-600 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-neutral-500 transition-colors duration-200"
                     name="message"
                     id="grid-message"
                     rows={6}
@@ -74,7 +74,7 @@ export default function Contact() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full px-6 py-3 rounded-lg bg-green-600 hover:bg-green-700 text-white font-medium transition-colors duration-200 transform hover:scale-[1.02]"
+                    className="w-full px-6 py-3 rounded-lg bg-neutral-900 hover:bg-black dark:bg-neutral-100 dark:hover:bg-white dark:text-neutral-900 text-white font-medium transition-colors duration-200"
                   >
                     {language === "en" ? "Send Message" : "Lähetä viesti"}
                   </button>
@@ -150,7 +150,7 @@ export default function Contact() {
                   href="mailto:niko.hoffren@gmail.com"
                   className="flex items-center p-4 rounded-lg bg-white/5 hover:bg-white/10 dark:bg-gray-800/5 dark:hover:bg-gray-800/10 transition-colors duration-200 group"
                 >
-                  <i className="fas fa-envelope text-2xl text-green-500 group-hover:scale-110 transition-transform duration-200"></i>
+                  <i className="fas fa-envelope text-2xl text-neutral-500 group-hover:scale-110 transition-transform duration-200"></i>
                   <span className="ml-3 text-gray-700 dark:text-gray-300">
                     niko.hoffren@gmail.com
                   </span>
